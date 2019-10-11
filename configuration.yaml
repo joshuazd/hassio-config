@@ -1,0 +1,39 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+http:
+  base_url: !secret base_url
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+
+wemo:
+  discovery: true
+
+google_assistant:
+  project_id: hassio-aca8d
+  api_key: !secret google_api_key
+  expose_by_default: true
+  exposed_domains:
+    - switch
+    - light
+    
+# Example configuration.yaml entry for Nmap
+# One whole subnet, and skipping two specific IPs.
+device_tracker:
+  - platform: nmap_tracker
+    hosts: 192.168.86.1/24
+    home_interval: 5
+    exclude:
+     - 192.168.86.93

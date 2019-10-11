@@ -1,0 +1,12 @@
+.storage
+.cloud
+.google.token
+node-red
+tts
+
+ip_bans.yaml
+secrets.yaml
+known_devices.yaml
+
+home-assistant.log
+home-assistant_v2.db
