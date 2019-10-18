@@ -1,0 +1,6 @@
+living_room_switches:
+  name: Living Room
+  entities:
+    - switch.lamp
+    - switch.floor_lamp
+    - switch.pumpkin
