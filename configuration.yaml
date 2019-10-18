@@ -2,10 +2,6 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-# http:
-#   base_url: example.duckdns.org:8123
-
 # Text to speech
 tts:
   - platform: google_translate
@@ -13,6 +9,14 @@ tts:
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
+homeassistant:
+  customize: !include customize.yaml
+frontend:
+  themes: !include themes.yaml
+  extra_html_url:
+    - /local/custom_ui/state-card-custom-ui.html
+  extra_html_url_es5:
+    - /local/custom_ui/state-card-custom-ui-es5.html
 http:
   base_url: !secret base_url
   ssl_certificate: /ssl/fullchain.pem
@@ -28,12 +32,38 @@ google_assistant:
   exposed_domains:
     - switch
     - light
-    
-# Example configuration.yaml entry for Nmap
-# One whole subnet, and skipping two specific IPs.
+
 device_tracker:
   - platform: nmap_tracker
     hosts: 192.168.86.1/24
     home_interval: 5
     exclude:
      - 192.168.86.93
+
+weather:
+  - platform: darksky
+    name: Home
+    api_key: !secret darksky_api_key
+    scan_interval: '00:15'
+    mode: daily
+
+notify:
+  - platform: html5
+    name: home
+    vapid_pub_key: !secret vapid_pub_key
+    vapid_prv_key: !secret vapid_prv_key
+    vapid_email: !secret email
+
+sensor:
+  - platform: google_travel_time
+    api_key: !secret google_maps_api_key
+    origin: !secret home_place_id
+    destination: !secret work_place_id
+    scan_interval: 1800
+
+input_boolean:
+  night_mode:
+    name: Night Mode
+    icon: mdi:theme-light-dark
+
+shopping_list:
