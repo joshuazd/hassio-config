@@ -1,0 +1,8 @@
+input_boolean.night_mode:
+  templates:
+    icon: >
+      if (state === 'on') return 'mdi:weather-night';
+      return 'mdi:weather-sunny';
+    icon_color: >
+      if (state === 'on') return '#5294E2';
+      return '#ffaf5f';
