@@ -1,8 +1,36 @@
 input_boolean.night_mode:
   templates:
-    icon: >
-      if (state === 'on') return 'mdi:weather-night';
-      return 'mdi:weather-sunny';
-    icon_color: >
-      if (state === 'on') return '#5294E2';
-      return '#ffaf5f';
+    icon: 'if (state === ''on'') return ''mdi:weather-night''; return ''mdi:weather-sunny'';'
+    icon_color: if (state === 'on') return '#5294E2'; return '#ffaf5f';
+switch.pumpkin:
+  icon: 'mdi:pine-tree'
+light.front_light:
+  icon: 'mdi:coach-lamp'
+switch.lamp:
+  icon: 'mdi:lamp'
+switch.floor_lamp:
+  icon: 'mdi:floor-lamp'
+media_player.basement_speaker:
+  icon: 'mdi:google-home'
+media_player.kitchen_speaker:
+  icon: 'mdi:dots-horizontal-circle'
+media_player.joshua_s_bedroom_speaker:
+  icon: 'mdi:dots-horizontal-circle'
+media_player.josie_s_bedroom_speaker:
+  icon: 'mdi:dots-horizontal-circle'
+media_player.living_room_display:
+  icon: 'mdi:monitor'
+media_player.tv_speaker:
+  icon: 'mdi:speaker'
+input_boolean.sleeping:
+  icon: 'mdi:sleep'
+  templates:
+    icon_color: if (state === 'on') return '#87af87'; return '#ff5f5f';
+input_boolean.running:
+  icon: 'mdi:run'
+  templates:
+    icon_color: if (state === 'on') return '#87af87'; return '#ff5f5f';
+input_boolean.vacation:
+  icon: 'mdi:calendar-range'
+  templates:
+    icon_color: if (state === 'on') return '#87af87'; return '#ff5f5f';

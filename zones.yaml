@@ -1,0 +1,5 @@
+- name: panera
+  latitude: !secret panera_lat
+  longitude: !secret panera_long
+  radius: 800
+  icon: mdi:office-building

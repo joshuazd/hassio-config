@@ -1,0 +1,24 @@
+'1576009703168':
+  alias: Go To Sleep
+  sequence:
+  - data:
+      entity_id: input_boolean.sleeping
+    service: input_boolean.turn_on
+'1576010222780':
+  alias: Wake Up
+  sequence:
+  - data:
+      entity_id: input_boolean.sleeping
+    service: input_boolean.turn_off
+'1576029452963':
+  alias: Running
+  sequence:
+  - data:
+      entity_id: input_boolean.running
+    service: input_boolean.turn_on
+'1576100520139':
+  alias: Vacation
+  sequence:
+  - data: {}
+    entity_id: input_boolean.vacation
+    service: input_boolean.toggle
