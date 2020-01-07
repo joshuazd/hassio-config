@@ -1,7 +1,5 @@
 
 config:
-history:
-logbook:
 map:
 mobile_app:
 ssdp:
@@ -58,17 +56,49 @@ http:
 wemo:
   discovery: true
 
+history:
+  exclude:
+    entities:
+      - device_tracker.galaxy_s9_lan
+      - device_tracker.joshua
+      - device_tracker.josie
+      - device_tracker.pixel_3
+      - device_tracker.lias_iphone_lan
+      - input_boolean.night_mode
+      - input_boolean.running
+
+logbook:
+  exclude:
+    entities:
+      - device_tracker.galaxy_s9_lan
+      - device_tracker.joshua
+      - device_tracker.josie
+      - device_tracker.pixel_3
+      - device_tracker.lias_iphone_lan
+      - input_boolean.night_mode
+      - input_boolean.running
+
 recorder:
   db_url: !secret mariadb_url
   purge_keep_days: 5
   purge_interval: 1
   exclude:
+    domains:
+      - calendar
     entities:
       - sun.sun
       - weather.home
       - weather.home_2
       - sensor.dark_sky_icon
       - sensor.hacs
+      - binary_sensor.updater
+      - sensor.bedroom_sensor_light_level
+      - zone.home
+      - zone.panera
+      - light.hue_white_lamp_4
+      - light.hue_white_lamp_5
+      - light.joshua_bedroom_light_1
+      - light.joshua_bedroom_light_2
 
 google:
   client_id: !secret google_client_id
