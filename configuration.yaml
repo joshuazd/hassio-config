@@ -52,8 +52,8 @@ frontend:
 
 http:
   base_url: !secret base_url
-  ssl_certificate: /ssl/fullchain.pem
-  ssl_key: /ssl/privkey.pem
+  ssl_certificate: !secret ssl_cert
+  ssl_key: !secret ssl_key
 
 wemo:
   discovery: true
