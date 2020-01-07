@@ -66,6 +66,9 @@ recorder:
     entities:
       - sun.sun
       - weather.home
+      - weather.home_2
+      - sensor.dark_sky_icon
+      - sensor.hacs
 
 google:
   client_id: !secret google_client_id
@@ -122,6 +125,7 @@ sensor:
     command: "cat /sys/class/thermal/thermal_zone0/temp"
     unit_of_measurement: "°C"
     value_template: '{{ value | multiply(0.001) | round(1) }}'
+    scan_interval: 180
   - platform: google_travel_time
     api_key: !secret google_maps_api_key
     origin: !secret home_place_id
