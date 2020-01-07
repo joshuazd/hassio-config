@@ -2,6 +2,7 @@ language: python
 python:
   - "3.7"
 before_install:
+  - touch foobar.pem
   - mv travis_secrets.yaml secrets.yaml
   - sudo apt-get install -y libudev-dev
 install:
