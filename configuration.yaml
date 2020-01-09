@@ -123,6 +123,8 @@ recorder:
       - sensor.dark_sky_temperature_0h
       - sensor.dark_sky_wind_speed_0d
       - sensor.dark_sky_wind_speed_0h
+      - media_player.lg_smart_tv
+      - media_player.basement_tv
 
 google:
   client_id: !secret google_client_id
