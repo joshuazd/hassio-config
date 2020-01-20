@@ -9,6 +9,12 @@ updater:
 zeroconf:
 discovery:
 
+mqtt:
+  broker: 127.0.0.1
+
+zwave:
+  usb_path: /dev/serial/by-id/usb-Silicon_Labs_HubZ_Smart_Home_Controller_8130021D-if00-port0
+
 homeassistant:
   customize: !include customize.yaml
 
@@ -24,6 +30,7 @@ person:
     user_id: f3f546705e9844379edf982ea68104a8
     device_trackers:
       - device_tracker.josie
+      - device_tracker.pixel_3a
   - name: Lia
     id: 058b429c295946dbbfcd4560b6a76c2e
     device_trackers:
@@ -37,6 +44,7 @@ zone: !include zones.yaml
 
 tts:
   - platform: google_translate
+    base_url: http://192.168.86.93:8123
 
 group: !include groups.yaml
 automation: !include automations.yaml
@@ -50,8 +58,8 @@ frontend:
 
 http:
   base_url: !secret base_url
-  ssl_certificate: !secret ssl_cert
-  ssl_key: !secret ssl_key
+#  ssl_certificate: !secret ssl_cert
+#  ssl_key: !secret ssl_key
 
 wemo:
   discovery: true
@@ -74,7 +82,7 @@ history:
       - input_boolean.night_mode
       - input_boolean.running
       - input_boolean.vacation
-      - input_boolean.sleeping
+      - input_boolean.joshua_sleeping
 
 logbook:
   exclude:
@@ -123,8 +131,10 @@ recorder:
       - sensor.dark_sky_temperature_0h
       - sensor.dark_sky_wind_speed_0d
       - sensor.dark_sky_wind_speed_0h
-      - media_player.lg_smart_tv
+      - media_player.lg_tv
       - media_player.basement_tv
+      - input_boolean.joshua_home
+      - input_boolean.josie_home
 
 google:
   client_id: !secret google_client_id
@@ -174,8 +184,21 @@ notify:
     platform: slack
     api_key: !secret slack_api_key
     default_channel: '#home'
+  - name: ga_broadcast
+    platform: rest
+    resource: http://127.0.0.1:5000/broadcast_message
 
 sensor:
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /home
+      - type: memory_use_percent
+      - type: network_in
+        arg: wlan0
+      - type: network_out
+        arg: wlan0
+      - type: load_5m
   - platform: google_wifi
   - platform: command_line
     name: CPU Temperature
@@ -192,7 +215,11 @@ sensor:
     sensors:
       tv_muted:
         friendly_name: 'TV muted'
-        value_template: "{{ is_state_attr('media_player.lg_smart_tv', 'is_volume_muted', true) }}"
+        value_template: "{{ is_state_attr('media_player.lg_tv', 'is_volume_muted', true) }}"
+      tv_volume:
+        friendly_name: 'TV volume'
+        value_template: "{{ state_attr('media_player.lg_tv', 'volume_level') }}"
+        unit_of_measurement: 'percent'
   - platform: darksky
     api_key: !secret darksky_api_key
     scan_interval: '00:10'
@@ -208,16 +235,20 @@ sensor:
       - dew_point
       - wind_speed
 
+binary_sensor:
+  - platform: wyzesense
+    device: auto
+
 media_player:
   - platform: androidtv
     host: 192.168.86.99
     name: "Basement TV"
     adb_server_ip: 127.0.0.1
     adb_server_port: 5037
-  - platform: webostv
-    name: "LG Smart TV"
-    host: 192.168.86.47
-    timeout: 5
+
+webostv:
+  name: "LG TV"
+  host: 192.168.86.47
 
 input_boolean:
   night_mode:
@@ -230,3 +261,7 @@ input_boolean:
     name: Running
   vacation:
     name: Vacation
+  joshua_home:
+    name: Joshua Home Status
+  josie_home:
+    name: Josie Home Status
