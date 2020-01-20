@@ -1,8 +1,8 @@
 '1576009703168':
-  alias: Go To Sleep
+  alias: Go To Sleep - Joshua
   sequence:
   - data:
-      entity_id: input_boolean.sleeping
+      entity_id: input_boolean.joshua_sleeping
     service: input_boolean.turn_on
 '1576010222780':
   alias: Wake Up
@@ -22,3 +22,8 @@
   - data: {}
     entity_id: input_boolean.vacation
     service: input_boolean.toggle
+'1579285649046':
+  alias: Go To Sleep - Josie
+  sequence:
+  - entity_id: input_boolean.josie_sleeping
+    service: input_boolean.turn_on
