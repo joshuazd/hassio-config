@@ -9,3 +9,20 @@ all_people:
   entities:
     - person.joshua
     - person.josie
+all_switches:
+  name: All Switches
+  all: true
+  entities:
+    - switch.lamp
+    - switch.floor_lamp
+    - switch.pumpkin
+all_speakers:
+  name: All Speakers
+  all: true
+  entities:
+    - media_player.joshua_s_bedroom_speaker
+    - media_player.josie_s_bedroom_speaker
+    - media_player.living_room_display
+    - media_player.kitchen_speaker
+    - media_player.tv_speaker
+    - media_player.basement_speaker
