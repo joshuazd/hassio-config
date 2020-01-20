@@ -22,7 +22,11 @@ media_player.living_room_display:
   icon: 'mdi:monitor'
 media_player.tv_speaker:
   icon: 'mdi:speaker'
-input_boolean.sleeping:
+input_boolean.joshua_sleeping:
+  icon: 'mdi:sleep'
+  templates:
+    icon_color: if (state === 'on') return '#87af87'; return '#ff5f5f';
+input_boolean.josie_sleeping:
   icon: 'mdi:sleep'
   templates:
     icon_color: if (state === 'on') return '#87af87'; return '#ff5f5f';

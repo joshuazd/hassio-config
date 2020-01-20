@@ -222,8 +222,10 @@ media_player:
 input_boolean:
   night_mode:
     name: Night Mode
-  sleeping:
-    name: Sleeping
+  joshua_sleeping:
+    name: Joshua Sleeping
+  josie_sleeping:
+    name: Josie Sleeping
   running:
     name: Running
   vacation:
