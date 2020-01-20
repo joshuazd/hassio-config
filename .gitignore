@@ -19,3 +19,8 @@ googlea8595ea436715d70.html
 .ssh/
 .HA_VERSION
 webostv.conf
+*.sqlite
+*.db
+zwcfg_*.xml
+OZW_Log.txt
+*.jpeg
