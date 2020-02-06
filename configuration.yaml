@@ -10,7 +10,10 @@ zeroconf:
 discovery:
 
 mqtt:
+  discovery: true
   broker: 127.0.0.1
+  username: !secret username
+  password: !secret password
 
 zwave:
   usb_path: /dev/serial/by-id/usb-Silicon_Labs_HubZ_Smart_Home_Controller_8130021D-if00-port0
@@ -116,6 +119,8 @@ recorder:
       - light.hue_white_lamp_5
       - light.joshua_bedroom_light_1
       - light.joshua_bedroom_light_2
+      - light.laundry_room_1
+      - light.laundry_room_2
       - sensor.google_wifi_current_version
       - sensor.google_wifi_last_restart
       - sensor.google_wifi_local_ip
@@ -142,7 +147,7 @@ google:
 
 google_assistant:
   project_id: hassio-aca8d
-  api_key: !secret google_api_key
+  service_account: !include service_account.json
   expose_by_default: true
   exposed_domains:
     - switch
@@ -158,6 +163,12 @@ google_assistant:
       expose: false
     light.hue_white_lamp_5:
       expose: false
+    light.laundry_room_1:
+      expose: false
+    light.laundry_room_2:
+      expose: false
+    input_boolean.movie_mode:
+      expose: true
 
 device_tracker:
   - platform: nmap_tracker
@@ -265,3 +276,5 @@ input_boolean:
     name: Joshua Home Status
   josie_home:
     name: Josie Home Status
+  movie_mode:
+    name: Movie Mode

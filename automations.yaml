@@ -7,3 +7,13 @@
     service: frontend.set_theme
     data:
       name: midnight
+- alias: "Sync Tasmota states on start-up - autodiscovery"
+  initial_state: true
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - service: mqtt.publish
+      data:
+        topic: "tasmotas/cmnd/state"
+        payload: ""

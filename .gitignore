@@ -25,3 +25,4 @@ zwcfg_*.xml
 OZW_Log.txt
 *.jpeg
 *.svg
+service_account.json

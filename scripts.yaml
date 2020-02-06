@@ -8,7 +8,7 @@
   alias: Wake Up
   sequence:
   - data:
-      entity_id: input_boolean.sleeping
+      entity_id: input_boolean.joshua_sleeping
     service: input_boolean.turn_off
 '1576029452963':
   alias: Running

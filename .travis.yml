@@ -3,6 +3,7 @@ python:
   - "3.7"
 before_install:
   - touch foobar.pem
+  - touch service_account.json
   - mv travis_secrets.yaml secrets.yaml
   - sudo apt-get install -y libudev-dev
 install:

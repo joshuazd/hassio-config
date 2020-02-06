@@ -3,6 +3,7 @@
 # Midnight Theme
 #
 midnight:
+  ha-card-header-font-size: '16px'
   ha-card-border-radius: '12px'
   accent-color: "#E45E65"
   card-background-color: "var(--primary-background-color)"
