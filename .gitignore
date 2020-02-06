@@ -24,3 +24,4 @@ webostv.conf
 zwcfg_*.xml
 OZW_Log.txt
 *.jpeg
+*.svg
