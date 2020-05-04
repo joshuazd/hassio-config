@@ -1,4 +1,4 @@
-- alias: 'System - Set Custom Theme at Startup'
+- alias: System - Set Custom Theme at Startup
   initial_state: 'true'
   trigger:
     platform: homeassistant
@@ -7,13 +7,37 @@
     service: frontend.set_theme
     data:
       name: midnight
-- alias: "Sync Tasmota states on start-up - autodiscovery"
+  id: dcd93ed7dd0d4928944b5d435b6af3c5
+- alias: Sync Tasmota states on start-up - autodiscovery
   initial_state: true
   trigger:
     platform: homeassistant
     event: start
   action:
-    - service: mqtt.publish
-      data:
-        topic: "tasmotas/cmnd/state"
-        payload: ""
+  - service: mqtt.publish
+    data:
+      topic: tasmotas/cmnd/state
+      payload: ''
+  id: 93566cc0bf4d4b99b63debc0f2ccd843
+- id: '1586183063690'
+  alias: Vacation
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - data: {}
+    entity_id: input_boolean.vacation
+    service: input_boolean.turn_on
+- id: '1588296994097'
+  alias: Notify on Start
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - data:
+      message: Home Assistant Started
+    service: notify.mobile_app_pixel_3
