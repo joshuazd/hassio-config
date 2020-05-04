@@ -28,12 +28,14 @@ person:
     device_trackers:
       - device_tracker.joshua
       - device_tracker.pixel_3
+      - device_tracker.ping_joshua
   - name: Josie
     id: 679231f68a4d4e05b2a552cc84133a2c
     user_id: f3f546705e9844379edf982ea68104a8
     device_trackers:
       - device_tracker.josie
       - device_tracker.pixel_3a
+      - device_tracker.ping_josie
   - name: Lia
     id: 058b429c295946dbbfcd4560b6a76c2e
     device_trackers:
@@ -101,7 +103,6 @@ logbook:
 recorder:
   db_url: !secret mariadb_url
   purge_keep_days: 5
-  purge_interval: 1
   exclude:
     domains:
       - calendar
@@ -136,10 +137,11 @@ recorder:
       - sensor.dark_sky_temperature_0h
       - sensor.dark_sky_wind_speed_0d
       - sensor.dark_sky_wind_speed_0h
-      - media_player.lg_tv
-      - media_player.basement_tv
       - input_boolean.joshua_home
       - input_boolean.josie_home
+      - sensor.tv_muted
+      - sensor.tv_volume
+      - sensor.tv_source
 
 google:
   client_id: !secret google_client_id
@@ -169,14 +171,25 @@ google_assistant:
       expose: false
     input_boolean.movie_mode:
       expose: true
+    sensor.bedroom_sensor_temperature:
+      expose: true
 
 device_tracker:
   - platform: nmap_tracker
-    hosts: 192.168.86.1/24
-    home_interval: 5
-    consider_home: 120
+    hosts: 
+      - 192.168.86.92
+      - 192.168.86.114
+      - 192.168.86.1/24
+    #home_interval: 5
+    consider_home: 300
+    interval_seconds: 60
+    track_new_devices: false
     exclude:
      - 192.168.86.93
+  - platform: ping
+    hosts:
+      ping_josie: 192.168.86.114
+      ping_joshua: 192.168.86.92
 
 weather:
   - platform: darksky
@@ -218,9 +231,16 @@ sensor:
     value_template: '{{ value | multiply(0.001) | round(1) }}'
     scan_interval: 180
   - platform: google_travel_time
+    name: Travel Time Home to Work
     api_key: !secret google_maps_api_key
     origin: !secret home_place_id
     destination: !secret work_place_id
+    scan_interval: 1800
+  - platform: google_travel_time
+    name: Travel Time Work to Home
+    api_key: !secret google_maps_api_key
+    origin: !secret work_place_id
+    destination: !secret home_place_id
     scan_interval: 1800
   - platform: template
     sensors:
@@ -231,6 +251,9 @@ sensor:
         friendly_name: 'TV volume'
         value_template: "{{ state_attr('media_player.lg_tv', 'volume_level') }}"
         unit_of_measurement: 'percent'
+      tv_source:
+        friendly_name: 'TV source'
+        value_template: "{{ state_attr('media_player.lg_tv', 'source') }}"
   - platform: darksky
     api_key: !secret darksky_api_key
     scan_interval: '00:10'

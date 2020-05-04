@@ -1,44 +1,48 @@
 input_boolean.night_mode:
   templates:
-    icon: 'if (state === ''on'') return ''mdi:weather-night''; return ''mdi:weather-sunny'';'
+    icon: if (state === 'on') return 'mdi:weather-night'; return 'mdi:weather-sunny';
     icon_color: if (state === 'on') return '#5294E2'; return '#ffaf5f';
 switch.pumpkin:
-  icon: 'mdi:pine-tree'
+  icon: mdi:pine-tree
 light.front_light:
-  icon: 'mdi:coach-lamp'
+  icon: mdi:coach-lamp
 switch.lamp:
-  icon: 'mdi:lamp'
+  icon: mdi:lamp
 switch.floor_lamp:
-  icon: 'mdi:floor-lamp'
+  icon: mdi:floor-lamp
 media_player.basement_speaker:
-  icon: 'mdi:google-home'
+  icon: mdi:google-home
 media_player.kitchen_speaker:
-  icon: 'mdi:dots-horizontal-circle'
+  icon: mdi:dots-horizontal-circle
 media_player.joshua_s_bedroom_speaker:
-  icon: 'mdi:dots-horizontal-circle'
+  icon: mdi:dots-horizontal-circle
 media_player.josie_s_bedroom_speaker:
-  icon: 'mdi:dots-horizontal-circle'
+  icon: mdi:dots-horizontal-circle
 media_player.living_room_display:
-  icon: 'mdi:tablet'
+  icon: mdi:tablet
 media_player.tv_speaker:
-  icon: 'mdi:speaker'
+  icon: mdi:speaker
 input_boolean.joshua_sleeping:
-  icon: 'mdi:sleep'
+  icon: mdi:sleep
   templates:
     icon_color: if (state === 'on') return '#87af87'; return '#ff5f5f';
 input_boolean.josie_sleeping:
-  icon: 'mdi:sleep'
+  icon: mdi:sleep
   templates:
     icon_color: if (state === 'on') return '#87af87'; return '#ff5f5f';
 input_boolean.running:
-  icon: 'mdi:run'
+  icon: mdi:run
   templates:
     icon_color: if (state === 'on') return '#87af87'; return '#ff5f5f';
 input_boolean.vacation:
-  icon: 'mdi:calendar-range'
+  icon: mdi:calendar-range
   templates:
     icon_color: if (state === 'on') return '#87af87'; return '#ff5f5f';
 person.joshua:
-  entity_picture: '/local/joshua.svg'
+  entity_picture: /local/joshua.svg
 person.josie:
-  entity_picture: '/local/josie.svg'
+  entity_picture: /local/josie.svg
+device_tracker.pixel_3:
+  entity_picture: /local/joshua.svg
+sensor.bedroom_sensor_temperature:
+  device_class: temperature
