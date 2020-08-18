@@ -1,0 +1,20 @@
+{
+    "data": {
+        "items": [
+            {
+                "has_date": false,
+                "has_time": true,
+                "id": "run_time",
+                "name": "Run Time"
+            },
+            {
+                "has_date": false,
+                "has_time": true,
+                "id": "wake_up_time",
+                "name": "Wake Up Time"
+            }
+        ]
+    },
+    "key": "input_datetime",
+    "version": 1
+}

@@ -1,0 +1,13 @@
+{
+    "data": {
+        "devices": [
+            {
+                "ieee": "00:0d:6f:00:11:f5:d5:68",
+                "last_seen": null,
+                "name": "Silicon Labs EZSP"
+            }
+        ]
+    },
+    "key": "zha.storage",
+    "version": 1
+}

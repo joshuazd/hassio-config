@@ -1,0 +1,36 @@
+{
+    "data": {
+        "areas": [
+            {
+                "id": "ae19ae0bea504d2ea6982d936ef8591a",
+                "name": "Living Room"
+            },
+            {
+                "id": "5d9bb3967e064b3a92e3f029ac2460e7",
+                "name": "Kitchen"
+            },
+            {
+                "id": "375dbda3580a43108b4f8f2d6ecb7ac1",
+                "name": "Bedroom"
+            },
+            {
+                "id": "b42349b9125241e3aded45a0521bf8c7",
+                "name": "Outside"
+            },
+            {
+                "id": "9bd2d8f658df4c54860e03973bc59968",
+                "name": "Joshua's Bedroom"
+            },
+            {
+                "id": "beb15d6cdc9141a2a5bcc23e9af28c07",
+                "name": "Josie's Bedroom"
+            },
+            {
+                "id": "03bace1f84ef43488fd1a5bacab0bc96",
+                "name": "Basement"
+            }
+        ]
+    },
+    "key": "core.area_registry",
+    "version": 1
+}

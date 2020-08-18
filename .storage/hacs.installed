@@ -1,0 +1,10 @@
+{
+    "data": {
+        "maykar/lovelace-swipe-navigation": {
+            "version_type": "version",
+            "version_installed": "1.2.1",
+            "version_available": "1.2.1"
+        }
+    },
+    "schema": "5"
+}

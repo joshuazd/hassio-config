@@ -1,0 +1,17 @@
+{
+    "data": {
+        "items": [
+            {
+                "icon": "mdi:view-dashboard-outline",
+                "id": "lovelace_states",
+                "mode": "storage",
+                "require_admin": true,
+                "show_in_sidebar": true,
+                "title": "states",
+                "url_path": "lovelace-states"
+            }
+        ]
+    },
+    "key": "lovelace_dashboards",
+    "version": 1
+}

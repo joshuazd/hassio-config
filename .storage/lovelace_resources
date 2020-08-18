@@ -1,0 +1,78 @@
+{
+    "data": {
+        "items": [
+            {
+                "id": "ddcaf66281ac425b809cfeba44eba2d1",
+                "type": "module",
+                "url": "/local/fold-entity-row.js"
+            },
+            {
+                "id": "05ea37b1d1f848dab97aade312e2eb62",
+                "type": "module",
+                "url": "/hacsfiles/mini-graph-card/mini-graph-card-bundle.js"
+            },
+            {
+                "id": "170bfab46bf54355bf0e1f1077798038",
+                "type": "js",
+                "url": "/hacsfiles/light-entity-card/light-entity-card.js"
+            },
+            {
+                "id": "48bbcbed88264799bd9cd0df61ae3a62",
+                "type": "js",
+                "url": "/hacsfiles/lovelace-swipe-navigation/swipe-navigation.js"
+            },
+            {
+                "id": "cdb202d5c35d49688090ccfbe1cadd65",
+                "type": "module",
+                "url": "/hacsfiles/lovelace-layout-card/layout-card.js"
+            },
+            {
+                "id": "ec406d5647ac4693b0794870b02dcf3c",
+                "type": "js",
+                "url": "/hacsfiles/lovelace-html-card/html-card.js"
+            },
+            {
+                "id": "cb2794a9b4074f75ae8a4ecad0733814",
+                "type": "js",
+                "url": "/hacsfiles/vertical-stack-in-card/vertical-stack-in-card.js"
+            },
+            {
+                "id": "949a3a8585534d78a7170db36d1c67eb",
+                "type": "module",
+                "url": "/hacsfiles/lovelace-template-entity-row/template-entity-row.js"
+            },
+            {
+                "id": "d40aa4c9f3204679bc1fdf52e775dc6b",
+                "type": "module",
+                "url": "/hacsfiles/button-card/button-card.js"
+            },
+            {
+                "id": "0b29d24693a043ab927db82dbce86747",
+                "type": "module",
+                "url": "/hacsfiles/custom-header/custom-header.js"
+            },
+            {
+                "id": "7ba3079f993f44349ee53f4d1a0f2133",
+                "type": "module",
+                "url": "/hacsfiles/lovelace-slider-entity-row/slider-entity-row.js"
+            },
+            {
+                "id": "950399f26055496fa0615320eb2fb289",
+                "type": "module",
+                "url": "/hacsfiles/mini-media-player/mini-media-player-bundle.js"
+            },
+            {
+                "id": "82e4da2b39dc4105b2d569a8b7baec5a",
+                "type": "module",
+                "url": "/hacsfiles/lovelace-card-mod/card-mod.js"
+            },
+            {
+                "id": "cf5412c990884ee49a93a475f5ca4b10",
+                "type": "module",
+                "url": "/hacsfiles/lovelace-state-switch/state-switch.js"
+            }
+        ]
+    },
+    "key": "lovelace_resources",
+    "version": 1
+}
