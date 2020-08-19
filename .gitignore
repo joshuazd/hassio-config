@@ -1,4 +1,3 @@
-.storage
 .cloud
 .google.token
 node-red
@@ -26,3 +25,6 @@ OZW_Log.txt
 *.jpeg
 *.svg
 service_account.json
+.storage/auth
+.storage/auth_module.totp
+.storage/auth_provider.homeassistant
