@@ -1,0 +1,91 @@
+homekit_style:
+  aspect_ratio: 1/1
+  show_label: true
+  show_state: true
+  name: '[[[ return entity.attributes.friendly_name ]]]'
+  size: 30%
+  color_type: card
+  hold_action:
+    action: more-info
+  color: rgb(242, 242, 247)
+  state: &button_state
+    - styles: &on_state
+        # - color: rgb(100, 210, 255)
+        # - color: "#fbc02d"
+        # card:
+        #   - '--paper-card-background-color': var(--homekit-white)
+        card: [background-color: 'rgba(255, 255, 255, 0.8)']
+        name: [color: 'rgba(0, 0, 0, 0.6)']
+        state: [color: 'rgba(0, 0, 0, 0.6)']
+        icon: [color: "#fbc02d"]
+      value: 'on'
+      id: _state_value_on
+
+    - styles: *on_state
+      value: 'armed_away'
+
+    - styles: *on_state
+      value: 'armed_home'
+
+    - styles:
+        <<: *on_state
+        state: [color: 'red']
+      value: 'arming'
+
+    - styles: &default_off
+        card: [background-color: null]
+        icon: [color: 'rgb(142, 142, 147)']
+      value: "disarmed"
+
+    - styles: &off_state
+        icon:
+          # - filter: grayscale(100%)
+          - color: rgb(142, 142, 147)
+      value: 'off'
+
+  styles:
+    card:
+      - border-radius: 20px
+      # Borrar estos dos si se quiere un look menos plano
+      - box-shadow: none
+      - background-color: "rgba(10, 10, 10, 0.7)"
+    label:
+      - color: black
+      - font-size: 11px
+      - font-family: Helvetica
+      - padding: 0px 10px
+      - justify-self: start
+      - color: var(--primary-text-color)
+    state:
+      - font-size: 11px
+      - font-family: Helvetica
+      - padding: 0px 10px
+      - justify-self: start
+      - text-transform: capitalize
+      - font-weight: bold
+      - padding-left: 20px
+      - padding-bottom: 10px
+      - color: var(--primary-text-color)
+      - max-width: 75%
+    grid:
+      - grid-template-areas: '"i" "n" "s" "l"'
+      - grid-template-columns: 1fr
+      - grid-template-rows: 1fr # min-content min-content min-content
+    img_cell:
+      - justify-content: start
+      - align-items: start
+      - padding-left: 20px
+    icon:
+      - height: auto
+      - padding-top: 10px
+    name:
+      - justify-self: start
+      - padding-left: 20px
+      - font-weight: bold
+      - font-family: Helvetica
+      - font-size: 13px
+      - padding-bottom: 3px
+      - color: var(--primary-text-color)
+      - max-width: 75%
+
+

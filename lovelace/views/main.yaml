@@ -1,0 +1,193 @@
+title: Home
+path: home
+icon: 'mdi:home'
+panel: false
+badges:
+  - entity: person.josie
+    style: |
+      :host {
+        color: rgb(0,0,0);
+        font-variant: small-caps;
+      }
+  - entity: person.joshua
+    style: |
+      :host {
+        color: rgb(0,0,0);
+        font-variant: small-caps;
+      }
+cards:
+  - cards:
+      - card:
+          cards:
+            - type: 'custom:button-card'
+              template: blank
+            - entity: switch.lamp
+              # size: 40%
+              template: switch_button_style
+              type: 'custom:button-card'
+            - entity: switch.floor_lamp
+              # size: 40%
+              template: switch_button_style
+              type: 'custom:button-card'
+            - entity: light.front_light
+              name: Front Light
+              # size: 40%
+              template: light_button_style
+              type: 'custom:button-card'
+            - type: 'custom:button-card'
+              template: blank
+          title: Lights
+          type: horizontal-stack
+        style:
+          .: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
+        type: 'custom:mod-card'
+      - card:
+          cards:
+            - template: blank
+              type: 'custom:button-card'
+            - entity: light.joshua_s_bedroom
+              name: Joshua
+              # size: 40%
+              template: light_button_style
+              type: 'custom:button-card'
+            - entity: light.josie_s_bedroom
+              name: Josie
+              # size: 40%
+              template: light_button_style
+              type: 'custom:button-card'
+            - entity: light.basement_lights
+              name: Basement
+              # size: 40%
+              template: light_button_style
+              type: 'custom:button-card'
+            - type: 'custom:button-card'
+              template: blank
+          type: horizontal-stack
+        style: |
+          ha-card {
+            font-variant: small-caps;
+          }
+        type: 'custom:mod-card'
+      - card:
+          cards:
+            - template: blank
+              type: 'custom:button-card'
+            - entity: binary_sensor.wyze_front_door
+              name: Front Door
+              # size: 40%
+              tap_action:
+                action: more-info
+              template: door_sensor
+              type: 'custom:button-card'
+            - entity: binary_sensor.wyze_basement_door
+              name: Basement
+              # size: 40%
+              template: door_sensor
+              type: 'custom:button-card'
+            - entity: binary_sensor.wyze_laundry_room_door
+              name: Laundry
+              # size: 40%
+              template: door_sensor
+              type: 'custom:button-card'
+            - type: 'custom:button-card'
+              template: blank
+          title: Door
+          type: horizontal-stack
+        style: |
+          ha-card {
+            font-variant: small-caps;
+            color: rgba(0, 0, 0, 0.6);
+            --ha-card-header-font-size: 22px;
+          }
+        type: 'custom:mod-card'
+      - card:
+          cards:
+            - template: blank
+              type: 'custom:button-card'
+            - entity: media_player.all_speakers
+              icon: 'mdi:speaker-multiple'
+              template: media_audio
+              type: 'custom:button-card'
+            - entity: media_player.first_floor_speakers
+              icon: 'mdi:speaker-multiple'
+              template: media_audio
+              type: 'custom:button-card'
+            - entity: media_player.basement_tv
+              icon: 'mdi:television'
+              name: Shield
+              template: mediaplayer_button_style
+              type: 'custom:button-card'
+            - template: blank
+              type: 'custom:button-card'
+          title: Media
+          type: horizontal-stack
+        style: |
+          ha-card {
+            font-variant: small-caps;
+            color: rgba(0, 0, 0, 0.6);
+            --ha-card-header-font-size: 22px;
+          }
+        type: 'custom:mod-card'
+      - cards:
+          - template: blank
+            type: 'custom:button-card'
+        type: horizontal-stack
+    state_color: true
+    type: vertical-stack
+  - card:
+      cards:
+        - template: blank
+          type: 'custom:button-card'
+        - cards:
+            - decimals: 0
+              entities:
+                - entity: sensor.dark_sky_apparent_temperature
+                  index: 0
+                  name: Feels Like
+                - entity: sensor.dark_sky_temperature
+                  index: 1
+                  name: Temp
+              hours_to_show: 12
+              line_color:
+                - var(--accent-color)
+                - var(--google-red-500)
+              name: Outside
+              style: |
+                ha-card {
+                  # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                  color: rgb(242, 242, 247);
+                  background: rgba(10, 10, 10, 0.7);
+                }
+              type: 'custom:mini-graph-card'
+            - decimals: 0
+              entities:
+                - entity: sensor.bedroom_sensor_temperature
+                  index: 0
+              hours_to_show: 12
+              name: Bedroom
+              points_per_hour: 1
+              style: |
+                ha-card {
+                  # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                  color: rgb(242, 242, 247);
+                  background: rgba(10, 10, 10, 0.7);
+                }
+              type: 'custom:mini-graph-card'
+          type: vertical-stack
+        - template: blank
+          type: 'custom:button-card'
+      title: Temperature
+      type: horizontal-stack
+    style: |
+      ha-card {
+        font-variant: small-caps;
+        color: rgba(0, 0, 0, 0.6);
+        --ha-card-header-font-size: 22px;
+      }
+    type: 'custom:mod-card'
+

@@ -1,0 +1,247 @@
+title: Joshua
+path: joshua
+badges: []
+panel: true
+cards:
+  - layout: vertical
+    type: 'custom:layout-card'
+    cards:
+      - card:
+          cards:
+            - cards:
+                - template: blank
+                  type: 'custom:button-card'
+                - entity: input_boolean.joshua_sleeping
+                  name: Sleeping
+                  template: input_boolean
+                  type: 'custom:button-card'
+                - entity: input_boolean.running
+                  template: input_boolean
+                  type: 'custom:button-card'
+                - entity: input_boolean.vacation
+                  template: input_boolean
+                  type: 'custom:button-card'
+                - template: blank
+                  type: 'custom:button-card'
+              title: Toggles
+              type: horizontal-stack
+          type: vertical-stack
+        style: |
+          ha-card {
+            font-variant: small-caps;
+            color: rgba(0, 0, 0, 0.6);
+            --ha-card-header-font-size: 22px;
+          }
+        type: 'custom:mod-card'
+      - card:
+          cards:
+            - cards:
+                - template: blank
+                  type: 'custom:button-card'
+                - entity: light.joshua_s_bedroom
+                  show_name: false
+                  template: light_button_style
+                  type: 'custom:button-card'
+                - entity: sensor.bedroom_sensor_temperature
+                  template: sensor_style
+                  name: Temperature
+                  type: 'custom:button-card'
+                - entity: binary_sensor.joshua_bedroom_motion
+                  template: binary_sensor
+                  name: Motion Sensor
+                  type: 'custom:button-card'
+                - template: blank
+                  type: 'custom:button-card'
+              title: Bedroom
+              type: horizontal-stack
+            - cards:
+                - template: blank
+                  type: 'custom:button-card'
+                - entity: sensor.bedroom_sensor_light_level
+                  template: sensor_style
+                  name: Light Level
+                  type: 'custom:button-card'
+                - template: filler
+                  type: 'custom:button-card'
+                - template: filler
+                  type: 'custom:button-card'
+                - template: blank
+                  type: 'custom:button-card'
+              type: horizontal-stack
+          type: vertical-stack
+        style: |
+          ha-card {
+            font-variant: small-caps;
+            color: rgba(0, 0, 0, 0.6);
+            --ha-card-header-font-size: 22px;
+          }
+        type: 'custom:mod-card'
+      - card:
+          cards:
+            - template: blank
+              type: 'custom:button-card'
+            - entity: sensor.travel_time_home_to_work
+              hold_action:
+                action: more-info
+              icon: 'mdi:directions'
+              name: To Work
+              # label: to work
+              # show_label: true
+              # styles:
+              #   label:
+              #     - font-size: 18px
+              #     - padding-bottom: 0px
+              template: homekit_style
+              type: 'custom:button-card'
+            - entity: sensor.travel_time_work_to_home
+              hold_action:
+                action: more-info
+              icon: 'mdi:directions'
+              name: To Home
+              # label: to home
+              # show_label: true
+              # styles:
+              #   label:
+              #     - font-size: 18px
+              #     - padding-bottom: 0px
+              template: homekit_style
+              type: 'custom:button-card'
+            - template: filler
+              type: 'custom:button-card'
+            - template: blank
+              type: 'custom:button-card'
+          title: Commute Time
+          type: horizontal-stack
+        style: |
+          ha-card {
+            font-variant: small-caps;
+            color: rgba(0, 0, 0, 0.6);
+            --ha-card-header-font-size: 22px;
+          }
+        type: 'custom:mod-card'
+      - break
+      - card:
+          cards:
+            - template: blank
+              type: 'custom:button-card'
+            - decimals: 0
+              entities:
+                - entity: sensor.bedroom_sensor_temperature
+                  index: 0
+              name: Bedroom Temperature
+              points_per_hour: 1
+              style: |
+                ha-card {
+                  # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                  color: rgb(242, 242, 247);
+                  background: rgba(10, 10, 10, 0.7);
+                }
+              type: 'custom:mini-graph-card'
+            - template: blank
+              type: 'custom:button-card'
+          title: ' '
+          type: horizontal-stack
+        style: |
+          ha-card {
+            font-variant: small-caps;
+            color: rgba(0, 0, 0, 0.6);
+            --ha-card-header-font-size: 22px;
+          }
+        type: 'custom:mod-card'
+      - card:
+          cards:
+            - template: blank
+              type: 'custom:button-card'
+            - aggregate_func: max
+              entities:
+                - entity: sensor.cpu_temperature
+                  index: 0
+              hours_to_show: 4
+              points_per_hour: 6
+              smoothing: true
+              style: |
+                ha-card {
+                  # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                  color: rgb(242, 242, 247);
+                  background: rgba(10, 10, 10, 0.7);
+                }
+              type: 'custom:mini-graph-card'
+            - template: blank
+              type: 'custom:button-card'
+          type: horizontal-stack
+        style: |
+          ha-card {
+            font-variant: small-caps;
+            color: rgba(0, 0, 0, 0.6);
+            --ha-card-header-font-size: 22px;
+          }
+        type: 'custom:mod-card'
+      - break
+      - cards:
+          - template: blank
+            type: 'custom:button-card'
+          - entities:
+              - entity: sensor.load_5m
+              - entity: sensor.memory_use_percent
+                name: Memory Use
+              - entity: sensor.network_in_wlan0
+                name: Network In
+              - entity: sensor.network_out_wlan0
+                name: Network Out
+              - entity: sensor.disk_use_percent_home
+                name: Disk Use
+            style: |
+              ha-card {
+                # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                color: rgb(242, 242, 247);
+                background: rgba(10, 10, 10, 0.7);
+              }
+            title: Raspberry Pi
+            type: entities
+          - template: blank
+            type: 'custom:button-card'
+        title: ' '
+        type: horizontal-stack
+      - cards:
+          - template: blank
+            type: 'custom:button-card'
+          - entities:
+              - entity: sensor.google_wifi_status
+                name: Status
+              - entity: sensor.google_wifi_uptime
+                name: Uptime
+              - entity: sensor.google_wifi_last_restart
+                name: Last Restart
+              - entity: sensor.google_wifi_local_ip
+                name: Local IP
+            style: |
+              ha-card {
+                # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                color: rgb(242, 242, 247);
+                background: rgba(10, 10, 10, 0.7);
+              }
+            title: Wifi
+            type: entities
+          - template: blank
+            type: 'custom:button-card'
+        title: ' '
+        type: horizontal-stack
+      - cards:
+          - template: blank
+            type: 'custom:button-card'
+          - type: entities
+            style: |
+              ha-card {
+                # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                color: rgb(242, 242, 247);
+                background: rgba(10, 10, 10, 0.7);
+              }
+            entities:
+              - input_datetime.run_time
+              - input_datetime.wake_up_time
+          - template: blank
+            type: 'custom:button-card'
+        title: ' '
+        type: horizontal-stack
+
+

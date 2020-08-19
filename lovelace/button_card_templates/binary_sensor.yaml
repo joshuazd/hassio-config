@@ -1,0 +1,123 @@
+door_sensor:
+  template: binary_sensor
+  icon: |
+    [[[
+      if(entity.state == "on")
+        return "mdi:door-open"
+      else
+        return "mdi:door-closed"
+    ]]]
+
+motion_sensor:
+  template: binary_sensor
+  show_state: false
+  name: |
+    [[[
+      if (entity.state == "off")
+        return "Clear";
+      else
+        return "Detected";
+    ]]]
+
+input_boolean:
+  template: binary_sensor
+  show_name: true
+  tap_action:
+    action: toggle
+  state: &button_state
+    - color: '#87af87'
+      styles: &on_state
+        icon: [color: '#87af87']
+      id: _state_value_on
+      value: 'on'
+
+graph_sensor:
+  aspect_ratio: 1/1
+  show_label: true
+  show_state: true
+  name: '[[[ return entity.attributes.friendly_name ]]]'
+  size: 30%
+  color_type: card
+  hold_action:
+    action: more-info
+  color: rgb(242, 242, 247)
+  state:
+    - styles:
+        icon: [color: "#fbc02d"]
+      id: _state_value_on
+      value: 'on'
+  custom_fields:
+    graph:
+      card:
+        type: 'custom:mini-graph-card'
+        show:
+          name: false
+          icon: false
+          state: false
+        entities:
+          - entity: sensor.bedroom_sensor_light_level
+        style: |
+          ha-card {
+            box-shadow: none;
+            background-color: rgba(0,0,0,0);
+            color: rgba(0, 0, 0, 0.6);
+          }
+  styles:
+    custom_fields:
+      graph:
+        # - filter: opacity(50%)
+        # - overflow: unset
+    card:
+      # - overflow: unset
+      - border-radius: 20px
+      # Borrar estos dos si se quiere un look menos plano
+      - box-shadow: none
+      - background-color: 'rgba(255, 255, 255, 0.8)'
+    grid:
+      - grid-template-areas: '"i" "n" "s" "graph"'
+      - grid-template-columns: 1fr
+      - grid-template-rows: 1fr min-content min-content min-content
+    label:
+      - color: black
+      - font-size: 11px
+      - font-family: Helvetica
+      - padding: 0px 10px
+      - justify-self: start
+      - color: var(--primary-text-color)
+    state:
+      - font-size: 11px
+      - font-family: Helvetica
+      - padding: 0px 10px
+      - justify-self: start
+      - text-transform: capitalize
+      - font-weight: bold
+      - padding-left: 20px
+      - padding-bottom: 10px
+      # - color: var(--primary-text-color)
+      - color: 'rgba(0, 0, 0, 0.6)'
+      - max-width: 75%
+    img_cell:
+      - justify-content: start
+      - align-items: start
+      - padding-left: 20px
+    icon:
+      - height: auto
+      - padding-top: 10px
+      - padding-bottom: 10px
+      - color: '#fbc02d'
+    name:
+      - justify-self: start
+      - padding-left: 20px
+      - font-weight: bold
+      - font-family: Helvetica
+      - font-size: 13px
+      - padding-bottom: 3px
+      # - color: var(--primary-text-color)
+      - color: 'rgba(0, 0, 0, 0.6)'
+      - max-width: 75%
+
+binary_sensor:
+  template: homekit_style
+  show_icon: true
+  tap_action:
+    action: more-info

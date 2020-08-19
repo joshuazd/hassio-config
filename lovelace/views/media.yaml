@@ -1,0 +1,140 @@
+title: Media
+path: media
+icon: 'mdi:speaker'
+panel: true
+badges: []
+cards:
+  - card_options:
+      style:
+        .: |
+          ha-card {
+            font-variant: small-caps;
+            color: rgba(0, 0, 0, 0.6);
+            --ha-card-header-font-size: 22px;
+          }
+    cards:
+      - card:
+          cards:
+            - template: blank
+              type: 'custom:button-card'
+            - entity: media_player.all_speakers
+              icon: 'mdi:speaker-multiple'
+              template: media_audio
+              type: 'custom:button-card'
+            - entity: media_player.first_floor_speakers
+              icon: 'mdi:speaker-multiple'
+              template: media_audio
+              type: 'custom:button-card'
+            - entity: media_player.non_bedroom_speakers
+              icon: 'mdi:speaker-multiple'
+              template: media_audio
+              type: 'custom:button-card'
+            - template: blank
+              type: 'custom:button-card'
+          title: Groups
+          type: horizontal-stack
+        type: 'custom:mod-card'
+        style: |
+          ha-card {
+            font-variant: small-caps;
+            color: rgba(0, 0, 0, 0.6);
+            --ha-card-header-font-size: 22px;
+          }
+      - break
+      - card:
+          cards:
+            - template: blank
+              type: 'custom:button-card'
+              icon: '[[[return entity.attributes.icon]]]'
+            - entity: media_player.joshua_s_bedroom_speaker
+              name: Joshua
+              template: media_audio
+              type: 'custom:button-card'
+              icon: '[[[return entity.attributes.icon]]]'
+            - entity: media_player.josie_s_bedroom_speaker
+              name: Josie
+              template: media_audio
+              type: 'custom:button-card'
+              icon: '[[[return entity.attributes.icon]]]'
+            - type: 'custom:button-card'
+              template: filler
+            - type: 'custom:button-card'
+              template: blank
+          title: Speakers
+          type: horizontal-stack
+        type: 'custom:mod-card'
+        style: |
+          ha-card {
+            font-variant: small-caps;
+            color: rgba(0, 0, 0, 0.6);
+            --ha-card-header-font-size: 22px;
+          }
+      - card:
+          cards:
+            - template: blank
+              type: 'custom:button-card'
+            - entity: media_player.living_room_display
+              template: mediaplayer_button_style
+              icon: '[[[return entity.attributes.icon]]]'
+              type: 'custom:button-card'
+            - entity: media_player.kitchen_speaker
+              template: media_audio
+              icon: '[[[return entity.attributes.icon]]]'
+              type: 'custom:button-card'
+            - type: 'custom:button-card'
+              template: filler
+            - type: 'custom:button-card'
+              template: blank
+          type: horizontal-stack
+        type: 'custom:mod-card'
+      - card:
+          cards:
+            - template: blank
+              type: 'custom:button-card'
+            - entity: media_player.basement_speaker
+              template: mediaplayer_button_style
+              type: 'custom:button-card'
+              icon: '[[[return entity.attributes.icon]]]'
+            - entity: media_player.tv_speaker
+              template: media_audio
+              type: 'custom:button-card'
+              icon: '[[[return entity.attributes.icon]]]'
+            - type: 'custom:button-card'
+              template: filler
+            - type: 'custom:button-card'
+              template: blank
+          type: horizontal-stack
+        type: 'custom:mod-card'
+      - break
+      - card:
+          cards:
+            - template: blank
+              type: 'custom:button-card'
+            - entity: media_player.basement_tv
+              icon: 'mdi:television'
+              name: Shield
+              template: mediaplayer_button_style
+              type: 'custom:button-card'
+            - entity: media_player.lg_tv
+              template: mediaplayer_button_style
+              type: 'custom:button-card'
+            - type: 'custom:button-card'
+              template: filler
+            - type: 'custom:button-card'
+              template: blank
+          title: TV
+          type: horizontal-stack
+        type: 'custom:mod-card'
+        style: |
+          ha-card {
+            font-variant: small-caps;
+            color: rgba(0, 0, 0, 0.6);
+            --ha-card-header-font-size: 22px;
+          }
+      - cards:
+          - template: blank
+            type: 'custom:button-card'
+        type: horizontal-stack
+    layout: vertical
+    type: 'custom:layout-card'
+
