@@ -30,3 +30,5 @@ service_account.json
 .storage/auth_provider.homeassistant
 .storage/core.restore_state
 .storage/mobile_app
+.storage/hacs
+.storage/hacs.repositories
