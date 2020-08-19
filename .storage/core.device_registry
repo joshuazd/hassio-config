@@ -290,12 +290,12 @@
                 "id": "212f8cca6707487597afe71fca7c7eed",
                 "identifiers": [
                     [
-                        "webhook_id",
-                        "2e5af1cf5f9593fb40012b1fff99fb7cc7c3af5e0cd7b8e59954fa8c136a5605"
-                    ],
-                    [
                         "device_id",
                         "6dbf041d61a44803a35a29bcfaed66f5"
+                    ],
+                    [
+                        "webhook_id",
+                        "2e5af1cf5f9593fb40012b1fff99fb7cc7c3af5e0cd7b8e59954fa8c136a5605"
                     ]
                 ],
                 "manufacturer": "Google",

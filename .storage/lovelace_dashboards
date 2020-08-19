@@ -9,6 +9,14 @@
                 "show_in_sidebar": true,
                 "title": "states",
                 "url_path": "lovelace-states"
+            },
+            {
+                "id": "lovelace_test",
+                "mode": "storage",
+                "require_admin": true,
+                "show_in_sidebar": false,
+                "title": "Test",
+                "url_path": "lovelace-test"
             }
         ]
     },
