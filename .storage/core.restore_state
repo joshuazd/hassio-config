@@ -1,7 +1,7 @@
 {
     "data": [
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
@@ -15,18 +15,18 @@
                     "user_id": "0deba9a5d55f4283a58721dd67e57107"
                 },
                 "context": {
-                    "id": "7f876c3ce18c11ea8833a78d6190f5c4",
+                    "id": "54154f02e24711eab8b2ff5c579b888b",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "person.joshua",
-                "last_changed": "2020-08-18T19:53:03.065752+00:00",
-                "last_updated": "2020-08-18T19:53:33.947639+00:00",
+                "last_changed": "2020-08-19T18:10:16.923470+00:00",
+                "last_updated": "2020-08-19T18:10:56.945997+00:00",
                 "state": "home"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
@@ -40,18 +40,18 @@
                     "user_id": "f3f546705e9844379edf982ea68104a8"
                 },
                 "context": {
-                    "id": "7f878454e18c11ea8fbb639e18178b98",
+                    "id": "441d3b6ce24411eab7f54926487ad2f0",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "person.josie",
-                "last_changed": "2020-08-18T19:53:03.066330+00:00",
-                "last_updated": "2020-08-18T19:53:33.948075+00:00",
+                "last_changed": "2020-08-19T17:47:58.323747+00:00",
+                "last_updated": "2020-08-19T17:49:01.664214+00:00",
                 "state": "home"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
@@ -60,18 +60,18 @@
                     "source": "device_tracker.lias_iphone_lan"
                 },
                 "context": {
-                    "id": "7f879162e18c11ea84814d94bca70fb8",
+                    "id": "41db10c0e19a11ea9300951b69279f7c",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "person.lia",
-                "last_changed": "2020-08-18T19:53:03.066729+00:00",
-                "last_updated": "2020-08-18T19:53:33.948394+00:00",
+                "last_changed": "2020-08-18T21:31:30.262178+00:00",
+                "last_updated": "2020-08-18T21:32:03.431076+00:00",
                 "state": "not_home"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
@@ -80,18 +80,18 @@
                     "source": "device_tracker.galaxy_s9_lan"
                 },
                 "context": {
-                    "id": "7f879c1fe18c11ea9e6ec73c7ae25e76",
+                    "id": "41db1b38e19a11ea8b8f0b96f1f85e5c",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "person.dad",
-                "last_changed": "2020-08-18T19:53:03.067122+00:00",
-                "last_updated": "2020-08-18T19:53:33.948668+00:00",
+                "last_changed": "2020-08-18T21:31:30.262451+00:00",
+                "last_updated": "2020-08-18T21:32:03.431343+00:00",
                 "state": "not_home"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
@@ -102,18 +102,18 @@
                     }
                 },
                 "context": {
-                    "id": "6e702969e18c11eab9ae13439db3b01b",
+                    "id": "202b8cd5e20b11eaa92a09724a1079c0",
                     "parent_id": null,
-                    "user_id": null
+                    "user_id": "0c01cbc24c814709a3fbe173f564d980"
                 },
                 "entity_id": "input_boolean.night_mode",
-                "last_changed": "2020-08-18T19:53:05.273758+00:00",
-                "last_updated": "2020-08-18T19:53:05.273758+00:00",
+                "last_changed": "2020-08-19T11:00:00.052394+00:00",
+                "last_updated": "2020-08-19T11:00:00.052394+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
@@ -124,18 +124,18 @@
                     }
                 },
                 "context": {
-                    "id": "6e703987e18c11eab5913724c823e236",
+                    "id": "898565d3e22511eaab6f5d8cdad29863",
                     "parent_id": null,
-                    "user_id": null
+                    "user_id": "0deba9a5d55f4283a58721dd67e57107"
                 },
                 "entity_id": "input_boolean.joshua_sleeping",
-                "last_changed": "2020-08-18T19:53:05.274156+00:00",
-                "last_updated": "2020-08-18T19:53:05.274156+00:00",
+                "last_changed": "2020-08-19T14:09:03.713292+00:00",
+                "last_updated": "2020-08-19T14:09:03.713292+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
@@ -146,18 +146,18 @@
                     }
                 },
                 "context": {
-                    "id": "6e704629e18c11eaa2c91f099b2b4dcf",
+                    "id": "9ef50a8de21c11ea8c5353afff21ebf9",
                     "parent_id": null,
-                    "user_id": null
+                    "user_id": "0c01cbc24c814709a3fbe173f564d980"
                 },
                 "entity_id": "input_boolean.josie_sleeping",
-                "last_changed": "2020-08-18T19:53:05.274474+00:00",
-                "last_updated": "2020-08-18T19:53:05.274474+00:00",
+                "last_changed": "2020-08-19T13:05:14.208680+00:00",
+                "last_updated": "2020-08-19T13:05:14.208680+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
@@ -168,18 +168,18 @@
                     }
                 },
                 "context": {
-                    "id": "6e70521ce18c11ea9e46df4a57ebdb6b",
+                    "id": "84170ef4e22511eaab06f9d58fd33494",
                     "parent_id": null,
-                    "user_id": null
+                    "user_id": "0deba9a5d55f4283a58721dd67e57107"
                 },
                 "entity_id": "input_boolean.running",
-                "last_changed": "2020-08-18T19:53:05.274777+00:00",
-                "last_updated": "2020-08-18T19:53:05.274777+00:00",
+                "last_changed": "2020-08-19T14:08:54.601496+00:00",
+                "last_updated": "2020-08-19T14:08:54.601496+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
@@ -190,182 +190,264 @@
                     }
                 },
                 "context": {
-                    "id": "6e705deee18c11eaa9ed1556679e4bf6",
+                    "id": "2f010573e19a11ea9e553783b81dba83",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "input_boolean.vacation",
-                "last_changed": "2020-08-18T19:53:05.275082+00:00",
-                "last_updated": "2020-08-18T19:53:05.275082+00:00",
+                "last_changed": "2020-08-18T21:31:31.803119+00:00",
+                "last_updated": "2020-08-18T21:31:31.803119+00:00",
                 "state": "on"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
                     "friendly_name": "Joshua Home Status"
                 },
                 "context": {
-                    "id": "6e7069a5e18c11ea8c15a9a28f91398b",
+                    "id": "3c4cad94e24711eaba0d99d82ffb79f8",
                     "parent_id": null,
-                    "user_id": null
+                    "user_id": "0c01cbc24c814709a3fbe173f564d980"
                 },
                 "entity_id": "input_boolean.joshua_home",
-                "last_changed": "2020-08-18T19:53:05.275378+00:00",
-                "last_updated": "2020-08-18T19:53:05.275378+00:00",
+                "last_changed": "2020-08-19T18:10:17.054233+00:00",
+                "last_updated": "2020-08-19T18:10:17.054233+00:00",
                 "state": "on"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
                     "friendly_name": "Josie Home Status"
                 },
                 "context": {
-                    "id": "6e7074f3e18c11ea896c519f40093dfd",
+                    "id": "1f094ad5e24411eaa680770d251efd2e",
                     "parent_id": null,
-                    "user_id": null
+                    "user_id": "0c01cbc24c814709a3fbe173f564d980"
                 },
                 "entity_id": "input_boolean.josie_home",
-                "last_changed": "2020-08-18T19:53:05.275667+00:00",
-                "last_updated": "2020-08-18T19:53:05.275667+00:00",
+                "last_changed": "2020-08-19T17:47:59.459819+00:00",
+                "last_updated": "2020-08-19T17:47:59.459819+00:00",
                 "state": "on"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
                     "friendly_name": "Movie Mode"
                 },
                 "context": {
-                    "id": "6e70803ae18c11ea9cf9bfa5ca6e0a34",
+                    "id": "2f012738e19a11ea85de357aab874c25",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "input_boolean.movie_mode",
-                "last_changed": "2020-08-18T19:53:05.275956+00:00",
-                "last_updated": "2020-08-18T19:53:05.275956+00:00",
+                "last_changed": "2020-08-18T21:31:31.803984+00:00",
+                "last_updated": "2020-08-18T21:31:31.803984+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "editable": false,
                     "friendly_name": "TV Toggle"
                 },
                 "context": {
-                    "id": "a601d3efe18c11ea82e59147f23b6576",
+                    "id": "71d1961ae1c911ea9145e9b8d63fbb5e",
                     "parent_id": null,
                     "user_id": "0c01cbc24c814709a3fbe173f564d980"
                 },
                 "entity_id": "input_boolean.tv_toggle",
-                "last_changed": "2020-08-18T19:54:38.504703+00:00",
-                "last_updated": "2020-08-18T19:54:38.504703+00:00",
+                "last_changed": "2020-08-19T03:09:50.247473+00:00",
+                "last_updated": "2020-08-19T03:09:50.247473+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
-            "state": {
-                "attributes": {
-                    "assumed_state": true,
-                    "battery_level": 99,
-                    "device_class": "motion",
-                    "mac": "779D4AC7",
-                    "rssi": -58,
-                    "timestamp": "2020-08-18T08:12:37.900000"
-                },
-                "context": {
-                    "id": "6e81a1f0e18c11ea968da7e53d526e12",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "binary_sensor.wyze_motion",
-                "last_changed": "2020-08-18T19:53:05.388260+00:00",
-                "last_updated": "2020-08-18T19:53:05.388260+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
-            "state": {
-                "attributes": {
-                    "assumed_state": true,
-                    "battery_level": 89,
-                    "device_class": "door",
-                    "mac": "7797F2F3",
-                    "rssi": -70,
-                    "timestamp": "2020-08-18T07:32:45.307000"
-                },
-                "context": {
-                    "id": "6e82e725e18c11ea841753055274c35a",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "binary_sensor.wyze_front_door",
-                "last_changed": "2020-08-18T19:53:05.396585+00:00",
-                "last_updated": "2020-08-18T19:53:05.396585+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "editable": true,
                     "friendly_name": "Run Time",
                     "has_date": false,
                     "has_time": true,
-                    "hour": 0,
-                    "minute": 0,
+                    "hour": 16,
+                    "minute": 50,
                     "second": 0,
-                    "timestamp": 0
+                    "timestamp": 60600
                 },
                 "context": {
-                    "id": "6e834aa2e18c11eab5794f400cac0d29",
+                    "id": "88cb8318e19c11ea8f2e6f318b0ebbee",
                     "parent_id": null,
-                    "user_id": null
+                    "user_id": "0deba9a5d55f4283a58721dd67e57107"
                 },
                 "entity_id": "input_datetime.run_time",
-                "last_changed": "2020-08-18T19:53:05.399141+00:00",
-                "last_updated": "2020-08-18T19:53:05.399141+00:00",
-                "state": "00:00:00"
+                "last_changed": "2020-08-18T21:48:21.444653+00:00",
+                "last_updated": "2020-08-18T21:48:21.444653+00:00",
+                "state": "16:50:00"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "editable": true,
                     "friendly_name": "Wake Up Time",
                     "has_date": false,
                     "has_time": true,
-                    "hour": 0,
-                    "minute": 0,
+                    "hour": 7,
+                    "minute": 30,
                     "second": 0,
-                    "timestamp": 0
+                    "timestamp": 27000
                 },
                 "context": {
-                    "id": "6e835e67e18c11eab9e5f7b15a72dbd3",
+                    "id": "57549609e1a611eaaf9155888d78830c",
                     "parent_id": null,
-                    "user_id": null
+                    "user_id": "0deba9a5d55f4283a58721dd67e57107"
                 },
                 "entity_id": "input_datetime.wake_up_time",
-                "last_changed": "2020-08-18T19:53:05.399624+00:00",
-                "last_updated": "2020-08-18T19:53:05.399624+00:00",
-                "state": "00:00:00"
+                "last_changed": "2020-08-18T22:58:33.422822+00:00",
+                "last_updated": "2020-08-18T22:58:33.422822+00:00",
+                "state": "07:30:00"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
+            "state": {
+                "attributes": {
+                    "current": 0,
+                    "friendly_name": "System - Set Custom Theme at Startup",
+                    "id": "dcd93ed7dd0d4928944b5d435b6af3c5",
+                    "last_triggered": "2020-08-18T21:32:03.640443+00:00",
+                    "mode": "single"
+                },
+                "context": {
+                    "id": "41fb00f3e19a11ea869ce77b1a72a5c8",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.system_set_custom_theme_at_startup",
+                "last_changed": "2020-08-18T21:31:31.941948+00:00",
+                "last_updated": "2020-08-18T21:32:03.854992+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
+            "state": {
+                "attributes": {
+                    "current": 0,
+                    "friendly_name": "Sync Tasmota states on start-up - autodiscovery",
+                    "id": "93566cc0bf4d4b99b63debc0f2ccd843",
+                    "last_triggered": "2020-08-18T21:32:03.641849+00:00",
+                    "mode": "single"
+                },
+                "context": {
+                    "id": "41fb38ebe19a11ea915d0963d452e0e0",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.sync_tasmota_states_on_start_up_autodiscovery",
+                "last_changed": "2020-08-18T21:31:31.942552+00:00",
+                "last_updated": "2020-08-18T21:32:03.900320+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
+            "state": {
+                "attributes": {
+                    "current": 0,
+                    "friendly_name": "Vacation",
+                    "id": "1586183063690",
+                    "last_triggered": "2020-08-18T21:32:03.642770+00:00",
+                    "mode": "single"
+                },
+                "context": {
+                    "id": "41fb5cd9e19a11eab042d5139117beef",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.vacation",
+                "last_changed": "2020-08-18T21:31:31.943093+00:00",
+                "last_updated": "2020-08-18T21:32:03.939758+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
+            "state": {
+                "attributes": {
+                    "current": 0,
+                    "friendly_name": "Notify on Start",
+                    "id": "1588296994097",
+                    "last_triggered": "2020-08-18T21:32:03.643642+00:00",
+                    "mode": "single"
+                },
+                "context": {
+                    "id": "41fb7f2ae19a11ea94c01d0c61a5aaf6",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.notify_on_start",
+                "last_changed": "2020-08-18T21:31:31.943618+00:00",
+                "last_updated": "2020-08-18T21:32:04.926524+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
+            "state": {
+                "attributes": {
+                    "battery_level": 99,
+                    "device_class": "motion",
+                    "mac": "779D4AC7",
+                    "rssi": -56,
+                    "timestamp": "2020-08-19T11:46:48.655000"
+                },
+                "context": {
+                    "id": "9a9ca2aae23b11ea94579b1916b15298",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "binary_sensor.wyze_motion",
+                "last_changed": "2020-08-19T16:47:01.312744+00:00",
+                "last_updated": "2020-08-19T16:47:01.312744+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
+            "state": {
+                "attributes": {
+                    "battery_level": 90,
+                    "device_class": "door",
+                    "mac": "7797F2F3",
+                    "rssi": -70,
+                    "timestamp": "2020-08-19T13:09:52.380000"
+                },
+                "context": {
+                    "id": "3936bb4de24711ea9b2cffe9907c282c",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "binary_sensor.wyze_front_door",
+                "last_changed": "2020-08-19T18:10:11.866656+00:00",
+                "last_updated": "2020-08-19T18:10:11.866656+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "assumed_state": true,
@@ -376,211 +458,81 @@
                     "timestamp": "2020-08-17T11:29:30.129000"
                 },
                 "context": {
-                    "id": "6e8392b2e18c11ea9823e5fec55ae84b",
+                    "id": "3bd86022e19a11eaac5b25a6867fadb4",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "binary_sensor.wyze_laundry_room_door",
-                "last_changed": "2020-08-18T19:53:05.400969+00:00",
-                "last_updated": "2020-08-18T19:53:05.400969+00:00",
+                "last_changed": "2020-08-18T21:31:53.347155+00:00",
+                "last_updated": "2020-08-18T21:31:53.347155+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
-                    "assumed_state": true,
                     "battery_level": 91,
                     "device_class": "door",
                     "mac": "777F73FC",
-                    "rssi": -59,
-                    "timestamp": "2020-08-18T08:20:11.692000"
+                    "rssi": -57,
+                    "timestamp": "2020-08-19T08:20:35.633000"
                 },
                 "context": {
-                    "id": "6e83e7f6e18c11eaa2526fb41674ced1",
+                    "id": "ce3013e0e21e11eab42f6bdbf3f1de06",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "binary_sensor.wyze_basement_door",
-                "last_changed": "2020-08-18T19:53:05.403152+00:00",
-                "last_updated": "2020-08-18T19:53:05.403152+00:00",
+                "last_changed": "2020-08-19T13:20:52.437656+00:00",
+                "last_updated": "2020-08-19T13:20:52.437656+00:00",
                 "state": "on"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "battery_level": 98,
                     "device_class": "motion",
                     "mac": "779B25C4",
                     "rssi": -60,
-                    "timestamp": "2020-08-18T15:04:58.319000"
+                    "timestamp": "2020-08-19T13:31:45.610000"
                 },
                 "context": {
-                    "id": "24f70ef0e18e11ea8ffe5fe5f657bc04",
+                    "id": "45ce2752e24a11ea9fae7fe6c7334ad2",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "binary_sensor.wyze_basement_motion",
-                "last_changed": "2020-08-18T20:05:21.000021+00:00",
-                "last_updated": "2020-08-18T20:05:21.000021+00:00",
-                "state": "off"
+                "last_changed": "2020-08-19T18:32:01.481867+00:00",
+                "last_updated": "2020-08-19T18:32:01.481867+00:00",
+                "state": "on"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
-                    "assumed_state": true,
                     "battery_level": 95,
                     "device_class": "motion",
                     "mac": "779B0951",
                     "rssi": -91,
-                    "timestamp": "2020-08-18T08:25:42.659000"
+                    "timestamp": "2020-08-19T11:48:49.573000"
                 },
                 "context": {
-                    "id": "6e85498fe18c11ea9fcaefabcd2b710f",
+                    "id": "e631971ce23b11eab07e4fd10f6f90c6",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "binary_sensor.joshua_bedroom_motion",
-                "last_changed": "2020-08-18T19:53:05.412199+00:00",
-                "last_updated": "2020-08-18T19:53:05.412199+00:00",
+                "last_changed": "2020-08-19T16:49:08.118147+00:00",
+                "last_updated": "2020-08-19T16:49:08.118147+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
-            "state": {
-                "attributes": {
-                    "current": 0,
-                    "friendly_name": "System - Set Custom Theme at Startup",
-                    "id": "dcd93ed7dd0d4928944b5d435b6af3c5",
-                    "last_triggered": "2020-08-18T19:53:34.091003+00:00",
-                    "mode": "single"
-                },
-                "context": {
-                    "id": "7f9d5131e18c11eaaa05d511be6a7a2f",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.system_set_custom_theme_at_startup",
-                "last_changed": "2020-08-18T19:53:05.426151+00:00",
-                "last_updated": "2020-08-18T19:53:34.367774+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
-            "state": {
-                "attributes": {
-                    "current": 0,
-                    "friendly_name": "Sync Tasmota states on start-up - autodiscovery",
-                    "id": "93566cc0bf4d4b99b63debc0f2ccd843",
-                    "last_triggered": "2020-08-18T19:53:34.092485+00:00",
-                    "mode": "single"
-                },
-                "context": {
-                    "id": "7f9d8c31e18c11eab36933d3fa56b773",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.sync_tasmota_states_on_start_up_autodiscovery",
-                "last_changed": "2020-08-18T19:53:05.426736+00:00",
-                "last_updated": "2020-08-18T19:53:34.399877+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
-            "state": {
-                "attributes": {
-                    "current": 0,
-                    "friendly_name": "Vacation",
-                    "id": "1586183063690",
-                    "last_triggered": "2020-08-18T19:53:34.093588+00:00",
-                    "mode": "single"
-                },
-                "context": {
-                    "id": "7f9db7d9e18c11ea8cd7fbed1fd7c281",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.vacation",
-                "last_changed": "2020-08-18T19:53:05.427273+00:00",
-                "last_updated": "2020-08-18T19:53:34.569347+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
-            "state": {
-                "attributes": {
-                    "current": 0,
-                    "friendly_name": "Notify on Start",
-                    "id": "1588296994097",
-                    "last_triggered": "2020-08-18T19:53:34.137443+00:00",
-                    "mode": "single"
-                },
-                "context": {
-                    "id": "7fa4618ee18c11ea941cbf0b71f0f6e3",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.notify_on_start",
-                "last_changed": "2020-08-18T19:53:05.427823+00:00",
-                "last_updated": "2020-08-18T19:53:35.952554+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
-            "state": {
-                "attributes": {
-                    "altitude": 132.0,
-                    "course": 0,
-                    "entity_picture": "/local/joshua.svg",
-                    "friendly_name": "Pixel 3",
-                    "gps_accuracy": 12,
-                    "latitude": 38.668935,
-                    "longitude": -90.3317589,
-                    "source_type": "gps",
-                    "speed": 0,
-                    "vertical_accuracy": 2
-                },
-                "context": {
-                    "id": "b1b8a02be19411eaa3e171d4292fab66",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "device_tracker.pixel_3",
-                "last_changed": "2020-08-18T20:52:14.129923+00:00",
-                "last_updated": "2020-08-18T20:52:14.129923+00:00",
-                "state": "home"
-            }
-        },
-        {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Pixel 3a",
-                    "source_type": "gps"
-                },
-                "context": {
-                    "id": "7aa841ade18c11eaafaa63adbfcb7d37",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "device_tracker.pixel_3a",
-                "last_changed": "2020-08-18T19:53:25.774040+00:00",
-                "last_updated": "2020-08-18T19:53:25.774040+00:00",
-                "state": "unknown"
-            }
-        },
-        {
-            "last_seen": "2020-08-18T20:53:33.945784+00:00",
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
             "state": {
                 "attributes": {
                     "brightness": 255,
@@ -588,14 +540,58 @@
                     "supported_features": 1
                 },
                 "context": {
-                    "id": "7fe67775e18c11ea83c661dc49a9d362",
+                    "id": "3ccfe103e24411eab69949107486bcd8",
+                    "parent_id": null,
+                    "user_id": "0c01cbc24c814709a3fbe173f564d980"
+                },
+                "entity_id": "light.basement_lights",
+                "last_changed": "2020-08-19T17:48:49.570971+00:00",
+                "last_updated": "2020-08-19T17:48:49.570971+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
+            "state": {
+                "attributes": {
+                    "altitude": 132.0,
+                    "course": 0,
+                    "entity_picture": "/local/joshua.svg",
+                    "friendly_name": "Pixel 3",
+                    "gps_accuracy": 93,
+                    "latitude": 38.6689411,
+                    "longitude": -90.3317653,
+                    "source_type": "gps",
+                    "speed": 0,
+                    "vertical_accuracy": 2
+                },
+                "context": {
+                    "id": "41fc08bae24911eaa2238755f2f7a0d8",
                     "parent_id": null,
                     "user_id": null
                 },
-                "entity_id": "light.basement_lights",
-                "last_changed": "2020-08-18T19:53:34.570343+00:00",
-                "last_updated": "2020-08-18T19:53:34.570343+00:00",
-                "state": "on"
+                "entity_id": "device_tracker.pixel_3",
+                "last_changed": "2020-08-19T18:24:45.574928+00:00",
+                "last_updated": "2020-08-19T18:24:45.574928+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2020-08-19T18:32:03.613760+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Pixel 3a",
+                    "source_type": "gps"
+                },
+                "context": {
+                    "id": "3c6077f8e19a11ea8ffaad207ac615b0",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.pixel_3a",
+                "last_changed": "2020-08-18T21:31:54.239025+00:00",
+                "last_updated": "2020-08-18T21:31:54.239025+00:00",
+                "state": "unknown"
             }
         },
         {
