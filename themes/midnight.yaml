@@ -4,7 +4,7 @@
 #
 midnight:
   ha-card-header-font-size: '16px'
-  ha-card-border-radius: '12px'
+  ha-card-border-radius: '20px'
   #accent-color: "#E45E65"
   accent-color: '#5294E2'
   card-background-color: "var(--primary-background-color)"
@@ -16,6 +16,7 @@ midnight:
   google-red-500: "#E45E65"
   google-yellow-500: "#f4b400"
   # label-badge-background-color: "#2E333A"     
+  ha-card-background: "#434954"
   label-badge-background-color: "var(--primary-background-color)"
   label-badge-blue: "#039be5"
   label-badge-border-color: "green"
@@ -26,6 +27,7 @@ midnight:
   label-badge-text-color: "#000000"
   label-badge-yellow: "#f4b400"
   light-primary-color: "var(--accent-color)"
+  markdown-code-background-color: "var(--paper-listbox-background-color)"
   paper-card-background-color: "#434954"
   paper-card-header-color: "var(--accent-color)"
   paper-dialog-background-color: "#434954"
@@ -66,6 +68,8 @@ midnight:
   slider-bar-color: "var(--disabled-text-color)"
   slider-color: "var(--primary-color)"
   slider-secondary-color: "var(--light-primary-color)"
+  st-mode-active-background: "var(--dark-primary-color)"
+  st-mode-background: "var(--primary-background-color)"
   #state-icon-active-color: "#FDD835"
   state-icon-active-color: '#ffd787'
   state-icon-color: "#44739e"

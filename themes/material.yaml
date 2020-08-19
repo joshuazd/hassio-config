@@ -39,7 +39,7 @@ material:
   slider-bar-color: 'var(--disabled-text-color)'
   # for label-badge
   label-badge-background-color: 'white'
-  label-badge-text-color: 'rgb(76, 76, 76)'
+  label-badge-text-color: 'rgba(0, 0, 0, 0.7)'
   label-badge-red: '#DF4C1E'
   label-badge-blue: '#039be5'
   label-badge-green: '#0DA035'
