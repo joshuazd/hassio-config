@@ -8,7 +8,8 @@ system_health:
 updater:
 zeroconf:
 discovery:
-
+lovelace:
+  mode: yaml
 mqtt:
   discovery: true
   broker: 127.0.0.1
@@ -28,7 +29,7 @@ person:
     device_trackers:
       - device_tracker.joshua
       - device_tracker.pixel_3
-      - device_tracker.ping_joshua
+     # - device_tracker.ping_joshua
   - name: Josie
     id: 679231f68a4d4e05b2a552cc84133a2c
     user_id: f3f546705e9844379edf982ea68104a8
@@ -56,13 +57,13 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 frontend:
   themes: !include_dir_merge_named themes
-  extra_html_url:
-    - /local/custom_ui/state-card-custom-ui.html
-  extra_html_url_es5:
-    - /local/custom_ui/state-card-custom-ui-es5.html
+  #extra_html_url:
+  #  - /local/custom_ui/state-card-custom-ui.html
+  #extra_html_url_es5:
+  #  - /local/custom_ui/state-card-custom-ui-es5.html
 
 http:
-  base_url: !secret base_url
+#  base_url: !secret base_url
 #  ssl_certificate: !secret ssl_cert
 #  ssl_key: !secret ssl_key
 
@@ -70,14 +71,15 @@ wemo:
   discovery: true
 
 spotcast:
-  username: !secret spotify_username
-  password: !secret spotify_password
+  sp_dc: !secret spotify_username
+  sp_key: !secret spotify_password
 
 history:
   exclude:
     domains:
       - notify
       - persistent_notification
+      - automation
     entities:
       - device_tracker.galaxy_s9_lan
       - device_tracker.joshua
@@ -112,8 +114,6 @@ recorder:
       - weather.home_2
       - sensor.dark_sky_icon
       - sensor.hacs
-      - binary_sensor.updater
-      - sensor.bedroom_sensor_light_level
       - zone.home
       - zone.panera
       - light.hue_white_lamp_4
@@ -142,6 +142,7 @@ recorder:
       - sensor.tv_muted
       - sensor.tv_volume
       - sensor.tv_source
+      - sensor.time
 
 google:
   client_id: !secret google_client_id
@@ -179,8 +180,8 @@ device_tracker:
     hosts: 
       - 192.168.86.92
       - 192.168.86.114
-      - 192.168.86.1/24
-    #home_interval: 5
+ #     - 192.168.86.1/24
+    home_interval: 5
     consider_home: 300
     interval_seconds: 60
     track_new_devices: false
@@ -213,6 +214,9 @@ notify:
     resource: http://127.0.0.1:5000/broadcast_message
 
 sensor:
+  - platform: time_date
+    display_options:
+      - 'time'
   - platform: systemmonitor
     resources:
       - type: disk_use_percent
@@ -254,6 +258,9 @@ sensor:
       tv_source:
         friendly_name: 'TV source'
         value_template: "{{ state_attr('media_player.lg_tv', 'source') }}"
+      tv_app:
+        friendly_name: 'TV App'
+        value_template: "{{ state_attr('media_player.shield', 'app_name') }}"
   - platform: darksky
     api_key: !secret darksky_api_key
     scan_interval: '00:10'
@@ -272,10 +279,12 @@ sensor:
 binary_sensor:
   - platform: wyzesense
     device: auto
+  - platform: workday
+    country: US
 
 media_player:
   - platform: androidtv
-    host: 192.168.86.99
+    host: 192.168.86.95
     name: "Basement TV"
     adb_server_ip: 127.0.0.1
     adb_server_port: 5037
@@ -283,6 +292,8 @@ media_player:
 webostv:
   name: "LG TV"
   host: 192.168.86.47
+
+input_datetime:
 
 input_boolean:
   night_mode:
@@ -301,3 +312,5 @@ input_boolean:
     name: Josie Home Status
   movie_mode:
     name: Movie Mode
+  tv_toggle:
+    name: TV Toggle

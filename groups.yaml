@@ -9,6 +9,12 @@ all_people:
   entities:
     - person.joshua
     - person.josie
+some_people:
+  name: People 2
+  all: true
+  entities:
+    - person.joshua
+    - person.josie
 all_switches:
   name: All Switches
   all: true
