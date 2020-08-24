@@ -1,0 +1,31 @@
+{
+    "data": {
+        "device_info": {
+            "compilation_time": "Aug 24 2020, 11:37:41",
+            "esphome_version": "1.14.5",
+            "has_deep_sleep": false,
+            "mac_address": "EC:FA:BC:9A:8F:E0",
+            "model": "PLATFORMIO_ESP01_1M",
+            "name": "basement_lights",
+            "uses_password": false
+        },
+        "light": [
+            {
+                "effects": [],
+                "key": 2447752834,
+                "max_mireds": 0.0,
+                "min_mireds": 0.0,
+                "name": "basement_lights",
+                "object_id": "basement_lights",
+                "supports_brightness": true,
+                "supports_color_temperature": false,
+                "supports_rgb": false,
+                "supports_white_value": false,
+                "unique_id": "basement_lightslightbasement_lights"
+            }
+        ],
+        "services": []
+    },
+    "key": "esphome.846ecf13829e4bf28fc07252b65d1c53",
+    "version": 1
+}

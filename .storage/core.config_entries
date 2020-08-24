@@ -217,18 +217,40 @@
             {
                 "connection_class": "local_poll",
                 "data": {
-                    "st": "urn:schemas-upnp-org:device:InternetGatewayDevice:2",
-                    "udn": "uuid:03526e55-559f-4453-932c-58875252df4d"
+                    "host": "127.0.0.1",
+                    "password": null,
+                    "port": 45158,
+                    "ssl": false,
+                    "username": null,
+                    "verify_ssl": true
                 },
-                "domain": "upnp",
-                "entry_id": "acc01b4d488e4c1dbe407dca92e6a720",
+                "domain": "adguard",
+                "entry_id": "6e0df5f6b443470ca447d0221157bd7f",
                 "options": {},
-                "source": "ssdp",
+                "source": "hassio",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "OnHub",
-                "unique_id": "uuid:134424d3-426b-4fe0-9447-3917b4171eb8::urn:schemas-upnp-org:device:InternetGatewayDevice:2",
+                "title": "AdGuard Home",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "host": "192.168.86.20",
+                    "password": "",
+                    "port": 6053
+                },
+                "domain": "esphome",
+                "entry_id": "846ecf13829e4bf28fc07252b65d1c53",
+                "options": {},
+                "source": "zeroconf",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "basement_lights",
+                "unique_id": "basement_lights",
                 "version": 1
             }
         ]

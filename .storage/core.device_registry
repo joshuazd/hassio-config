@@ -437,9 +437,10 @@
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "03bace1f84ef43488fd1a5bacab0bc96",
                 "config_entries": [
-                    "8d968cbd413f444882dc73bdcf65af2b"
+                    "8d968cbd413f444882dc73bdcf65af2b",
+                    "846ecf13829e4bf28fc07252b65d1c53"
                 ],
                 "connections": [
                     [
@@ -455,11 +456,11 @@
                         "9A8FE0"
                     ]
                 ],
-                "manufacturer": "Tasmota",
-                "model": "KS-7011 Dimmer",
-                "name": "Basement Lights",
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_ESP01_1M",
+                "name": "basement_lights",
                 "name_by_user": null,
-                "sw_version": "8.1.0(tasmota)",
+                "sw_version": "1.14.5 (Aug 24 2020, 11:37:41)",
                 "via_device_id": null
             },
             {
@@ -591,287 +592,24 @@
             {
                 "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
                 "config_entries": [
-                    "acc01b4d488e4c1dbe407dca92e6a720"
+                    "6e0df5f6b443470ca447d0221157bd7f"
                 ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:03526e55-559f-4453-932c-58875252df4d"
-                    ]
-                ],
-                "entry_type": null,
-                "id": "d2fe0c6230c1406f8096f09a9566a028",
+                "connections": [],
+                "entry_type": "service",
+                "id": "377d908e861049fd8de3b492dd00bb2a",
                 "identifiers": [
                     [
-                        "upnp",
-                        "uuid:03526e55-559f-4453-932c-58875252df4d"
+                        "adguard",
+                        "127.0.0.1",
+                        45158,
+                        "/control/"
                     ]
                 ],
-                "manufacturer": "Google",
-                "model": "OnHub",
-                "name": "OnHub",
+                "manufacturer": "AdGuard Team",
+                "model": null,
+                "name": "AdGuard Home",
                 "name_by_user": null,
-                "sw_version": null,
-                "via_device_id": null
-            },
-            {
-                "area_id": null,
-                "config_entries": [
-                    "acc01b4d488e4c1dbe407dca92e6a720"
-                ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:0bd47748-7b7b-4d9d-a125-8b0390a401bc"
-                    ]
-                ],
-                "entry_type": null,
-                "id": "ec2e218714ee46239449480bad0442e1",
-                "identifiers": [
-                    [
-                        "upnp",
-                        "uuid:0bd47748-7b7b-4d9d-a125-8b0390a401bc"
-                    ]
-                ],
-                "manufacturer": "Google",
-                "model": "OnHub",
-                "name": "OnHub",
-                "name_by_user": null,
-                "sw_version": null,
-                "via_device_id": null
-            },
-            {
-                "area_id": null,
-                "config_entries": [
-                    "acc01b4d488e4c1dbe407dca92e6a720"
-                ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:dbe3c798-090b-44c4-aae1-abb278faf6a9"
-                    ]
-                ],
-                "entry_type": null,
-                "id": "2123bd945fdf4f6798f9f33823b417a4",
-                "identifiers": [
-                    [
-                        "upnp",
-                        "uuid:dbe3c798-090b-44c4-aae1-abb278faf6a9"
-                    ]
-                ],
-                "manufacturer": "Google",
-                "model": "OnHub",
-                "name": "OnHub",
-                "name_by_user": null,
-                "sw_version": null,
-                "via_device_id": null
-            },
-            {
-                "area_id": null,
-                "config_entries": [
-                    "acc01b4d488e4c1dbe407dca92e6a720"
-                ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:bbe4e6c6-4bd1-4758-b7fc-5d3393056685"
-                    ]
-                ],
-                "entry_type": null,
-                "id": "a7ce3ef229a9413f90b2f80afefa8ec4",
-                "identifiers": [
-                    [
-                        "upnp",
-                        "uuid:bbe4e6c6-4bd1-4758-b7fc-5d3393056685"
-                    ]
-                ],
-                "manufacturer": "Google",
-                "model": "OnHub",
-                "name": "OnHub",
-                "name_by_user": null,
-                "sw_version": null,
-                "via_device_id": null
-            },
-            {
-                "area_id": null,
-                "config_entries": [
-                    "acc01b4d488e4c1dbe407dca92e6a720"
-                ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:cb67c23d-7a1d-42d8-a85d-79f4b4aca3be"
-                    ]
-                ],
-                "entry_type": null,
-                "id": "5cbffdf51f8c4a6bbe67f354fb6697ad",
-                "identifiers": [
-                    [
-                        "upnp",
-                        "uuid:cb67c23d-7a1d-42d8-a85d-79f4b4aca3be"
-                    ]
-                ],
-                "manufacturer": "Google",
-                "model": "OnHub",
-                "name": "OnHub",
-                "name_by_user": null,
-                "sw_version": null,
-                "via_device_id": null
-            },
-            {
-                "area_id": null,
-                "config_entries": [
-                    "acc01b4d488e4c1dbe407dca92e6a720"
-                ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:972127ec-3d92-4bba-b9d0-229f65b71d00"
-                    ]
-                ],
-                "entry_type": null,
-                "id": "26dae6e139344451947fdf64cc200cac",
-                "identifiers": [
-                    [
-                        "upnp",
-                        "uuid:972127ec-3d92-4bba-b9d0-229f65b71d00"
-                    ]
-                ],
-                "manufacturer": "Google",
-                "model": "OnHub",
-                "name": "OnHub",
-                "name_by_user": null,
-                "sw_version": null,
-                "via_device_id": null
-            },
-            {
-                "area_id": null,
-                "config_entries": [
-                    "acc01b4d488e4c1dbe407dca92e6a720"
-                ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:50d02d8a-4faf-4c86-aef5-5c63d7ce8922"
-                    ]
-                ],
-                "entry_type": null,
-                "id": "62019cfb26d64667a1d55d018ff218ab",
-                "identifiers": [
-                    [
-                        "upnp",
-                        "uuid:50d02d8a-4faf-4c86-aef5-5c63d7ce8922"
-                    ]
-                ],
-                "manufacturer": "Google",
-                "model": "OnHub",
-                "name": "OnHub",
-                "name_by_user": null,
-                "sw_version": null,
-                "via_device_id": null
-            },
-            {
-                "area_id": null,
-                "config_entries": [
-                    "acc01b4d488e4c1dbe407dca92e6a720"
-                ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:ffd665fc-ca35-4b2e-8a1d-31526068a354"
-                    ]
-                ],
-                "entry_type": null,
-                "id": "2123c97ba54441e89333c05f5aafa96c",
-                "identifiers": [
-                    [
-                        "upnp",
-                        "uuid:ffd665fc-ca35-4b2e-8a1d-31526068a354"
-                    ]
-                ],
-                "manufacturer": "Google",
-                "model": "OnHub",
-                "name": "OnHub",
-                "name_by_user": null,
-                "sw_version": null,
-                "via_device_id": null
-            },
-            {
-                "area_id": null,
-                "config_entries": [
-                    "acc01b4d488e4c1dbe407dca92e6a720"
-                ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:a1941959-aa42-49cc-8526-555c63c56383"
-                    ]
-                ],
-                "entry_type": null,
-                "id": "c0f47271d5e2462cbadebfda617234ac",
-                "identifiers": [
-                    [
-                        "upnp",
-                        "uuid:a1941959-aa42-49cc-8526-555c63c56383"
-                    ]
-                ],
-                "manufacturer": "Google",
-                "model": "OnHub",
-                "name": "OnHub",
-                "name_by_user": null,
-                "sw_version": null,
-                "via_device_id": null
-            },
-            {
-                "area_id": null,
-                "config_entries": [
-                    "acc01b4d488e4c1dbe407dca92e6a720"
-                ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:23fc4a11-a38e-4b9c-a987-332c9d6ba4d8"
-                    ]
-                ],
-                "entry_type": null,
-                "id": "b777805b227c42af9ccbc596cf5ed75f",
-                "identifiers": [
-                    [
-                        "upnp",
-                        "uuid:23fc4a11-a38e-4b9c-a987-332c9d6ba4d8"
-                    ]
-                ],
-                "manufacturer": "Google",
-                "model": "OnHub",
-                "name": "OnHub",
-                "name_by_user": null,
-                "sw_version": null,
-                "via_device_id": null
-            },
-            {
-                "area_id": null,
-                "config_entries": [
-                    "acc01b4d488e4c1dbe407dca92e6a720"
-                ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:134424d3-426b-4fe0-9447-3917b4171eb8"
-                    ]
-                ],
-                "entry_type": null,
-                "id": "999f153c157b4df6bc21d0f1b5ce0b13",
-                "identifiers": [
-                    [
-                        "upnp",
-                        "uuid:134424d3-426b-4fe0-9447-3917b4171eb8"
-                    ]
-                ],
-                "manufacturer": "Google",
-                "model": "OnHub",
-                "name": "OnHub",
-                "name_by_user": null,
-                "sw_version": null,
+                "sw_version": "v0.102.0",
                 "via_device_id": null
             }
         ]
