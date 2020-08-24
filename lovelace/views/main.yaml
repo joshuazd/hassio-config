@@ -117,10 +117,10 @@ cards:
               icon: 'mdi:speaker-multiple'
               template: media_audio
               type: 'custom:button-card'
-            - entity: media_player.basement_tv
+            - entity: media_player.shield
               icon: 'mdi:television'
               name: Shield
-              template: mediaplayer_button_style
+              template: media_display
               type: 'custom:button-card'
             - template: blank
               type: 'custom:button-card'

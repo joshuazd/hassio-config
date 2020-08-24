@@ -74,7 +74,7 @@ cards:
             - template: blank
               type: 'custom:button-card'
             - entity: media_player.living_room_display
-              template: mediaplayer_button_style
+              template: media_audio
               icon: '[[[return entity.attributes.icon]]]'
               type: 'custom:button-card'
             - entity: media_player.kitchen_speaker
@@ -110,10 +110,10 @@ cards:
           cards:
             - template: blank
               type: 'custom:button-card'
-            - entity: media_player.basement_tv
+            - entity: media_player.shield
               icon: 'mdi:television'
               name: Shield
-              template: mediaplayer_button_style
+              template: media_display
               type: 'custom:button-card'
             - entity: media_player.lg_tv
               template: mediaplayer_button_style

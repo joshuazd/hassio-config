@@ -91,7 +91,7 @@ cards:
               #   label:
               #     - font-size: 18px
               #     - padding-bottom: 0px
-              template: homekit_style
+              template: sensor_style
               type: 'custom:button-card'
             - entity: sensor.travel_time_work_to_home
               hold_action:
@@ -104,7 +104,7 @@ cards:
               #   label:
               #     - font-size: 18px
               #     - padding-bottom: 0px
-              template: homekit_style
+              template: sensor_style
               type: 'custom:button-card'
             - template: filler
               type: 'custom:button-card'
