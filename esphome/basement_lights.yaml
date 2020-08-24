@@ -1,0 +1,39 @@
+esphome:
+  name: basement_lights
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: "FBI Surveillance Van #258"
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Basement Lights Fallback Hotspot"
+    password: "ItQm4aGFFNYk"
+
+captive_portal:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+
+# Enable logging
+logger:
+  baud_rate: 0
+  
+# My dimmer used the hardware serial port on the alternate pins
+uart:
+  rx_pin: GPIO03
+  tx_pin: GPIO01
+  baud_rate: 9600
+
+tuya:
+
+light:
+  - platform: "tuya"
+    name: "basement_lights"
+    dimmer_datapoint: 2
+    switch_datapoint: 1
