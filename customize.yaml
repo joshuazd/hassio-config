@@ -3,7 +3,8 @@ input_boolean.night_mode:
     icon: if (state === 'on') return 'mdi:weather-night'; return 'mdi:weather-sunny';
     icon_color: if (state === 'on') return '#5294E2'; return '#ffaf5f';
 switch.pumpkin:
-  icon: mdi:pine-tree
+#   icon: mdi:pine-tree
+  icon: mdi:pumpkin
 light.front_light:
   icon: mdi:coach-lamp
 switch.lamp:
