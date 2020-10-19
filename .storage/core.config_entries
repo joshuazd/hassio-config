@@ -1,72 +1,77 @@
 {
+    "version": 1,
+    "key": "core.config_entries",
     "data": {
         "entries": [
             {
-                "connection_class": "cloud_poll",
+                "entry_id": "01cc9e098a794decbd7ad26ac8f5b46a",
+                "version": 1,
+                "domain": "met",
+                "title": "Home",
                 "data": {
                     "track_home": true
                 },
-                "domain": "met",
-                "entry_id": "01cc9e098a794decbd7ad26ac8f5b46a",
                 "options": {},
-                "source": "onboarding",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "Home",
-                "unique_id": null,
-                "version": 1
+                "source": "onboarding",
+                "connection_class": "cloud_poll",
+                "unique_id": null
             },
             {
-                "connection_class": "local_poll",
+                "entry_id": "b685162ad3b34c31b80a4beacd583a5e",
+                "version": 1,
+                "domain": "hue",
+                "title": "Philips hue",
                 "data": {
                     "bridge_id": "001788FFFE6C9370",
                     "host": "192.168.86.41",
                     "username": "joLQrP0bCvTKfKAVtkwvte6ecVwFqfiS-p0UTR8s"
                 },
-                "domain": "hue",
-                "entry_id": "b685162ad3b34c31b80a4beacd583a5e",
                 "options": {},
-                "source": "homekit",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "Philips hue",
-                "unique_id": "0017886c9370",
-                "version": 1
+                "source": "homekit",
+                "connection_class": "local_poll",
+                "unique_id": "0017886c9370"
             },
             {
-                "connection_class": "local_push",
+                "entry_id": "c4370eb218294fe5b705e7871860372b",
+                "version": 1,
+                "domain": "cast",
+                "title": "Google Cast",
                 "data": {
                     "user_id": "8fbd88938a2b4b14b5b514c00cf669fa"
                 },
-                "domain": "cast",
-                "entry_id": "c4370eb218294fe5b705e7871860372b",
                 "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
                 "source": "zeroconf",
-                "system_options": {
-                    "disable_new_entities": false
-                },
-                "title": "Google Cast",
-                "unique_id": null,
-                "version": 1
-            },
-            {
                 "connection_class": "local_push",
-                "data": {},
-                "domain": "wemo",
+                "unique_id": null
+            },
+            {
                 "entry_id": "60cb92cc1e91480c87c662261778440e",
+                "version": 1,
+                "domain": "wemo",
+                "title": "Wemo",
+                "data": {},
                 "options": {},
-                "source": "ssdp",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "Wemo",
-                "unique_id": null,
-                "version": 1
+                "source": "ssdp",
+                "connection_class": "local_push",
+                "unique_id": null
             },
             {
-                "connection_class": "cloud_poll",
+                "entry_id": "28ddb8b45e63479bb0bb91a819c79c64",
+                "version": 1,
+                "domain": "hacs",
+                "title": "",
                 "data": {
                     "appdaemon": false,
                     "python_script": false,
@@ -75,86 +80,86 @@
                     "theme": true,
                     "token": "5c36fe795dc8bead3aa84744f7d318447ed24873"
                 },
-                "domain": "hacs",
-                "entry_id": "28ddb8b45e63479bb0bb91a819c79c64",
                 "options": {},
-                "source": "user",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "",
-                "unique_id": null,
-                "version": 1
+                "source": "user",
+                "connection_class": "cloud_poll",
+                "unique_id": null
             },
             {
-                "connection_class": "cloud_push",
+                "entry_id": "2d523b87d0a04ff29bdd5a37e83ee1f6",
+                "version": 1,
+                "domain": "mobile_app",
+                "title": "Pixel 3",
                 "data": {
                     "app_data": {
-                        "push_token": "ekdtw40ec60:APA91bHgG5iTMkiPlcRlIdhKo3LFKOgqznl30IGy2OQ3upaZQLf9zzTTdSkavm7RqMTzKlhfQE6U9TCLBqvcG4Glf_I4ueDNHk5ppqO46v-FADSIGNDoN6BKqD6_E2bDoW19PvJ-DJnj",
-                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPush/android/v1"
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPush/android/v1",
+                        "push_token": "ekdtw40ec60:APA91bHgG5iTMkiPlcRlIdhKo3LFKOgqznl30IGy2OQ3upaZQLf9zzTTdSkavm7RqMTzKlhfQE6U9TCLBqvcG4Glf_I4ueDNHk5ppqO46v-FADSIGNDoN6BKqD6_E2bDoW19PvJ-DJnj"
                     },
                     "app_id": "io.homeassistant.companion.android",
                     "app_name": "Home Assistant",
-                    "app_version": "2.1.1-249-full (249)",
+                    "app_version": "2.5.0-full (400)",
                     "device_id": "6dbf041d61a44803a35a29bcfaed66f5",
                     "device_name": "Pixel 3",
                     "manufacturer": "Google",
                     "model": "Pixel 3",
                     "os_name": "Android",
-                    "os_version": "29",
+                    "os_version": "30",
                     "supports_encryption": false,
                     "user_id": "0deba9a5d55f4283a58721dd67e57107",
                     "webhook_id": "2e5af1cf5f9593fb40012b1fff99fb7cc7c3af5e0cd7b8e59954fa8c136a5605"
                 },
-                "domain": "mobile_app",
-                "entry_id": "2d523b87d0a04ff29bdd5a37e83ee1f6",
                 "options": {},
-                "source": "registration",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "Pixel 3",
-                "unique_id": null,
-                "version": 1
+                "source": "registration",
+                "connection_class": "cloud_push",
+                "unique_id": null
             },
             {
-                "connection_class": "local_push",
+                "entry_id": "9cad80867d0f4cb880ef426c0670873d",
+                "version": 1,
+                "domain": "zwave",
+                "title": "Z-Wave (import from configuration.yaml)",
                 "data": {
                     "network_key": null,
                     "usb_path": "/zwaveusbstick"
                 },
-                "domain": "zwave",
-                "entry_id": "9cad80867d0f4cb880ef426c0670873d",
                 "options": {},
-                "source": "import",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "Z-Wave (import from configuration.yaml)",
-                "unique_id": null,
-                "version": 1
+                "source": "import",
+                "connection_class": "local_push",
+                "unique_id": null
             },
             {
-                "connection_class": "local_push",
+                "entry_id": "26605136b3bb49dc9d46c7e831afa6ca",
+                "version": 2,
+                "domain": "zha",
+                "title": "/dev/serial/by-id/usb-Silicon_Labs_HubZ_Smart_Home_Controller_8130021D-if01-port0",
                 "data": {
                     "device": {
                         "path": "/dev/serial/by-id/usb-Silicon_Labs_HubZ_Smart_Home_Controller_8130021D-if01-port0"
                     },
                     "radio_type": "ezsp"
                 },
-                "domain": "zha",
-                "entry_id": "26605136b3bb49dc9d46c7e831afa6ca",
                 "options": {},
-                "source": "user",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "/dev/serial/by-id/usb-Silicon_Labs_HubZ_Smart_Home_Controller_8130021D-if01-port0",
-                "unique_id": null,
-                "version": 2
+                "source": "user",
+                "connection_class": "local_push",
+                "unique_id": null
             },
             {
-                "connection_class": "cloud_push",
+                "entry_id": "6e8e592f00e1416793ef8fb3d9642437",
+                "version": 1,
+                "domain": "mobile_app",
+                "title": "Pixel 3a",
                 "data": {
                     "app_data": {
                         "push_token": "dcMUT6OIEFc:APA91bFS6dFHBPr2AfsOb58w5iP01MEQDQDtkTPobm89HZMW6aL_a_2-fVKEp26LKvl9CHhkGxvczroKs9sVjzfQbj0R5pn48V5Lzc9Pj9NLIhdO8ENlkfUqXSvL0LeisWRiJE1OADZZ",
@@ -162,7 +167,7 @@
                     },
                     "app_id": "io.homeassistant.companion.android",
                     "app_name": "Home Assistant",
-                    "app_version": "1.11.2-221 (221)",
+                    "app_version": "2.3.0-306-full (306)",
                     "device_id": "1913527027cc4082ab9c2675a5afc5ec",
                     "device_name": "Pixel 3a",
                     "manufacturer": "Google",
@@ -173,49 +178,49 @@
                     "user_id": "f3f546705e9844379edf982ea68104a8",
                     "webhook_id": "b36dad4336376129463068dbe9281d6f42208f6e1d0ea982a8a807063b59ece7"
                 },
-                "domain": "mobile_app",
-                "entry_id": "6e8e592f00e1416793ef8fb3d9642437",
                 "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
                 "source": "registration",
-                "system_options": {
-                    "disable_new_entities": false
-                },
-                "title": "Pixel 3a",
-                "unique_id": null,
-                "version": 1
+                "connection_class": "cloud_push",
+                "unique_id": null
             },
             {
-                "connection_class": "local_push",
-                "data": {},
-                "domain": "mqtt",
                 "entry_id": "8d968cbd413f444882dc73bdcf65af2b",
+                "version": 1,
+                "domain": "mqtt",
+                "title": "configuration.yaml",
+                "data": {},
                 "options": {},
-                "source": "import",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "configuration.yaml",
-                "unique_id": null,
-                "version": 1
+                "source": "import",
+                "connection_class": "local_push",
+                "unique_id": null
             },
             {
-                "connection_class": "local_poll",
+                "entry_id": "d540abadfedc4031a32b59a3d4dac189",
+                "version": 1,
+                "domain": "hue",
+                "title": "Ignored",
                 "data": {
                     "host": "192.168.86.41"
                 },
-                "domain": "hue",
-                "entry_id": "d540abadfedc4031a32b59a3d4dac189",
                 "options": {},
-                "source": "ignore",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "Ignored",
-                "unique_id": "e9d5c2d620df",
-                "version": 1
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "e9d5c2d620df"
             },
             {
-                "connection_class": "local_poll",
+                "entry_id": "6e0df5f6b443470ca447d0221157bd7f",
+                "version": 1,
+                "domain": "adguard",
+                "title": "AdGuard Home",
                 "data": {
                     "host": "127.0.0.1",
                     "password": null,
@@ -224,37 +229,170 @@
                     "username": null,
                     "verify_ssl": true
                 },
-                "domain": "adguard",
-                "entry_id": "6e0df5f6b443470ca447d0221157bd7f",
                 "options": {},
-                "source": "hassio",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "AdGuard Home",
-                "unique_id": null,
-                "version": 1
+                "source": "hassio",
+                "connection_class": "local_poll",
+                "unique_id": null
             },
             {
-                "connection_class": "local_push",
+                "entry_id": "846ecf13829e4bf28fc07252b65d1c53",
+                "version": 1,
+                "domain": "esphome",
+                "title": "basement_lights",
                 "data": {
                     "host": "192.168.86.20",
                     "password": "",
                     "port": 6053
                 },
-                "domain": "esphome",
-                "entry_id": "846ecf13829e4bf28fc07252b65d1c53",
                 "options": {},
-                "source": "zeroconf",
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "basement_lights",
-                "unique_id": "basement_lights",
-                "version": 1
+                "source": "zeroconf",
+                "connection_class": "local_push",
+                "unique_id": "basement_lights"
+            },
+            {
+                "entry_id": "c8d9076f13c14d3aab39fe46c4f63f31",
+                "version": 1,
+                "domain": "upnp",
+                "title": "Ignored",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "uuid:88e41ec0-bd50-429e-b395-92264d1698b5::urn:schemas-upnp-org:device:InternetGatewayDevice:2"
+            },
+            {
+                "entry_id": "aec32ab9e1a64eb59d579266dc89e01f",
+                "version": 1,
+                "domain": "upnp",
+                "title": "Ignored",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "uuid:34ec8578-9d59-4103-9abf-6aa32673db94::urn:schemas-upnp-org:device:InternetGatewayDevice:2"
+            },
+            {
+                "entry_id": "7567c1c55e654d2692adebfe248fec95",
+                "version": 1,
+                "domain": "upnp",
+                "title": "Ignored",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "uuid:d3914c48-5182-4558-a274-b4a2dbfe11ef::urn:schemas-upnp-org:device:InternetGatewayDevice:2"
+            },
+            {
+                "entry_id": "7073911f716543a59a65757bb40bb6cf",
+                "version": 1,
+                "domain": "upnp",
+                "title": "Ignored",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ignore",
+                "connection_class": "local_poll",
+                "unique_id": "uuid:7262e368-03fa-47dc-81ae-f4d8dbd7260a::urn:schemas-upnp-org:device:InternetGatewayDevice:2"
+            },
+            {
+                "entry_id": "cd23fe0ffc1111eabbd6256dd286a770",
+                "version": 1,
+                "domain": "spotify",
+                "title": "cnirithian",
+                "data": {
+                    "auth_implementation": "spotify",
+                    "token": {
+                        "access_token": "BQBMl1x7YFsBT46A3DzOCKdiWSS4uIJLMz3EOVd6ThruXz06OVSTk-R8br19NyThItmj4zYczodXEHuYTuK8gcGWgtfbIjhwFS9wOwcCF-QdxI4kM8cmt7yLyu3lmiJBbZ91MlNxSaNkyx6yR992nTWg6ZH0QXG0INDwp4jKQnzNn7OZmVCQHqEqY5MqrGhN72DhaN0Po0g",
+                        "token_type": "Bearer",
+                        "expires_in": 3600,
+                        "refresh_token": "AQB6aG9OZ091YGhU4lcn-iPNUd8hUsUC1XTm_AckeXJXRnwcsvLyAunzxt-jqCEhsAanFUA_rncdzoFld_t_6Mv54_rBVmuC1xLw4HsrW4dDxJXW5NmrMIrjviWy6JIuaF8",
+                        "scope": "playlist-read-private playlist-read-collaborative user-modify-playback-state user-library-read user-follow-read user-read-playback-state user-read-recently-played user-read-playback-position user-read-private user-top-read",
+                        "expires_at": 1603122586.404833
+                    },
+                    "id": "cnirithian",
+                    "name": "cnirithian"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "reauth",
+                "connection_class": "cloud_poll",
+                "unique_id": "cnirithian"
+            },
+            {
+                "entry_id": "223eeb2b09e811ebb177f7079c4655e5",
+                "version": 1,
+                "domain": "plex",
+                "title": "SHIELD Android TV",
+                "data": {
+                    "server": "SHIELD Android TV",
+                    "server_id": "3e5d09b71b2ad597bd7d1ae15011c4ab537e3e26",
+                    "server_config": {
+                        "url": "https://192-168-86-95.09484bac23df4461b57cc390a3e7ac0e.plex.direct:32400",
+                        "client_id": "aa0ff7eb-6c68-4cdf-8f20-707fabc97df9",
+                        "token": "igR4-DenAZygREJ5SZb6",
+                        "verify_ssl": true
+                    }
+                },
+                "options": {
+                    "media_player": {}
+                },
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "user",
+                "connection_class": "local_push",
+                "unique_id": "3e5d09b71b2ad597bd7d1ae15011c4ab537e3e26"
+            },
+            {
+                "entry_id": "1c531812121a11eb98393d13ee3346dc",
+                "version": 1,
+                "domain": "upnp",
+                "title": "OnHub",
+                "data": {
+                    "udn": "uuid:56d567a6-ce9b-4a8e-b382-a4cdac3f609c",
+                    "st": "urn:schemas-upnp-org:device:InternetGatewayDevice:2"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ssdp",
+                "connection_class": "local_poll",
+                "unique_id": "uuid:56d567a6-ce9b-4a8e-b382-a4cdac3f609c::urn:schemas-upnp-org:device:InternetGatewayDevice:2"
+            },
+            {
+                "entry_id": "a81750bd121d11eba3184b489b011a69",
+                "version": 1,
+                "domain": "local_ip",
+                "title": "local_ip",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "user",
+                "connection_class": "local_poll",
+                "unique_id": null
             }
         ]
-    },
-    "key": "core.config_entries",
-    "version": 1
+    }
 }

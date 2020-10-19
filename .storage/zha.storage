@@ -1,13 +1,23 @@
 {
+    "version": 1,
+    "key": "zha.storage",
     "data": {
         "devices": [
             {
+                "name": "Silicon Labs EZSP",
                 "ieee": "00:0d:6f:00:11:f5:d5:68",
-                "last_seen": null,
-                "name": "Silicon Labs EZSP"
+                "last_seen": 1603108504.4212604
+            },
+            {
+                "name": "LUMI lumi.weather",
+                "ieee": "00:15:8d:00:05:4d:26:b1",
+                "last_seen": 1603120461.7325134
+            },
+            {
+                "name": "unk_manufacturer lumi.vibration.aq1",
+                "ieee": "00:15:8d:00:02:b7:bd:eb",
+                "last_seen": 1603117998.3550446
             }
         ]
-    },
-    "key": "zha.storage",
-    "version": 1
+    }
 }

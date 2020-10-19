@@ -1,9 +1,9 @@
 {
+    "version": 1,
+    "key": "core.device_registry",
     "data": {
-        "deleted_devices": [],
         "devices": [
             {
-                "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
                 "config_entries": [
                     "b685162ad3b34c31b80a4beacd583a5e"
                 ],
@@ -13,8 +13,6 @@
                         "00:17:88:6c:93:70"
                     ]
                 ],
-                "entry_type": null,
-                "id": "308e111f7a114bf09e4b2c9e26a1b649",
                 "identifiers": [
                     [
                         "hue",
@@ -24,18 +22,18 @@
                 "manufacturer": "Signify",
                 "model": "BSB002",
                 "name": "Philips hue",
-                "name_by_user": null,
-                "sw_version": "1940042020",
-                "via_device_id": null
+                "sw_version": "1941056000",
+                "entry_type": null,
+                "id": "308e111f7a114bf09e4b2c9e26a1b649",
+                "via_device_id": null,
+                "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
+                "name_by_user": null
             },
             {
-                "area_id": "9bd2d8f658df4c54860e03973bc59968",
                 "config_entries": [
                     "b685162ad3b34c31b80a4beacd583a5e"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "7b8528eccec94d5b955f939850a4cea2",
                 "identifiers": [
                     [
                         "hue",
@@ -45,18 +43,18 @@
                 "manufacturer": "Signify Netherlands B.V.",
                 "model": "Hue motion sensor",
                 "name": "bedroom sensor",
-                "name_by_user": null,
                 "sw_version": "6.1.1.27575",
-                "via_device_id": "308e111f7a114bf09e4b2c9e26a1b649"
+                "entry_type": null,
+                "id": "7b8528eccec94d5b955f939850a4cea2",
+                "via_device_id": "308e111f7a114bf09e4b2c9e26a1b649",
+                "area_id": "9bd2d8f658df4c54860e03973bc59968",
+                "name_by_user": null
             },
             {
-                "area_id": "9bd2d8f658df4c54860e03973bc59968",
                 "config_entries": [
                     "b685162ad3b34c31b80a4beacd583a5e"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "1e37b45903664f9fac916d17d091b408",
                 "identifiers": [
                     [
                         "hue",
@@ -66,18 +64,18 @@
                 "manufacturer": "Signify Netherlands B.V.",
                 "model": "Hue white lamp",
                 "name": "Joshua bedroom light 2",
-                "name_by_user": null,
                 "sw_version": "1.50.2_r30933",
-                "via_device_id": "308e111f7a114bf09e4b2c9e26a1b649"
+                "entry_type": null,
+                "id": "1e37b45903664f9fac916d17d091b408",
+                "via_device_id": "308e111f7a114bf09e4b2c9e26a1b649",
+                "area_id": "9bd2d8f658df4c54860e03973bc59968",
+                "name_by_user": null
             },
             {
-                "area_id": "9bd2d8f658df4c54860e03973bc59968",
                 "config_entries": [
                     "b685162ad3b34c31b80a4beacd583a5e"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "8bf4b95e34f84a5f992af187243a4353",
                 "identifiers": [
                     [
                         "hue",
@@ -87,18 +85,18 @@
                 "manufacturer": "Signify Netherlands B.V.",
                 "model": "Hue white lamp",
                 "name": "Joshua bedroom light 1",
-                "name_by_user": null,
                 "sw_version": "1.50.2_r30933",
-                "via_device_id": "308e111f7a114bf09e4b2c9e26a1b649"
+                "entry_type": null,
+                "id": "8bf4b95e34f84a5f992af187243a4353",
+                "via_device_id": "308e111f7a114bf09e4b2c9e26a1b649",
+                "area_id": "9bd2d8f658df4c54860e03973bc59968",
+                "name_by_user": null
             },
             {
-                "area_id": "beb15d6cdc9141a2a5bcc23e9af28c07",
                 "config_entries": [
                     "b685162ad3b34c31b80a4beacd583a5e"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "6595bbd66222463c93f9a154f60d3a17",
                 "identifiers": [
                     [
                         "hue",
@@ -108,18 +106,18 @@
                 "manufacturer": "Signify Netherlands B.V.",
                 "model": "Hue white lamp",
                 "name": "Hue white lamp 4",
-                "name_by_user": null,
                 "sw_version": "1.50.2_r30933",
-                "via_device_id": "308e111f7a114bf09e4b2c9e26a1b649"
+                "entry_type": null,
+                "id": "6595bbd66222463c93f9a154f60d3a17",
+                "via_device_id": "308e111f7a114bf09e4b2c9e26a1b649",
+                "area_id": "beb15d6cdc9141a2a5bcc23e9af28c07",
+                "name_by_user": null
             },
             {
-                "area_id": "b42349b9125241e3aded45a0521bf8c7",
                 "config_entries": [
                     "b685162ad3b34c31b80a4beacd583a5e"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "d4f845d65b8249568727a978fa4f6163",
                 "identifiers": [
                     [
                         "hue",
@@ -129,18 +127,18 @@
                 "manufacturer": "Signify Netherlands B.V.",
                 "model": "Hue white lamp",
                 "name": "Front light",
-                "name_by_user": null,
                 "sw_version": "1.50.2_r30933",
-                "via_device_id": "308e111f7a114bf09e4b2c9e26a1b649"
+                "entry_type": null,
+                "id": "d4f845d65b8249568727a978fa4f6163",
+                "via_device_id": "308e111f7a114bf09e4b2c9e26a1b649",
+                "area_id": "b42349b9125241e3aded45a0521bf8c7",
+                "name_by_user": null
             },
             {
-                "area_id": "beb15d6cdc9141a2a5bcc23e9af28c07",
                 "config_entries": [
                     "b685162ad3b34c31b80a4beacd583a5e"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "53897a6cbd464911bd10462cb16a105d",
                 "identifiers": [
                     [
                         "hue",
@@ -150,18 +148,18 @@
                 "manufacturer": "Signify Netherlands B.V.",
                 "model": "Hue white lamp",
                 "name": "Hue white lamp 5",
-                "name_by_user": null,
                 "sw_version": "1.50.2_r30933",
-                "via_device_id": "308e111f7a114bf09e4b2c9e26a1b649"
+                "entry_type": null,
+                "id": "53897a6cbd464911bd10462cb16a105d",
+                "via_device_id": "308e111f7a114bf09e4b2c9e26a1b649",
+                "area_id": "beb15d6cdc9141a2a5bcc23e9af28c07",
+                "name_by_user": null
             },
             {
-                "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
                 "config_entries": [
                     "c4370eb218294fe5b705e7871860372b"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "24080feba1d441d9a38fac929d4f1e15",
                 "identifiers": [
                     [
                         "cast",
@@ -171,18 +169,18 @@
                 "manufacturer": "Google Inc.",
                 "model": "Google Nest Hub",
                 "name": "Living Room display",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "24080feba1d441d9a38fac929d4f1e15",
+                "via_device_id": null,
+                "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
+                "name_by_user": null
             },
             {
-                "area_id": "9bd2d8f658df4c54860e03973bc59968",
                 "config_entries": [
                     "c4370eb218294fe5b705e7871860372b"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "d34d1eaf9e52477ba5cc23cfc72723b9",
                 "identifiers": [
                     [
                         "cast",
@@ -192,18 +190,18 @@
                 "manufacturer": "Google Inc.",
                 "model": "Google Home Mini",
                 "name": "Joshua's Bedroom speaker",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "d34d1eaf9e52477ba5cc23cfc72723b9",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": "z_joshua_bedroom_speaker"
             },
             {
-                "area_id": "5d9bb3967e064b3a92e3f029ac2460e7",
                 "config_entries": [
                     "c4370eb218294fe5b705e7871860372b"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "9c59fbb618954f85a0daccbac70c1f1f",
                 "identifiers": [
                     [
                         "cast",
@@ -213,18 +211,18 @@
                 "manufacturer": "Google Inc.",
                 "model": "Google Home Mini",
                 "name": "Kitchen speaker",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "9c59fbb618954f85a0daccbac70c1f1f",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": "beb15d6cdc9141a2a5bcc23e9af28c07",
                 "config_entries": [
                     "c4370eb218294fe5b705e7871860372b"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "d0eb66239bbc43e9b994fbf6c4d9d92d",
                 "identifiers": [
                     [
                         "cast",
@@ -234,18 +232,18 @@
                 "manufacturer": "Google Inc.",
                 "model": "Google Home Mini",
                 "name": "Josie's Bedroom speaker",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "d0eb66239bbc43e9b994fbf6c4d9d92d",
+                "via_device_id": null,
+                "area_id": "beb15d6cdc9141a2a5bcc23e9af28c07",
+                "name_by_user": null
             },
             {
-                "area_id": "03bace1f84ef43488fd1a5bacab0bc96",
                 "config_entries": [
                     "c4370eb218294fe5b705e7871860372b"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "2a25e33d0eaf4f6abe659a1f073d6925",
                 "identifiers": [
                     [
                         "cast",
@@ -255,18 +253,18 @@
                 "manufacturer": "Google Inc.",
                 "model": "Google Home",
                 "name": "Basement speaker",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "2a25e33d0eaf4f6abe659a1f073d6925",
+                "via_device_id": null,
+                "area_id": "03bace1f84ef43488fd1a5bacab0bc96",
+                "name_by_user": null
             },
             {
-                "area_id": "03bace1f84ef43488fd1a5bacab0bc96",
                 "config_entries": [
                     "c4370eb218294fe5b705e7871860372b"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "51d570d9219a494495c265b955babeda",
                 "identifiers": [
                     [
                         "cast",
@@ -276,43 +274,43 @@
                 "manufacturer": "Google Inc.",
                 "model": "Google Home Max",
                 "name": "TV Speaker",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "51d570d9219a494495c265b955babeda",
+                "via_device_id": null,
+                "area_id": "03bace1f84ef43488fd1a5bacab0bc96",
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "2d523b87d0a04ff29bdd5a37e83ee1f6"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "212f8cca6707487597afe71fca7c7eed",
                 "identifiers": [
-                    [
-                        "device_id",
-                        "6dbf041d61a44803a35a29bcfaed66f5"
-                    ],
                     [
                         "webhook_id",
                         "2e5af1cf5f9593fb40012b1fff99fb7cc7c3af5e0cd7b8e59954fa8c136a5605"
+                    ],
+                    [
+                        "device_id",
+                        "6dbf041d61a44803a35a29bcfaed66f5"
                     ]
                 ],
                 "manufacturer": "Google",
                 "model": "Pixel 3",
                 "name": "Pixel 3",
-                "name_by_user": null,
                 "sw_version": "29",
-                "via_device_id": null
+                "entry_type": null,
+                "id": "212f8cca6707487597afe71fca7c7eed",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "2d523b87d0a04ff29bdd5a37e83ee1f6"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "d3309d8314dc4e7b90c723dcfd0b056a",
                 "identifiers": [
                     [
                         "mobile_app",
@@ -322,18 +320,18 @@
                 "manufacturer": "Google",
                 "model": "Pixel 3",
                 "name": "Pixel 3",
-                "name_by_user": null,
-                "sw_version": "29",
-                "via_device_id": null
+                "sw_version": "30",
+                "entry_type": null,
+                "id": "d3309d8314dc4e7b90c723dcfd0b056a",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": "03bace1f84ef43488fd1a5bacab0bc96",
                 "config_entries": [
                     "c4370eb218294fe5b705e7871860372b"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "a6d4ded49d4e4150bc598f501489a308",
                 "identifiers": [
                     [
                         "cast",
@@ -343,18 +341,18 @@
                 "manufacturer": "NVIDIA",
                 "model": "SHIELD Android TV",
                 "name": "SHIELD",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "a6d4ded49d4e4150bc598f501489a308",
+                "via_device_id": null,
+                "area_id": "03bace1f84ef43488fd1a5bacab0bc96",
+                "name_by_user": null
             },
             {
-                "area_id": "03bace1f84ef43488fd1a5bacab0bc96",
                 "config_entries": [
                     "c4370eb218294fe5b705e7871860372b"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "c46aa4944f8b4d4c93a5edab2bf93f14",
                 "identifiers": [
                     [
                         "cast",
@@ -364,18 +362,18 @@
                 "manufacturer": "Google Inc.",
                 "model": "SHIELD Android TV",
                 "name": "SHIELD",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "c46aa4944f8b4d4c93a5edab2bf93f14",
+                "via_device_id": null,
+                "area_id": "03bace1f84ef43488fd1a5bacab0bc96",
+                "name_by_user": null
             },
             {
-                "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
                 "config_entries": [
                     "9cad80867d0f4cb880ef426c0670873d"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "4d2d43e6bd644f6f88eb9ff5a92d36a3",
                 "identifiers": [
                     [
                         "zwave",
@@ -385,12 +383,14 @@
                 "manufacturer": "Z-Wave (Sigma Designs)",
                 "model": "UZB Z-Wave USB Adapter",
                 "name": "Z-Wave (Sigma Designs) UZB Z-Wave USB Adapter",
-                "name_by_user": "Z-Wave Adapter",
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "4d2d43e6bd644f6f88eb9ff5a92d36a3",
+                "via_device_id": null,
+                "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
+                "name_by_user": "Z-Wave Adapter"
             },
             {
-                "area_id": "03bace1f84ef43488fd1a5bacab0bc96",
                 "config_entries": [
                     "26605136b3bb49dc9d46c7e831afa6ca"
                 ],
@@ -400,8 +400,6 @@
                         "00:0d:6f:00:11:f5:d5:68"
                     ]
                 ],
-                "entry_type": null,
-                "id": "67ea42990da646c9bdaa3ae0deccb03b",
                 "identifiers": [
                     [
                         "zha",
@@ -411,18 +409,18 @@
                 "manufacturer": "ZHA",
                 "model": "EZSP = Silicon Labs EmberZNet protocol: Elelabs, HUSBZB-1, Telegesis",
                 "name": "Zigbee Coordinator",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "67ea42990da646c9bdaa3ae0deccb03b",
+                "via_device_id": null,
+                "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "6e8e592f00e1416793ef8fb3d9642437"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "527ed6873d6b4f338e2b5dbffc15b191",
                 "identifiers": [
                     [
                         "mobile_app",
@@ -432,12 +430,14 @@
                 "manufacturer": "Google",
                 "model": "Pixel 3a",
                 "name": "Pixel 3a",
-                "name_by_user": null,
                 "sw_version": "29",
-                "via_device_id": null
+                "entry_type": null,
+                "id": "527ed6873d6b4f338e2b5dbffc15b191",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": "03bace1f84ef43488fd1a5bacab0bc96",
                 "config_entries": [
                     "8d968cbd413f444882dc73bdcf65af2b",
                     "846ecf13829e4bf28fc07252b65d1c53"
@@ -448,8 +448,6 @@
                         "ec:fa:bc:9a:8f:e0"
                     ]
                 ],
-                "entry_type": null,
-                "id": "85d93ce1498945e39eb99ca3f5ab90bb",
                 "identifiers": [
                     [
                         "mqtt",
@@ -459,18 +457,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "basement_lights",
-                "name_by_user": null,
-                "sw_version": "1.14.5 (Aug 24 2020, 11:37:41)",
-                "via_device_id": null
+                "sw_version": "1.15.2 (Sep 24 2020, 09:51:04)",
+                "entry_type": null,
+                "id": "85d93ce1498945e39eb99ca3f5ab90bb",
+                "via_device_id": null,
+                "area_id": "03bace1f84ef43488fd1a5bacab0bc96",
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "b685162ad3b34c31b80a4beacd583a5e"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "dafe3a5fe13a48458274b165e65bcae9",
                 "identifiers": [
                     [
                         "hue",
@@ -480,18 +478,18 @@
                 "manufacturer": "Signify Netherlands B.V.",
                 "model": "Hue white Lamp",
                 "name": "laundry room 1",
-                "name_by_user": null,
                 "sw_version": "1.65.11_hB798F2",
-                "via_device_id": "308e111f7a114bf09e4b2c9e26a1b649"
+                "entry_type": null,
+                "id": "dafe3a5fe13a48458274b165e65bcae9",
+                "via_device_id": "308e111f7a114bf09e4b2c9e26a1b649",
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "b685162ad3b34c31b80a4beacd583a5e"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "81acda6131654f67a3f108ff5e08b13d",
                 "identifiers": [
                     [
                         "hue",
@@ -501,18 +499,18 @@
                 "manufacturer": "Signify Netherlands B.V.",
                 "model": "Hue white Lamp",
                 "name": "laundry room 2",
-                "name_by_user": null,
                 "sw_version": "1.65.11_hB798F2",
-                "via_device_id": "308e111f7a114bf09e4b2c9e26a1b649"
+                "entry_type": null,
+                "id": "81acda6131654f67a3f108ff5e08b13d",
+                "via_device_id": "308e111f7a114bf09e4b2c9e26a1b649",
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
                 "config_entries": [
                     "60cb92cc1e91480c87c662261778440e"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "c10f102878d54929a84a797bb7d76249",
                 "identifiers": [
                     [
                         "wemo",
@@ -522,18 +520,18 @@
                 "manufacturer": "Belkin",
                 "model": "Socket",
                 "name": "Floor Lamp",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "c10f102878d54929a84a797bb7d76249",
+                "via_device_id": null,
+                "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
+                "name_by_user": null
             },
             {
-                "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
                 "config_entries": [
                     "60cb92cc1e91480c87c662261778440e"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "aea6b3b58a134a27ac9eb32cc1f2a10c",
                 "identifiers": [
                     [
                         "wemo",
@@ -543,18 +541,18 @@
                 "manufacturer": "Belkin",
                 "model": "Socket",
                 "name": "Lamp",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "aea6b3b58a134a27ac9eb32cc1f2a10c",
+                "via_device_id": null,
+                "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
+                "name_by_user": null
             },
             {
-                "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
                 "config_entries": [
                     "60cb92cc1e91480c87c662261778440e"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "1b32a7dc20104d838315a97583ac278a",
                 "identifiers": [
                     [
                         "wemo",
@@ -564,18 +562,18 @@
                 "manufacturer": "Belkin",
                 "model": "Socket",
                 "name": "Tree",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "1b32a7dc20104d838315a97583ac278a",
+                "via_device_id": null,
+                "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "28ddb8b45e63479bb0bb91a819c79c64"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "9b0615bd255346c19cd935fdfff68ac5",
                 "identifiers": [
                     [
                         "hacs",
@@ -585,18 +583,18 @@
                 "manufacturer": "hacs.xyz",
                 "model": "",
                 "name": "HACS",
-                "name_by_user": null,
-                "sw_version": "1.4.1",
-                "via_device_id": null
+                "sw_version": "1.6.0",
+                "entry_type": "service",
+                "id": "9b0615bd255346c19cd935fdfff68ac5",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
                 "config_entries": [
                     "6e0df5f6b443470ca447d0221157bd7f"
                 ],
                 "connections": [],
-                "entry_type": "service",
-                "id": "377d908e861049fd8de3b492dd00bb2a",
                 "identifiers": [
                     [
                         "adguard",
@@ -608,12 +606,302 @@
                 "manufacturer": "AdGuard Team",
                 "model": null,
                 "name": "AdGuard Home",
-                "name_by_user": null,
-                "sw_version": "v0.102.0",
-                "via_device_id": null
+                "sw_version": "0.103.3",
+                "entry_type": "service",
+                "id": "377d908e861049fd8de3b492dd00bb2a",
+                "via_device_id": null,
+                "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "cd23fe0ffc1111eabbd6256dd286a770"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "spotify",
+                        "cnirithian"
+                    ]
+                ],
+                "manufacturer": "Spotify AB",
+                "model": "Spotify premium",
+                "name": "Spotify cnirithian",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "cd58689dfc1111ea905e0dc6f4c86198",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "c4370eb218294fe5b705e7871860372b"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "cast",
+                        "822f0eef57237003f15351ec256f971a"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Google Home Mini",
+                "name": "GoogleHome5295",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "0901437c089b11eb9a66f1b92c9375e1",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "c4370eb218294fe5b705e7871860372b"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "cast",
+                        "ed606cb2ef8fa0dba3230833c36a5251"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Google Home Mini",
+                "name": "Joshua's Bedroom speaker",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "daa4cd1d08a211eb9071ef8e3ec2a284",
+                "via_device_id": null,
+                "area_id": "9bd2d8f658df4c54860e03973bc59968",
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "223eeb2b09e811ebb177f7079c4655e5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "plex",
+                        "3e5d09b71b2ad597bd7d1ae15011c4ab537e3e26"
+                    ]
+                ],
+                "manufacturer": "Plex",
+                "model": "Plex Media Server",
+                "name": "Activity Sensor",
+                "sw_version": "1.18.0.1913-e5cc93306",
+                "entry_type": null,
+                "id": "22bbbd4e09e811eb8a50f9daa22abfb3",
+                "via_device_id": null,
+                "area_id": "03bace1f84ef43488fd1a5bacab0bc96",
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "223eeb2b09e811ebb177f7079c4655e5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "plex",
+                        "qwk1vmppmim69g2zs1619kwu"
+                    ]
+                ],
+                "manufacturer": "Firefox",
+                "model": "Plex Web",
+                "name": "Plex (Plex Web - Firefox - Linux)",
+                "sw_version": "4.44.2",
+                "entry_type": null,
+                "id": "23e43a5309e811ebbc217146e8dee06c",
+                "via_device_id": "22bbbd4e09e811eb8a50f9daa22abfb3",
+                "area_id": null,
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "223eeb2b09e811ebb177f7079c4655e5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "plex",
+                        "c3gh0zvleatjceg0klzriq6n"
+                    ]
+                ],
+                "manufacturer": "Firefox",
+                "model": "Plex Web",
+                "name": "Plex (Plex Web - Firefox - Windows)",
+                "sw_version": "4.44.2",
+                "entry_type": null,
+                "id": "c173c22d0a3811eb887b5beb63c0b602",
+                "via_device_id": "22bbbd4e09e811eb8a50f9daa22abfb3",
+                "area_id": null,
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "223eeb2b09e811ebb177f7079c4655e5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "plex",
+                        "cc9h97i0qyqcyivtibhcxi7j"
+                    ]
+                ],
+                "manufacturer": "Plex",
+                "model": "Plex Web",
+                "name": "Plex (Plex Web - Firefox)",
+                "sw_version": "4.44.1",
+                "entry_type": null,
+                "id": "35bbb3190a4211eba0bafb5017288495",
+                "via_device_id": "22bbbd4e09e811eb8a50f9daa22abfb3",
+                "area_id": null,
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "223eeb2b09e811ebb177f7079c4655e5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "plex",
+                        "3718f5123b35de8c-com-plexapp-android"
+                    ]
+                ],
+                "manufacturer": "Plex",
+                "model": "Plex for Android (Mobile)",
+                "name": "Plex (Plex for Android (Mobile) - Pixel 3)",
+                "sw_version": "8.7.2.20952",
+                "entry_type": null,
+                "id": "5dac43510b3011eb85a19d6ab0579cd7",
+                "via_device_id": "22bbbd4e09e811eb8a50f9daa22abfb3",
+                "area_id": null,
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "c4370eb218294fe5b705e7871860372b"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "cast",
+                        "b1d1fc43f43a103f0da410f4fdc9eba3"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Google Home Mini",
+                "name": "Kitchen speaker",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "c44f1bc30b4d11eb9864e30c2b662303",
+                "via_device_id": null,
+                "area_id": "5d9bb3967e064b3a92e3f029ac2460e7",
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "223eeb2b09e811ebb177f7079c4655e5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "plex",
+                        "7b8ed266381c8b65-com-plexapp-android"
+                    ]
+                ],
+                "manufacturer": "Android",
+                "model": "Plex for Android (TV)",
+                "name": "Plex (Plex for Android (TV) - SHIELD Android TV)",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "633627450be711eb80aed3ae939f4bf7",
+                "via_device_id": "22bbbd4e09e811eb8a50f9daa22abfb3",
+                "area_id": null,
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "26605136b3bb49dc9d46c7e831afa6ca"
+                ],
+                "connections": [
+                    [
+                        "zigbee",
+                        "00:15:8d:00:05:4d:26:b1"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "zha",
+                        "00:15:8d:00:05:4d:26:b1"
+                    ]
+                ],
+                "manufacturer": "LUMI",
+                "model": "lumi.weather",
+                "name": "LUMI lumi.weather",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "42564144118911eb97319b4597ab1e0d",
+                "via_device_id": "67ea42990da646c9bdaa3ae0deccb03b",
+                "area_id": "03bace1f84ef43488fd1a5bacab0bc96",
+                "name_by_user": "Basement Temperature"
+            },
+            {
+                "config_entries": [
+                    "26605136b3bb49dc9d46c7e831afa6ca"
+                ],
+                "connections": [
+                    [
+                        "zigbee",
+                        "00:15:8d:00:02:b7:bd:eb"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "zha",
+                        "00:15:8d:00:02:b7:bd:eb"
+                    ]
+                ],
+                "manufacturer": "LUMI",
+                "model": "lumi.vibration.aq1",
+                "name": "LUMI lumi.vibration.aq1",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "e556d8fe119011eb84c5db336ca6873b",
+                "via_device_id": "67ea42990da646c9bdaa3ae0deccb03b",
+                "area_id": "03bace1f84ef43488fd1a5bacab0bc96",
+                "name_by_user": "Vibration"
+            },
+            {
+                "config_entries": [
+                    "1c531812121a11eb98393d13ee3346dc"
+                ],
+                "connections": [
+                    [
+                        "upnp",
+                        "uuid:56d567a6-ce9b-4a8e-b382-a4cdac3f609c"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:56d567a6-ce9b-4a8e-b382-a4cdac3f609c"
+                    ]
+                ],
+                "manufacturer": "Google",
+                "model": "OnHub",
+                "name": "OnHub",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "11b8e8ac121a11eba52f3769f0a52c26",
+                "via_device_id": null,
+                "area_id": "ae19ae0bea504d2ea6982d936ef8591a",
+                "name_by_user": null
             }
-        ]
-    },
-    "key": "core.device_registry",
-    "version": 1
+        ],
+        "deleted_devices": []
+    }
 }
