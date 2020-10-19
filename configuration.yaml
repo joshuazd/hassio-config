@@ -10,6 +10,7 @@ zeroconf:
 discovery:
 lovelace:
   mode: yaml
+  resources: !include lovelace/resources.yaml
 mqtt:
   discovery: true
   broker: 127.0.0.1
@@ -74,6 +75,10 @@ spotcast:
   sp_dc: !secret spotify_username
   sp_key: !secret spotify_password
 
+spotify:
+  client_id: !secret spotify_id
+  client_secret: !secret spotify_secret
+
 history:
   exclude:
     domains:
@@ -108,14 +113,12 @@ recorder:
   exclude:
     domains:
       - calendar
+      - weather
+      - zone
     entities:
       - sun.sun
-      - weather.home
-      - weather.home_2
       - sensor.dark_sky_icon
       - sensor.hacs
-      - zone.home
-      - zone.panera
       - light.hue_white_lamp_4
       - light.hue_white_lamp_5
       - light.joshua_bedroom_light_1
@@ -143,6 +146,16 @@ recorder:
       - sensor.tv_volume
       - sensor.tv_source
       - sensor.time
+      - sensor.adguard_dns_queries
+      - sensor.adguard_dns_queries_blocked
+      - sensor.adguard_parental_control_blocked
+      - sensor.adguard_safe_browsing_blocked
+      - sensor.adguard_safe_searches_enforced
+      - switch.adguard_filtering
+      - switch.adguard_parental_control
+      - switch.adguard_protection
+      - switch.adguard_safe_browsing
+      - switch.adguard_safe_search
 
 google:
   client_id: !secret google_client_id
@@ -174,6 +187,17 @@ google_assistant:
       expose: true
     sensor.bedroom_sensor_temperature:
       expose: true
+    media_player.lg_tv:
+      expose: true
+    switch.adguard_filtering:
+      expose: false
+    switch.adguard_safe_browsing:
+      expose: false
+    switch.adguard_parental_control:
+      expose: false
+    switch.adguard_safe_search:
+      expose: false
+    
 
 device_tracker:
   - platform: nmap_tracker
@@ -260,7 +284,7 @@ sensor:
         value_template: "{{ state_attr('media_player.lg_tv', 'source') }}"
       tv_app:
         friendly_name: 'TV App'
-        value_template: "{{ state_attr('media_player.shield', 'app_name') }}"
+        value_template: "{{ state_attr('media_player.basement_tv', 'app_name') }}"
   - platform: darksky
     api_key: !secret darksky_api_key
     scan_interval: '00:10'
@@ -281,6 +305,36 @@ binary_sensor:
     device: auto
   - platform: workday
     country: US
+  - platform: bayesian
+    prior: 0.3
+    probability_threshold: 0.7
+    name: Basement Occupied
+    observations:
+      - entity_id: binary_sensor.wyze_basement_motion
+        platform: state
+        to_state: 'on'
+        prob_given_true: 0.3
+        prob_given_false: 0
+      - entity_id: light.basement_lights
+        platform: state
+        to_state: 'on'
+        prob_given_true: 0.7
+        prob_given_false: 0.1
+      - entity_id: binary_sensor.wyze_basement_door
+        platform: state
+        to_state: 'on'
+        prob_given_true: 0.7
+        prob_given_false: 0.5
+      - entity_id: group.all_people
+        platform: state
+        to_state: 'home'
+        prob_given_true: 1.0
+        prob_given_false: 0.5
+      - entity_id: media_player.basement_tv
+        platform: state
+        to_state: 'playing'
+        prob_given_true: 0.05
+        prob_given_false: 0
 
 media_player:
   - platform: androidtv
@@ -294,7 +348,7 @@ webostv:
   host: 192.168.86.47
 
 input_datetime:
-
+input_select:
 input_boolean:
   night_mode:
     name: Night Mode

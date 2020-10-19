@@ -1,0 +1,24 @@
+{
+    "version": 1,
+    "key": "input_select",
+    "data": {
+        "items": [
+            {
+                "name": "Speakers",
+                "icon": "mdi:cast-audio",
+                "options": [
+                    "kitchen_speaker",
+                    "living_room_display",
+                    "first_floor_speakers",
+                    "non_bedroom_speakers",
+                    "basement_speaker",
+                    "tv_speaker",
+                    "all_speakers",
+                    "joshua_s_bedroom_speaker",
+                    "josie_s_bedroom_speaker"
+                ],
+                "id": "speakers"
+            }
+        ]
+    }
+}
