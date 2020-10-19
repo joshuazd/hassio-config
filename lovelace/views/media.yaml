@@ -40,6 +40,28 @@ cards:
             color: rgba(0, 0, 0, 0.6);
             --ha-card-header-font-size: 22px;
           }
+      - card:
+          cards:
+            - template: blank
+              type: 'custom:button-card'
+            - entity: media_player.spotify_cnirithian
+              icon: 'mdi:spotify'
+              template: media_audio
+              type: 'custom:button-card'
+            - template: filler
+              type: 'custom:button-card'
+            - template: filler
+              type: 'custom:button-card'
+            - template: blank
+              type: 'custom:button-card'
+          type: horizontal-stack
+        type: 'custom:mod-card'
+        style: |
+          ha-card {
+            font-variant: small-caps;
+            color: rgba(0, 0, 0, 0.6);
+            --ha-card-header-font-size: 22px;
+          }
       - break
       - card:
           cards:
@@ -92,7 +114,7 @@ cards:
             - template: blank
               type: 'custom:button-card'
             - entity: media_player.basement_speaker
-              template: mediaplayer_button_style
+              template: media_audio
               type: 'custom:button-card'
               icon: '[[[return entity.attributes.icon]]]'
             - entity: media_player.tv_speaker
@@ -110,10 +132,12 @@ cards:
           cards:
             - template: blank
               type: 'custom:button-card'
-            - entity: media_player.shield
+            # - entity: media_player.shield
+            - entity: media_player.basement_tv
               icon: 'mdi:television'
               name: Shield
-              template: media_display
+              # template: media_display
+              template: mediaplayer_button_style
               type: 'custom:button-card'
             - entity: media_player.lg_tv
               template: mediaplayer_button_style

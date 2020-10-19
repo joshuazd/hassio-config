@@ -64,7 +64,7 @@ mediaplayer_button_style:
     custom_fields:
       play_pause:
         [filter: 
-        "[[[ return entity.attributes.entity_picture == null ? 'none' : 'drop-shadow(0 0 1.3vw rgba(0,0,0,0.7))'; ]]]", 
+        "[[[ return entity.attributes.entity_picture == null ? 'none' : 'drop-shadow(0 0 1.3vw rgba(0,0,0,0))'; ]]]", 
         fill: '#858585', top: 0, right: 0, bottom: 70px, left: 80px, margin: auto, width: 15%, height: 15%, position: absolute, z-index: 10]
       
   hold_action:
