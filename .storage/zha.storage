@@ -11,7 +11,7 @@
             {
                 "name": "LUMI lumi.weather",
                 "ieee": "00:15:8d:00:05:4d:26:b1",
-                "last_seen": 1634279768.381584
+                "last_seen": 1634325169.4808326
             },
             {
                 "name": "unk_manufacturer lumi.vibration.aq1",
@@ -21,27 +21,27 @@
             {
                 "name": "sengled E1C-NB6",
                 "ieee": "b0:ce:18:14:00:04:16:0a",
-                "last_seen": 1634323714.3347034
+                "last_seen": 1634326161.2302413
             },
             {
                 "name": "sengled E1C-NB6",
                 "ieee": "b0:ce:18:14:00:04:0e:7e",
-                "last_seen": 1634323631.0816128
+                "last_seen": 1634325876.2773483
             },
             {
                 "name": "LUMI lumi.plug.maus01",
                 "ieee": "00:15:8d:00:02:a2:1e:9b",
-                "last_seen": 1634324194.731631
+                "last_seen": 1634326595.1788108
             },
             {
                 "name": "LUMI lumi.plug.maus01",
                 "ieee": "00:15:8d:00:02:a1:e7:a1",
-                "last_seen": 1634323867.976743
+                "last_seen": 1634326545.8573046
             },
             {
                 "name": "LUMI lumi.sensor_motion.aq2",
                 "ieee": "00:15:8d:00:06:a1:55:90",
-                "last_seen": 1634278690.9370844
+                "last_seen": 1634326209.850277
             },
             {
                 "name": "LUMI lumi.sensor_magnet.aq2",
@@ -51,12 +51,12 @@
             {
                 "name": "LUMI lumi.sensor_motion.aq2",
                 "ieee": "00:15:8d:00:06:a2:5b:bc",
-                "last_seen": 1634279467.6453052
+                "last_seen": 1634326230.0443585
             },
             {
                 "name": "Philips SML001",
                 "ieee": "00:17:88:01:04:b7:8c:ca",
-                "last_seen": 1634323966.3363702
+                "last_seen": 1634326504.2849758
             }
         ]
     }

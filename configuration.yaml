@@ -452,3 +452,9 @@ input_boolean:
     name: Movie Mode
   tv_toggle:
     name: TV Toggle
+
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_api_key
+    allowed_chat_ids:
+      - 1563546300
