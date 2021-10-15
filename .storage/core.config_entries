@@ -211,12 +211,12 @@
                 "data": {
                     "auth_implementation": "spotify",
                     "token": {
-                        "access_token": "BQAc4LptI4kLsPGhEMIn_keMvJTVET63mnHQcfmWelNgSj1-GpcyHAKfb6wM3NUR0DNt4KqxkzZinYozLFjfXG5u6O8nZZHEy4lKp2vW8BKjhC33xg7PqQ-O1dvDIFreZqCeNR_iwuDv5JHgnQyARK15Osbd4fXiO9aAHwhwiumrTizKxc1IEw8dSaNxyUm9klAhgs-i0IAymg",
+                        "access_token": "BQAcUQNuKInaBeY8bl_Yr5sMrwGJ141X4BtVBmiIeTOTxLABxQw5E7Wu_53tayubc7WtnLBHhNiCC1HMvm6_yNe3xYtlpC_oZEAWEQyR5mFCcn-U0KvZqu7GKFGC1uW2hsTjfzstlfNVeC4WOHDT9kh0D1Ej1yuJzeLAnHCqYjTRmhbh8_LIWMjwtKRz9AedPk8GwMM4OXkZjA",
                         "token_type": "Bearer",
                         "expires_in": 3600,
                         "refresh_token": "AQB6aG9OZ091YGhU4lcn-iPNUd8hUsUC1XTm_AckeXJXRnwcsvLyAunzxt-jqCEhsAanFUA_rncdzoFld_t_6Mv54_rBVmuC1xLw4HsrW4dDxJXW5NmrMIrjviWy6JIuaF8",
                         "scope": "playlist-read-private playlist-read-collaborative user-modify-playback-state user-library-read user-follow-read user-read-playback-state user-read-recently-played user-read-playback-position user-read-private user-top-read",
-                        "expires_at": 1634327219.1781204
+                        "expires_at": 1634330820.31849
                     },
                     "id": "cnirithian",
                     "name": "cnirithian"
