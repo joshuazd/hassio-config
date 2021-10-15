@@ -5,7 +5,10 @@ light_button_style:
   state: 
     # - <<: *button_state 
     - styles:
-        icon: [color: 'var(--button-card-light-color)']   
+        icon: 
+          - color: 'var(--button-card-light-color)'
+      value: 'on'
+      id: _state_value_on
   styles:
     grid:
       - position: relative
@@ -16,7 +19,7 @@ light_button_style:
 
   custom_fields:    
     brightness: >
-      [[[ if (entity.state === 'on' && entity.attributes.brightness) {
+      [[[ if (entity && entity.state === 'on' && entity.attributes.brightness) {
       const brightness = Math.round(entity.attributes.brightness / 2.54);
       const radius = 20.5; const circumference = radius * 2 * Math.PI; 
       return `<svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="${radius}" stroke="#b2b2b2" stroke-width="1.5" fill="none" style="
@@ -26,7 +29,7 @@ light_button_style:
 # LIGHT TILE SLIM
 light_slim_tile:
   template: light_button_style
-  aspect_ratio: 4/1          
+  aspect_ratio: 4/1
 
   styles:
     grid:

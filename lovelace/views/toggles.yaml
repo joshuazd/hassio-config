@@ -1,0 +1,118 @@
+title: ''
+path: toggles
+icon: 'mdi:toggle-switch-outline'
+panel: true
+cards:
+  - type: 'custom:layout-card'
+    layout_type: vertical
+    cards:
+      - type: 'custom:mod-card'
+        card_mod:
+          style: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
+        card:
+          type: horizontal-stack
+          title: ' '
+          cards:
+            - type: 'custom:button-card'
+              template: blank
+            - type: 'custom:button-card'
+              template: light_button_style
+              entity: light.laundry_room
+            - type: 'custom:button-card'
+              template: switch_button_style
+              entity: switch.pumpkin
+            #   color: 'rgb(255,102,25)'
+            #   state:
+            #     - styles:
+            #         icon: [color: "rgb(255,102,25)"]
+            #       value: 'on'
+            #       id: _state_value_on
+            - type: 'custom:button-card'
+              template: filler
+            - type: 'custom:button-card'
+              template: blank
+      - type: 'custom:mod-card'
+        card_mod:
+          style: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
+        card:
+          type: horizontal-stack
+          cards:
+            - type: 'custom:button-card'
+              template: blank
+            - type: 'custom:button-card'
+              template: switch_button_style
+              entity: switch.joshua_bedroom_switch
+            - type: 'custom:button-card'
+              template: switch_button_style
+              entity: switch.josie_bedroom_switch
+            - type: 'custom:button-card'
+              template: filler
+            - type: 'custom:button-card'
+              template: blank
+      - type: 'custom:layout-break'
+      - type: 'custom:mod-card'
+        card_mod:
+          style: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
+        card:
+          type: horizontal-stack
+          title: ' '
+          cards:
+            - type: 'custom:button-card'
+              template: blank
+            - type: 'custom:button-card'
+              template: input_boolean
+              entity: input_boolean.josie_sleeping
+            - type: 'custom:button-card'
+              template: input_boolean
+              entity: input_boolean.joshua_sleeping
+            - type: 'custom:button-card'
+              template: input_boolean
+              entity: input_boolean.night_mode
+              icon: >
+                [[[
+                  if (entity.state === 'on') return 'mdi:weather-night'; return 'mdi:weather-sunny';
+                ]]]
+            - type: 'custom:button-card'
+              template: blank
+      - type: 'custom:mod-card'
+        card_mod:
+          style: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
+        card:
+          type: horizontal-stack
+          cards:
+            - type: 'custom:button-card'
+              template: blank
+            - type: 'custom:button-card'
+              template: input_boolean
+              entity: input_boolean.movie_mode
+              icon: 'mdi:television-play'
+            - type: 'custom:button-card'
+              template: binary_sensor
+              entity: binary_sensor.washing_machine_running
+              name: Washer
+            - type: 'custom:button-card'
+              entity: binary_sensor.dryer_running
+              name: Dryer
+              template: binary_sensor
+            - type: 'custom:button-card'
+              template: blank

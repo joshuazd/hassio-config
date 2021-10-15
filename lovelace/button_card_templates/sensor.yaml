@@ -1,7 +1,9 @@
 sensor_style:
   template: homekit_style
+  tap_action:
+    action: more-info
   styles:
-    card: [background-color: 'rgba(255, 255, 255, 0.8)']
+    card: [background-color: 'rgba(236, 239, 244, 0.8)']
     name: [color: 'rgba(0, 0, 0, 0.6)']
     state: [color: 'rgba(0, 0, 0, 0.6)']
     # icon: [color: "#fbc02d"]

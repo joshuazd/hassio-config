@@ -57,6 +57,9 @@ midnight:
   paper-toggle-button-unchecked-ink-color: "var(--disabled-text-color)"
   primary-background-color: "#383C45"
   primary-color: "#5294E2"
+  #primary-color: 'RGBA(82, 148, 226, 0.6)'
+  app-header-background-color: 'rgba(0, 0, 0, 0.4)'
+  app-header-text-color: 'rgba(255, 255, 255, 0.8)'
   primary-text-color: "#FFFFFF"
   secondary-background-color: "#383C45"
   secondary-text-color: "#5294E2"

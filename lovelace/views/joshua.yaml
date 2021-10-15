@@ -3,10 +3,11 @@ path: joshua
 badges: []
 panel: true
 cards:
-  - layout: vertical
+  - layout_type: vertical
     type: 'custom:layout-card'
     cards:
       - card:
+          type: vertical-stack
           cards:
             - cards:
                 - template: blank
@@ -25,13 +26,13 @@ cards:
                   type: 'custom:button-card'
               title: Toggles
               type: horizontal-stack
-          type: vertical-stack
-        style: |
-          ha-card {
-            font-variant: small-caps;
-            color: rgba(0, 0, 0, 0.6);
-            --ha-card-header-font-size: 22px;
-          }
+        card_mod:
+          style: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
         type: 'custom:mod-card'
       - card:
           cards:
@@ -61,20 +62,25 @@ cards:
                   template: sensor_style
                   name: Light Level
                   type: 'custom:button-card'
-                - template: filler
+                - template: binary_sensor
+                  entity: binary_sensor.keyboard
+                  name: Keyboard
                   type: 'custom:button-card'
-                - template: filler
+                - template: aqara_motion
                   type: 'custom:button-card'
+                  icon: 'mdi:sofa-single'
+                  entity: binary_sensor.living_room_motion
                 - template: blank
                   type: 'custom:button-card'
               type: horizontal-stack
           type: vertical-stack
-        style: |
-          ha-card {
-            font-variant: small-caps;
-            color: rgba(0, 0, 0, 0.6);
-            --ha-card-header-font-size: 22px;
-          }
+        card_mod:
+          style: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
         type: 'custom:mod-card'
       - card:
           cards:
@@ -112,14 +118,15 @@ cards:
               type: 'custom:button-card'
           title: Commute Time
           type: horizontal-stack
-        style: |
-          ha-card {
-            font-variant: small-caps;
-            color: rgba(0, 0, 0, 0.6);
-            --ha-card-header-font-size: 22px;
-          }
+        card_mod:
+          style: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
         type: 'custom:mod-card'
-      - break
+      - type: 'custom:layout-break'
       - card:
           cards:
             - template: blank
@@ -130,23 +137,25 @@ cards:
                   index: 0
               name: Bedroom Temperature
               points_per_hour: 1
-              style: |
-                ha-card {
-                  # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
-                  color: rgb(242, 242, 247);
-                  background: rgba(10, 10, 10, 0.7);
-                }
+              card_mod:
+                style: |
+                  ha-card {
+                    # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                    color: rgb(242, 242, 247);
+                    background: rgba(46, 52, 64, 0.9);
+                  }
               type: 'custom:mini-graph-card'
             - template: blank
               type: 'custom:button-card'
           title: ' '
           type: horizontal-stack
-        style: |
-          ha-card {
-            font-variant: small-caps;
-            color: rgba(0, 0, 0, 0.6);
-            --ha-card-header-font-size: 22px;
-          }
+        card_mod:
+          style: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
         type: 'custom:mod-card'
       - card:
           cards:
@@ -159,33 +168,36 @@ cards:
               hours_to_show: 4
               points_per_hour: 6
               smoothing: true
-              style: |
-                ha-card {
-                  # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
-                  color: rgb(242, 242, 247);
-                  background: rgba(10, 10, 10, 0.7);
-                }
+              card_mod:
+                style: |
+                  ha-card {
+                    # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                    color: rgb(242, 242, 247);
+                    background: rgba(46, 52, 64, 0.9);
+                  }
               type: 'custom:mini-graph-card'
             - template: blank
               type: 'custom:button-card'
           type: horizontal-stack
-        style: |
-          ha-card {
-            font-variant: small-caps;
-            color: rgba(0, 0, 0, 0.6);
-            --ha-card-header-font-size: 22px;
-          }
+        card_mod:
+          style: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
         type: 'custom:mod-card'
       - cards:
           - template: blank
             type: 'custom:button-card'
           - type: entities
-            style: |
-              ha-card {
-                # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
-                color: rgb(242, 242, 247);
-                background: rgba(10, 10, 10, 0.7);
-              }
+            card_mod:
+              style: |
+                ha-card {
+                  # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                  color: rgb(242, 242, 247);
+                    background: rgba(46, 52, 64, 0.9);
+                }
             entities:
               - input_datetime.run_time
               - input_datetime.wake_up_time
@@ -205,19 +217,20 @@ cards:
                 name: Last Restart
               - entity: sensor.google_wifi_local_ip
                 name: Local IP
-            style: |
-              ha-card {
-                # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
-                color: rgb(242, 242, 247);
-                background: rgba(10, 10, 10, 0.7);
-              }
+            card_mod:
+              style: |
+                ha-card {
+                  # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                  color: rgb(242, 242, 247);
+                  background: rgba(46, 52, 64, 0.9);
+                }
             title: Wifi
             type: entities
           - template: blank
             type: 'custom:button-card'
         title: ''
         type: horizontal-stack
-      - break
+      - type: 'custom:layout-break'
       - cards:
           - template: blank
             type: 'custom:button-card'
@@ -238,12 +251,13 @@ cards:
                 name: Protection
               - entity: switch.adguard_safe_browsing
                 name: Safe Browsing
-            style: |
-              ha-card {
-                # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
-                color: rgb(242, 242, 247);
-                background: rgba(10, 10, 10, 0.7);
-              }
+            card_mod:
+              style: |
+                ha-card {
+                  # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                  color: rgb(242, 242, 247);
+                  background: rgba(46, 52, 64, 0.9);
+                }
             title: AdGuard
             type: entities
           - template: blank
@@ -263,12 +277,13 @@ cards:
                 name: Network Out
               - entity: sensor.disk_use_percent_home
                 name: Disk Use
-            style: |
-              ha-card {
-                # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
-                color: rgb(242, 242, 247);
-                background: rgba(10, 10, 10, 0.7);
-              }
+            card_mod:
+              style: |
+                ha-card {
+                  # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                  color: rgb(242, 242, 247);
+                  background: rgba(46, 52, 64, 0.9);
+                }
             title: Raspberry Pi
             type: entities
           - template: blank
@@ -284,12 +299,13 @@ cards:
                 entities:
                   - entity: input_select.speakers
                 show_header_toggle: false
-                style: |
-                  ha-card {
-                    # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
-                    color: rgb(242, 242, 247);
-                    background: rgba(10, 10, 10, 0.7);
-                  }
+                card_mod:
+                  style: |
+                    ha-card {
+                      # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                      color: rgb(242, 242, 247);
+                      background: rgba(46, 52, 64, 0.9);
+                    }
               - type: button
                 tap_action:
                   action: call-service
@@ -297,20 +313,22 @@ cards:
                 icon: 'mdi:cast'
                 show_state: false
                 icon_height: 50px
-                style: |
-                  ha-card {
-                    # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
-                    color: rgb(242, 242, 247);
-                    background: rgba(10, 10, 10, 0.7);
-                  }
+                card_mod:
+                  style: |
+                    ha-card {
+                      # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                      color: rgb(242, 242, 247);
+                      background: rgba(46, 52, 64, 0.9);
+                    }
               - type: media-control
                 entity: media_player.spotify_cnirithian
-                style: |
-                  ha-card {
-                    # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
-                    color: rgb(242, 242, 247);
-                    background: rgba(10, 10, 10, 0.7);
-                  }
+                card_mod:
+                  style: |
+                    ha-card {
+                      # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                      color: rgb(242, 242, 247);
+                      background: rgba(46, 52, 64, 0.9);
+                    }
           # - type: 'custom:spotify-card'
           #   spotify_entity: media_player.spotify_cnirithian
           #   #height: 500

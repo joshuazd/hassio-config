@@ -1,0 +1,72 @@
+aqara_motion:
+  template: homekit_style
+  name: >
+    [[[ return entity.attributes.friendly_name.split(" ").slice(0,-1).join(" ") ]]]
+  show_label: false
+  show_state: false
+  tap_action:
+    action: more-info
+  styles:
+    name:
+      - justify-self: start
+      - padding-left: 20px
+      - font-weight: bold
+      - font-family: Helvetica
+      - font-size: 13px
+      - padding-bottom: 3px
+      - color: 'rgba(0, 0, 0, 0.6)'
+      - max-width: 75%
+    card:
+      - background-color: 'rgba(236, 239, 244, 0.8)'
+    state:
+      - color: 'rgba(0, 0, 0, 0.6)'
+    icon:
+      - color: var(--accent-color)
+    grid:
+      - position: relative
+      - grid-template-areas: '"i" "n" "motion" "brightness"'
+      - grid-template-columns: 1fr
+      - grid-template-rows: 1fr
+    custom_fields:
+      battery:
+        - top: 8.5%
+        - right: 10%
+        - width: 50px
+        - height: 50px
+        - font-weight: bold
+        - position: absolute
+        - letter-spacing: 0.03vw
+      motion:
+        - justify-self: start
+        - padding-left: 20px
+        - font-family: Helvetica
+        - font-size: 11px
+        - font-weight: bold
+        - padding-bottom: 0px
+        - color: 'rgba(0, 0, 0, 0.6)'
+      brightness:
+        - justify-self: start
+        - padding-left: 20px
+        - font-family: Helvetica
+        - font-size: 11px
+        - font-weight: bold
+        - padding-bottom: 10px
+        - color: 'rgba(0, 0, 0, 0.6)'
+  custom_fields:
+    motion: >
+      [[[ if(entity) return 'Motion: ' + (entity.state == 'off' ? 'Clear' : 'Detected') ]]]
+    brightness: |
+      [[[ const light = states[entity.entity_id.slice(7,-6)+'light']
+        if(entity && light)
+        return 'Brightness: ' + light.state + light.attributes.unit_of_measurement ]]]
+    battery: >
+      [[[ if (entity && states[entity.entity_id.substr(7) + '_power']) { 
+      const battery = states[entity.entity_id.substr(7) + '_power'].state;
+      const radius = 20.5; const circumference = radius * 2 * Math.PI;
+      return `<svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="${radius}" stroke="#b2b2b2"
+      stroke-width="1.5" fill="none" style=" transform: rotate(-90deg);
+      transform-origin: 50% 50%; stroke-dasharray: ${circumference};
+      stroke-dashoffset: ${circumference - battery / 100 * circumference};" />
+      <text x="50%" y="54%" fill="#8d8e90" font-size="11" text-anchor="middle"
+      alignment-baseline="middle">${battery}<tspan
+      font-size="">%</tspan></text></svg>`; } ]]]

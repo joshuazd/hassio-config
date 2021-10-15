@@ -6,7 +6,7 @@ mediaplayer_button_style:
 
   tap_action: &media_tap_action
     action: >
-      [[[ if (entity.state === 'off' || entity.state === 'idle' || entity.state === 'standby') {
+      [[[ if (!entity || entity.state === 'off' || entity.state === 'idle' || entity.state === 'standby') {
       return 'none'; } else { return 'call-service'; } ]]]
     service: media_player.media_play_pause
     service_data:
@@ -15,7 +15,7 @@ mediaplayer_button_style:
 
   state: 
       - styles:
-          card: [background-color: 'rgba(255, 255, 255, 0.8)']
+          card: [background-color: 'rgba(236, 239, 244, 0.8)']
           name: [color: 'rgba(0, 0, 0, 0.6)']
           state: [color: 'rgba(0, 0, 0, 0.6)']
           icon: [color: "var(--accent-color)"]
@@ -23,7 +23,7 @@ mediaplayer_button_style:
         value: 'on'
 
       - styles:
-          card: [background-color: 'rgba(255, 255, 255, 0.8)']
+          card: [background-color: 'rgba(236, 239, 244, 0.8)']
           name: [color: 'rgba(0, 0, 0, 0.6)']
           state: [color: 'rgba(0, 0, 0, 0.6)']
           icon: [color: "var(--accent-color)"]
@@ -31,7 +31,7 @@ mediaplayer_button_style:
         value: 'playing'
 
       - styles:
-          card: [background-color: 'rgba(255, 255, 255, 0.8)']
+          card: [background-color: 'rgba(236, 239, 244, 0.8)']
           name: [color: 'rgba(0, 0, 0, 0.6)']
           state: [color: 'rgba(0, 0, 0, 0.6)']
           icon: [color: "var(--accent-color)"]
@@ -39,7 +39,7 @@ mediaplayer_button_style:
         value: 'idle'
 
       - styles:
-          card: [background-color: 'rgba(255, 255, 255, 0.8)']
+          card: [background-color: 'rgba(236, 239, 244, 0.8)']
           name: [color: 'rgba(0, 0, 0, 0.6)']
           state: [color: 'rgba(0, 0, 0, 0.6)']
           icon: [color: "var(--accent-color)"]
@@ -47,7 +47,7 @@ mediaplayer_button_style:
         value: 'standby'
 
       - styles:
-          card: [background-color: 'rgba(255, 255, 255, 0.8)']
+          card: [background-color: 'rgba(236, 239, 244, 0.8)']
           name: [color: 'rgba(0, 0, 0, 0.6)']
           state: [color: 'rgba(0, 0, 0, 0.6)']
           icon: [color: "var(--accent-color)"]
@@ -80,12 +80,13 @@ media_display:
   tap_action: *media_tap_action
 
   state_display: >
-    [[[ if (entity.attributes.media_title === 'Nothing playing' || entity.attributes.media_title === 'No title' && entity.state === 'paused' ) { return 'Nothing playing'; }
+    [[[ if(!entity) { return ''; }
+    if (entity.attributes.media_title === 'Nothing playing' || entity.attributes.media_title === 'No title' && entity.state === 'paused' ) { return 'Nothing playing'; }
     if (entity.attributes.media_title === 'No title' && entity.state === 'playing') { return 'No title'; }
     else { return entity.attributes.media_title; } ]]]
   state: 
       - styles:
-          card: [background-color: 'rgba(255, 255, 255, 0.8)']
+          card: [background-color: 'rgba(236, 239, 244, 0.8)']
           name: [color: 'rgba(0, 0, 0, 0.6)']
           state: [color: 'rgba(0, 0, 0, 0.6)']
           icon: [color: "var(--accent-color)"]
@@ -93,7 +94,7 @@ media_display:
         value: 'on'
 
       - styles:
-          card: [background-color: 'rgba(255, 255, 255, 0.8)']
+          card: [background-color: 'rgba(236, 239, 244, 0.8)']
           name: [color: 'rgba(0, 0, 0, 0.6)']
           state: [color: 'rgba(0, 0, 0, 0.6)']
           icon: [color: "var(--accent-color)"]
@@ -101,7 +102,7 @@ media_display:
         value: 'playing'
 
       - styles:
-          card: [background-color: 'rgba(255, 255, 255, 0.8)']
+          card: [background-color: 'rgba(236, 239, 244, 0.8)']
           name: [color: 'rgba(0, 0, 0, 0.6)']
           state: [color: 'rgba(0, 0, 0, 0.6)']
           icon: [color: "var(--accent-color)"]
@@ -109,7 +110,7 @@ media_display:
         value: 'idle'
 
       - styles:
-          card: [background-color: 'rgba(255, 255, 255, 0.8)']
+          card: [background-color: 'rgba(236, 239, 244, 0.8)']
           name: [color: 'rgba(0, 0, 0, 0.6)']
           state: [color: 'rgba(0, 0, 0, 0.6)']
           icon: [color: "var(--accent-color)"]
@@ -117,7 +118,7 @@ media_display:
         value: 'standby'
 
       - styles:
-          card: [background-color: 'rgba(255, 255, 255, 0.8)']
+          card: [background-color: 'rgba(236, 239, 244, 0.8)']
           name: [color: 'rgba(0, 0, 0, 0.6)']
           state: [color: 'rgba(0, 0, 0, 0.6)']
           icon: [color: "var(--accent-color)"]
@@ -162,7 +163,7 @@ media_audio:
   tap_action: *media_tap_action
   show_icon: true
   name: >-
-    [[[ return entity.attributes.friendly_name.split(" ").slice(0,-1).join(" "); ]]]
+    [[[ if(entity) {return entity.attributes.friendly_name.split(" ").slice(0,-1).join(" ");} else {return '';} ]]]
 
   hold_action: 
     action: more-info
@@ -185,41 +186,42 @@ media_audio:
     #       artwork: full-cover                  
 
   state_display: >
-    [[[ if (entity.attributes.media_title === 'Nothing playing' || entity.attributes.media_title === 'No title' && entity.state === 'paused' ) { return 'Nothing playing'; }
+    [[[ if(!entity) {return '';}
+    if (entity.attributes.media_title === 'Nothing playing' || entity.attributes.media_title === 'No title' && entity.state === 'paused' ) { return 'Nothing playing'; }
     if (entity.attributes.media_title === 'No title' && entity.state === 'playing') { return 'No title'; }
     else { return entity.attributes.media_title; } ]]]
 
   state: 
     - styles:
-        card: [background-color: 'rgba(255, 255, 255, 0.8)']
+        card: [background-color: 'rgba(236, 239, 244, 0.8)']
         name: [color: "[[[ return entity.attributes.entity_picture == null ? 'rgba(0, 0, 0, 0.6)' : 'var(--primary-text-color)'; ]]]"]
         state: [color: "[[[ return entity.attributes.entity_picture == null ? 'rgba(0, 0, 0, 0.6)' : 'var(--primary-text-color)'; ]]]"]
         icon: [color: "var(--accent-color)"]
       value: 'on'
 
     - styles:
-        card: [background-color: 'rgba(255, 255, 255, 0.8)']
+        card: [background-color: 'rgba(236, 239, 244, 0.8)']
         name: [color: "[[[ return entity.attributes.entity_picture == null ? 'rgba(0, 0, 0, 0.6)' : 'var(--primary-text-color)'; ]]]"]
         state: [color: "[[[ return entity.attributes.entity_picture == null ? 'rgba(0, 0, 0, 0.6)' : 'var(--primary-text-color)'; ]]]"]
         icon: [color: "var(--accent-color)"]
       value: 'playing'
 
     - styles:
-        card: [background-color: 'rgba(255, 255, 255, 0.8)']
+        card: [background-color: 'rgba(236, 239, 244, 0.8)']
         name: [color: 'rgba(0, 0, 0, 0.6)']
         state: [color: 'rgba(0, 0, 0, 0.6)']
         icon: [color: "var(--accent-color)"]
       value: 'idle'
 
     - styles:
-        card: [background-color: 'rgba(255, 255, 255, 0.8)']
+        card: [background-color: 'rgba(236, 239, 244, 0.8)']
         name: [color: 'rgba(0, 0, 0, 0.6)']
         state: [color: 'rgba(0, 0, 0, 0.6)']
         icon: [color: "var(--accent-color)"]
       value: 'standby'
 
     - styles:
-        card: [background-color: 'rgba(255, 255, 255, 0.8)']
+        card: [background-color: 'rgba(236, 239, 244, 0.8)']
         name: [color: "[[[ return entity.attributes.entity_picture == null ? 'rgba(0, 0, 0, 0.6)' : 'var(--primary-text-color)'; ]]]"]
         state: [color: "[[[ return entity.attributes.entity_picture == null ? 'rgba(0, 0, 0, 0.6)' : 'var(--primary-text-color)'; ]]]"]
         icon: [color: "var(--accent-color)"]

@@ -1,20 +1,19 @@
-title: Home
-path: home
+title: Test
+path: test
 icon: 'mdi:home'
 panel: true
 cards:
-  - layout_type: vertical
+  - layout: vertical
     type: 'custom:layout-card'
     cards:
       - type: 'custom:mod-card'
-        card_mod:
-          style:
-            .: |
-              ha-card {
-                font-variant: small-caps;
-                color: rgba(0, 0, 0, 0.6);
-                --ha-card-header-font-size: 22px;
-              }
+        style:
+          .: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
         card:
           type: horizontal-stack
           title: People
@@ -36,14 +35,13 @@ cards:
             - type: 'custom:button-card'
               template: blank
       - type: 'custom:mod-card'
-        card_mod:
-          style:
-            .: |
-              ha-card {
-                font-variant: small-caps;
-                color: rgba(0, 0, 0, 0.6);
-                --ha-card-header-font-size: 22px;
-              }
+        style:
+          .: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
         card:
           type: horizontal-stack
           title: Lights
@@ -63,11 +61,10 @@ cards:
             - type: 'custom:button-card'
               template: blank
       - type: 'custom:mod-card'
-        card_mod:
-          style: |
-            ha-card {
-              font-variant: small-caps;
-            }
+        style: |
+          ha-card {
+            font-variant: small-caps;
+          }
         card:
           type: horizontal-stack
           cards:
@@ -88,16 +85,15 @@ cards:
             - type: 'custom:button-card'
               template: blank
       - type: 'custom:mod-card'
-        card_mod:
-          style: |
-            ha-card {
-              font-variant: small-caps;
-              color: rgba(0, 0, 0, 0.6);
-              --ha-card-header-font-size: 22px;
-            }
+        style: |
+          ha-card {
+            font-variant: small-caps;
+            color: rgba(0, 0, 0, 0.6);
+            --ha-card-header-font-size: 22px;
+          }
         card:
           type: horizontal-stack
-          title: Doors
+          title: Door
           cards:
             - template: blank
               type: 'custom:button-card'
@@ -111,7 +107,7 @@ cards:
               name: Basement
               template: door_sensor
               type: 'custom:button-card'
-            - entity: binary_sensor.laundry_room_door
+            - entity: binary_sensor.wyze_laundry_room_door
               name: Laundry
               template: door_sensor
               type: 'custom:button-card'
@@ -145,15 +141,14 @@ cards:
     #           type: 'custom:button-card'
     #         - template: blank
     #           type: 'custom:button-card'
-      - type: 'custom:layout-break'
+      - break
       - type: 'custom:mod-card'
-        card_mod:
-          style: |
-            ha-card {
-              font-variant: small-caps;
-              color: rgba(0, 0, 0, 0.6);
-              --ha-card-header-font-size: 22px;
-            }
+        style: |
+          ha-card {
+            font-variant: small-caps;
+            color: rgba(0, 0, 0, 0.6);
+            --ha-card-header-font-size: 22px;
+          }
         card:
           type: horizontal-stack
           title: Temperature
@@ -175,16 +170,15 @@ cards:
                   height: 75
                   line_color:
                     - var(--accent-color)
-                    - var(--theme-red)
+                    - var(--google-red-500)
                   name: Outside
                   points_per_hour: 2
-                  card_mod:
-                    style: |
-                      ha-card {
-                        # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
-                        color: rgb(242, 242, 247);
-                        background: rgba(46, 52, 64, 0.9);
-                      }
+                  style: |
+                    ha-card {
+                      # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                      color: rgb(242, 242, 247);
+                      background: rgba(10, 10, 10, 0.7);
+                    }
                 - type: 'custom:mini-graph-card'
                   decimals: 0
                   entities:
@@ -198,24 +192,22 @@ cards:
                   height: 75
                   line_color:
                     - var(--accent-color)
-                    - var(--theme-red)
+                    - var(--google-red-500)
                   name: Inside
                   points_per_hour: 2
-                  card_mod:
-                    style: |
-                      ha-card {
-                        # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
-                        color: rgb(242, 242, 247);
-                        background: rgba(46, 52, 64, 0.9);
-                      }
+                  style: |
+                    ha-card {
+                      # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                      color: rgb(242, 242, 247);
+                      background: rgba(10, 10, 10, 0.7);
+                    }
                 - type: 'custom:scheduler-card'
-                  card_mod:
-                    style: |
-                      ha-card {
-                        # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
-                        color: rgb(242, 242, 247);
-                        background: rgba(46, 52, 64, 0.9);
-                      }
+                  style: |
+                    ha-card {
+                      # box-shadow: -5px -5px 8px 0 rgba(38, 41, 47,.5),5px 5px 8px 0 rgba(12, 13, 15,.15);
+                      color: rgb(242, 242, 247);
+                      background: rgba(10, 10, 10, 0.7);
+                    }
                   include:
                     - input_boolean.joshua_sleeping
                     - input_boolean.josie_sleeping
@@ -225,7 +217,6 @@ cards:
                     - light.joshua_s_bedroom
                     - light.josie_s_bedroom
                     - light.laundry_room
-                    - switch
                     - switch.floor_lamp
                     - switch.lamp
                     - switch.pumpkin

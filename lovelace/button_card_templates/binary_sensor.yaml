@@ -2,7 +2,7 @@ door_sensor:
   template: binary_sensor
   icon: |
     [[[
-      if(entity.state == "on")
+      if(entity && entity.state == "on")
         return "mdi:door-open"
       else
         return "mdi:door-closed"

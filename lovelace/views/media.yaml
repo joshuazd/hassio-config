@@ -5,13 +5,14 @@ panel: true
 badges: []
 cards:
   - card_options:
-      style:
-        .: |
-          ha-card {
-            font-variant: small-caps;
-            color: rgba(0, 0, 0, 0.6);
-            --ha-card-header-font-size: 22px;
-          }
+      card_mod:
+        style:
+          .: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
     cards:
       - card:
           cards:
@@ -34,12 +35,13 @@ cards:
           title: Groups
           type: horizontal-stack
         type: 'custom:mod-card'
-        style: |
-          ha-card {
-            font-variant: small-caps;
-            color: rgba(0, 0, 0, 0.6);
-            --ha-card-header-font-size: 22px;
-          }
+        card_mod:
+          style: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
       - card:
           cards:
             - template: blank
@@ -56,13 +58,14 @@ cards:
               type: 'custom:button-card'
           type: horizontal-stack
         type: 'custom:mod-card'
-        style: |
-          ha-card {
-            font-variant: small-caps;
-            color: rgba(0, 0, 0, 0.6);
-            --ha-card-header-font-size: 22px;
-          }
-      - break
+        card_mod:
+          style: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
+      - type: 'custom:layout-break'
       - card:
           cards:
             - template: blank
@@ -85,12 +88,13 @@ cards:
           title: Speakers
           type: horizontal-stack
         type: 'custom:mod-card'
-        style: |
-          ha-card {
-            font-variant: small-caps;
-            color: rgba(0, 0, 0, 0.6);
-            --ha-card-header-font-size: 22px;
-          }
+        card_mod:
+          style: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
       - card:
           cards:
             - template: blank
@@ -127,7 +131,7 @@ cards:
               template: blank
           type: horizontal-stack
         type: 'custom:mod-card'
-      - break
+      - type: 'custom:layout-break'
       - card:
           cards:
             - template: blank
@@ -149,16 +153,17 @@ cards:
           title: TV
           type: horizontal-stack
         type: 'custom:mod-card'
-        style: |
-          ha-card {
-            font-variant: small-caps;
-            color: rgba(0, 0, 0, 0.6);
-            --ha-card-header-font-size: 22px;
-          }
+        card_mod:
+          style: |
+            ha-card {
+              font-variant: small-caps;
+              color: rgba(0, 0, 0, 0.6);
+              --ha-card-header-font-size: 22px;
+            }
       - cards:
           - template: blank
             type: 'custom:button-card'
         type: horizontal-stack
-    layout: vertical
+    layout_type: vertical
     type: 'custom:layout-card'
 

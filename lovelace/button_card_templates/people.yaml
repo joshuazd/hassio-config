@@ -1,13 +1,7 @@
-homekit_style:
-  aspect_ratio: 1/1
-  show_label: true
-  show_state: true
-  name: '[[[ if(entity) {return entity.attributes.friendly_name;} else {return ""} ]]]'
-  size: 30%
-  color_type: card
-  hold_action:
-    action: more-info
-  color: rgb(242, 242, 247)
+# SWITCH BUTTON
+person_style:
+  template: homekit_style
+  icon: '[[[return entity.attributes.icon]]]'
   state: &button_state
     - styles: &on_state
         # - color: rgb(100, 210, 255)
@@ -17,42 +11,17 @@ homekit_style:
         card: [background-color: 'rgba(236, 239, 244, 0.8)']
         name: [color: 'rgba(0, 0, 0, 0.6)']
         state: [color: 'rgba(0, 0, 0, 0.6)']
-        icon: 
-          - color: "var(--paper-item-icon-active-color)"
-      value: 'on'
+        icon: [color: "#fbc02d"]
+      value: 'home'
       id: _state_value_on
 
-    - styles: *on_state
-      value: 'armed_away'
-
-    - styles: *on_state
-      value: 'armed_home'
-
-    - styles:
-        # <<: *on_state
-        card: [background-color: 'rgba(255, 255, 255, 0.8)']
-        name: [color: 'rgba(0, 0, 0, 0.6)']
-        icon: [color: "#fbc02d"]
-        state: [color: 'red']
-      value: 'arming'
-
-    - styles: &default_off
-        card: [background-color: null]
-        icon: [color: 'rgb(142, 142, 147)']
-      value: "disarmed"
-
     - styles: &off_state
+        entity_picture:
+          - filter: grayscale(100%)
         icon:
-          # - filter: grayscale(100%)
-          - color: rgb(142, 142, 147)
-      value: 'off'
-    
-    - styles: &error_state
-        card: [ background-color: var(--error-color) ]
-        icon:
-         - color: var(--primary-text-color)
-      value: 'unavailable'
-      
+          - filter: grayscale(100%)
+          #- color: rgb(142, 142, 147)
+      value: 'away'
 
   styles:
     card:
@@ -98,5 +67,3 @@ homekit_style:
       - padding-bottom: 3px
       - color: var(--primary-text-color)
       - max-width: 75%
-
-
