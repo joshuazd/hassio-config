@@ -3,7 +3,7 @@ python:
   - "3.7"
 before_install:
   - touch foobar.pem
-  - echo '{"private_key":"foo","client_email":"bar"}' > service_account.json
+  - echo '{"private_key":"foo","client_email":"bar"}' > Hassio-847c31d4c633.json
   - mv travis_secrets.yaml secrets.yaml
   - sudo apt-get install -y libudev-dev
 install:
