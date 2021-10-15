@@ -1,0 +1,158 @@
+{
+    "version": 1,
+    "key": "scheduler.storage",
+    "data": {
+        "schedules": [
+            {
+                "schedule_id": "1a96a9",
+                "timeslots": [
+                    {
+                        "start": "06:10:00",
+                        "stop": "08:30:00",
+                        "conditions": [],
+                        "condition_type": null,
+                        "actions": [
+                            {
+                                "service": "switch.turn_on",
+                                "entity_id": "switch.joshua_bedroom_switch",
+                                "service_data": {}
+                            }
+                        ]
+                    },
+                    {
+                        "start": "08:30:00",
+                        "stop": "00:00:00",
+                        "conditions": [],
+                        "condition_type": null,
+                        "actions": [
+                            {
+                                "service": "switch.turn_off",
+                                "entity_id": "switch.joshua_bedroom_switch",
+                                "service_data": {}
+                            }
+                        ]
+                    }
+                ],
+                "weekdays": [
+                    "workday"
+                ],
+                "repeat_type": "repeat",
+                "name": "Joshua Bedroom Switch Morning",
+                "enabled": false
+            },
+            {
+                "schedule_id": "23b56f",
+                "timeslots": [
+                    {
+                        "start": "00:10:00",
+                        "stop": "02:00:00",
+                        "conditions": [],
+                        "condition_type": null,
+                        "actions": [
+                            {
+                                "service": "switch.turn_off",
+                                "entity_id": "switch.joshua_bedroom_switch",
+                                "service_data": {}
+                            }
+                        ]
+                    },
+                    {
+                        "start": "02:00:00",
+                        "stop": "03:40:00",
+                        "conditions": [],
+                        "condition_type": null,
+                        "actions": [
+                            {
+                                "service": "switch.turn_off",
+                                "entity_id": "switch.joshua_bedroom_switch",
+                                "service_data": {}
+                            }
+                        ]
+                    }
+                ],
+                "weekdays": [
+                    "daily"
+                ],
+                "repeat_type": "repeat",
+                "name": "Joshua Bedroom Switch Night",
+                "enabled": true
+            },
+            {
+                "schedule_id": "7f0a2a",
+                "timeslots": [
+                    {
+                        "start": "00:00:00",
+                        "stop": "07:00:00",
+                        "conditions": [],
+                        "condition_type": null,
+                        "actions": [
+                            {
+                                "service": "switch.turn_off",
+                                "entity_id": "switch.josie_bedroom_switch",
+                                "service_data": {}
+                            }
+                        ]
+                    },
+                    {
+                        "start": "07:00:00",
+                        "stop": "08:00:00",
+                        "conditions": [],
+                        "condition_type": null,
+                        "actions": [
+                            {
+                                "service": "switch.turn_on",
+                                "entity_id": "switch.josie_bedroom_switch",
+                                "service_data": {}
+                            }
+                        ]
+                    },
+                    {
+                        "start": "08:00:00",
+                        "stop": "21:30:00",
+                        "conditions": [],
+                        "condition_type": null,
+                        "actions": [
+                            {
+                                "service": "switch.turn_off",
+                                "entity_id": "switch.josie_bedroom_switch",
+                                "service_data": {}
+                            }
+                        ]
+                    },
+                    {
+                        "start": "21:30:00",
+                        "stop": "23:00:00",
+                        "conditions": [],
+                        "condition_type": null,
+                        "actions": [
+                            {
+                                "service": "switch.turn_on",
+                                "entity_id": "switch.josie_bedroom_switch",
+                                "service_data": {}
+                            }
+                        ]
+                    },
+                    {
+                        "start": "23:00:00",
+                        "stop": "00:00:00",
+                        "conditions": [],
+                        "condition_type": null,
+                        "actions": [
+                            {
+                                "service": "switch.turn_off",
+                                "entity_id": "switch.josie_bedroom_switch",
+                                "service_data": {}
+                            }
+                        ]
+                    }
+                ],
+                "weekdays": [
+                    "daily"
+                ],
+                "repeat_type": "repeat",
+                "name": "Josie Bedroom Switch",
+                "enabled": false
+            }
+        ]
+    }
+}

@@ -3,6 +3,6 @@
     "key": "frontend_theme",
     "data": {
         "frontend_default_theme": "midnight",
-        "frontend_default_dark_theme": null
+        "frontend_default_dark_theme": "nord"
     }
 }

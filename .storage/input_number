@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "key": "input_number",
+    "data": {
+        "items": [
+            {
+                "min": 0.0,
+                "max": 5.0,
+                "name": "Runs",
+                "icon": "mdi:run",
+                "mode": "slider",
+                "step": 1.0,
+                "id": "runs"
+            }
+        ]
+    }
+}

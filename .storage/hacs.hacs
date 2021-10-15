@@ -4,6 +4,25 @@
     "data": {
         "view": "Grid",
         "compact": false,
-        "onboarding_done": true
+        "onboarding_done": true,
+        "archived_repositories": [
+            "PTST/O365-HomeAssistant",
+            "PTST/O365-HomeAssistant",
+            "Michsior14/ha-laser-egg",
+            "custom-components/sensor.custom_components",
+            "custom-components/custom_components",
+            "custom-components/sensor.tautulli",
+            "atomic7777/atomic_calendar",
+            "atomic7777/atomic_calendar",
+            "PTST/O365-HomeAssistant",
+            "mampfes/hacs_wiffi",
+            "pilotak/homeassistant-mikrotik"
+        ],
+        "renamed_repositories": {
+            "xMrVizzy/Philips-AirPurifier": "kraineff/philips-airpurifier",
+            "custom-components/blueprint": "custom-components/integration_blueprint",
+            "scottyphillips/mitsubishi_hass": "scottyphillips/echonetlite_homeassistant",
+            "idittansikte/bootstrap-grid-card": "ownbee/bootstrap-grid-card"
+        }
     }
 }

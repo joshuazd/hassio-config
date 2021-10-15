@@ -6,25 +6,35 @@
             "uses_password": false,
             "name": "basement_lights",
             "mac_address": "EC:FA:BC:9A:8F:E0",
-            "compilation_time": "Sep 24 2020, 09:51:04",
+            "compilation_time": "Sep  2 2021, 23:10:50",
             "model": "PLATFORMIO_ESP01_1M",
             "has_deep_sleep": false,
-            "esphome_version": "1.15.2"
+            "esphome_version": "2021.8.2",
+            "project_name": "",
+            "project_version": ""
         },
         "services": [],
+        "api_version": {
+            "major": 1,
+            "minor": 6
+        },
         "light": [
             {
                 "object_id": "basement_lights",
                 "key": 2447752834,
                 "name": "basement_lights",
                 "unique_id": "basement_lightslightbasement_lights",
-                "supports_brightness": true,
-                "supports_rgb": false,
-                "supports_white_value": false,
-                "supports_color_temperature": false,
+                "disabled_by_default": false,
+                "supported_color_modes": [
+                    2
+                ],
                 "min_mireds": 0.0,
                 "max_mireds": 0.0,
-                "effects": []
+                "effects": [],
+                "legacy_supports_brightness": true,
+                "legacy_supports_rgb": false,
+                "legacy_supports_white_value": false,
+                "legacy_supports_color_temperature": false
             }
         ]
     }

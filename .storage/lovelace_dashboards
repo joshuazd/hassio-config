@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace_dashboards",
     "data": {
         "items": [
             {
@@ -13,13 +15,20 @@
             {
                 "id": "lovelace_test",
                 "mode": "storage",
-                "require_admin": false,
+                "require_admin": true,
                 "show_in_sidebar": false,
                 "title": "Test",
                 "url_path": "lovelace-test"
+            },
+            {
+                "require_admin": false,
+                "show_in_sidebar": true,
+                "icon": "mdi:spotify",
+                "title": "Music",
+                "url_path": "lovelace-music",
+                "mode": "storage",
+                "id": "lovelace_music"
             }
         ]
-    },
-    "key": "lovelace_dashboards",
-    "version": 1
+    }
 }

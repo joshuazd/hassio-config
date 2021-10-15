@@ -1,0 +1,576 @@
+{
+    "version": 1,
+    "key": "lovelace.lovelace_test",
+    "data": {
+        "config": {
+            "button_card_templates": {
+                "aqara_motion": {
+                    "template": "homekit_style",
+                    "tap_action": {
+                        "action": "more-info"
+                    },
+                    "styles": {
+                        "card": [
+                            {
+                                "background-color": "rgba(236, 239, 244, 0.8)"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "color": "rgba(0, 0, 0, 0.6)"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "color": "rgba(0, 0, 0, 0.6)"
+                            }
+                        ],
+                        "icon": [
+                            {
+                                "color": "var(--accent-color)"
+                            }
+                        ],
+                        "grid": [
+                            {
+                                "position": "relative"
+                            }
+                        ],
+                        "custom_fields": {
+                            "battery": [
+                                {
+                                    "top": "8.5%"
+                                },
+                                {
+                                    "right": "10%"
+                                },
+                                {
+                                    "width": "50px"
+                                },
+                                {
+                                    "height": "50px"
+                                },
+                                {
+                                    "position": "absolute"
+                                },
+                                {
+                                    "letter-spacing": "0.03vw"
+                                }
+                            ]
+                        }
+                    },
+                    "custom_fields": {
+                        "battery": "[[[ if (entity && states[entity.entity_id + '_power']) { const battery = states[entity.entity_id + '_power']; const radius = 20.5; const circumference = radius * 2 * Math.PI;  return `<svg viewBox=\"0 0 50 50\"><circle cx=\"25\" cy=\"25\" r=\"${radius}\" stroke=\"#b2b2b2\" stroke-width=\"1.5\" fill=\"none\" style=\" transform: rotate(-90deg); transform-origin: 50% 50%; stroke-dasharray: ${circumference}; stroke-dashoffset: ${circumference - battery / 100 * circumference};\" /> <text x=\"50%\" y=\"54%\" fill=\"#8d8e90\" font-size=\"11\" text-anchor=\"middle\" alignment-baseline=\"middle\">${battery}<tspan font-size=\"\">%</tspan></text></svg>`; } ]]]\n"
+                    }
+                },
+                "homekit_style": {
+                    "aspect_ratio": "1/1",
+                    "show_label": true,
+                    "show_state": true,
+                    "name": "[[[ if(entity) {return entity.attributes.friendly_name;} else {return \"\"} ]]]",
+                    "size": "30%",
+                    "color_type": "card",
+                    "hold_action": {
+                        "action": "more-info"
+                    },
+                    "color": "rgb(242, 242, 247)",
+                    "state": [
+                        {
+                            "styles": {
+                                "card": [
+                                    {
+                                        "background-color": "rgba(236, 239, 244, 0.8)"
+                                    }
+                                ],
+                                "name": [
+                                    {
+                                        "color": "rgba(0, 0, 0, 0.6)"
+                                    }
+                                ],
+                                "state": [
+                                    {
+                                        "color": "rgba(0, 0, 0, 0.6)"
+                                    }
+                                ],
+                                "icon": [
+                                    {
+                                        "color": "var(--paper-item-icon-active-color)"
+                                    }
+                                ]
+                            },
+                            "value": "on",
+                            "id": "_state_value_on"
+                        },
+                        {
+                            "styles": {
+                                "card": [
+                                    {
+                                        "background-color": "rgba(236, 239, 244, 0.8)"
+                                    }
+                                ],
+                                "name": [
+                                    {
+                                        "color": "rgba(0, 0, 0, 0.6)"
+                                    }
+                                ],
+                                "state": [
+                                    {
+                                        "color": "rgba(0, 0, 0, 0.6)"
+                                    }
+                                ],
+                                "icon": [
+                                    {
+                                        "color": "var(--paper-item-icon-active-color)"
+                                    }
+                                ]
+                            },
+                            "value": "armed_away"
+                        },
+                        {
+                            "styles": {
+                                "card": [
+                                    {
+                                        "background-color": "rgba(236, 239, 244, 0.8)"
+                                    }
+                                ],
+                                "name": [
+                                    {
+                                        "color": "rgba(0, 0, 0, 0.6)"
+                                    }
+                                ],
+                                "state": [
+                                    {
+                                        "color": "rgba(0, 0, 0, 0.6)"
+                                    }
+                                ],
+                                "icon": [
+                                    {
+                                        "color": "var(--paper-item-icon-active-color)"
+                                    }
+                                ]
+                            },
+                            "value": "armed_home"
+                        },
+                        {
+                            "styles": {
+                                "card": [
+                                    {
+                                        "background-color": "rgba(255, 255, 255, 0.8)"
+                                    }
+                                ],
+                                "name": [
+                                    {
+                                        "color": "rgba(0, 0, 0, 0.6)"
+                                    }
+                                ],
+                                "icon": [
+                                    {
+                                        "color": "#fbc02d"
+                                    }
+                                ],
+                                "state": [
+                                    {
+                                        "color": "red"
+                                    }
+                                ]
+                            },
+                            "value": "arming"
+                        },
+                        {
+                            "styles": {
+                                "card": [
+                                    {
+                                        "background-color": null
+                                    }
+                                ],
+                                "icon": [
+                                    {
+                                        "color": "rgb(142, 142, 147)"
+                                    }
+                                ]
+                            },
+                            "value": "disarmed"
+                        },
+                        {
+                            "styles": {
+                                "icon": [
+                                    {
+                                        "color": "rgb(142, 142, 147)"
+                                    }
+                                ]
+                            },
+                            "value": "off"
+                        },
+                        {
+                            "styles": {
+                                "card": [
+                                    {
+                                        "background-color": "var(--error-color)"
+                                    }
+                                ],
+                                "icon": [
+                                    {
+                                        "color": "var(--primary-text-color)"
+                                    }
+                                ]
+                            },
+                            "value": "unavailable"
+                        }
+                    ],
+                    "styles": {
+                        "card": [
+                            {
+                                "border-radius": "20px"
+                            },
+                            {
+                                "box-shadow": "none"
+                            },
+                            {
+                                "background-color": "rgba(46, 52, 64, 0.6)"
+                            }
+                        ],
+                        "label": [
+                            {
+                                "color": "black"
+                            },
+                            {
+                                "font-size": "11px"
+                            },
+                            {
+                                "font-family": "Helvetica"
+                            },
+                            {
+                                "padding": "0px 10px"
+                            },
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "color": "var(--primary-text-color)"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "font-size": "11px"
+                            },
+                            {
+                                "font-family": "Helvetica"
+                            },
+                            {
+                                "padding": "0px 10px"
+                            },
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "text-transform": "capitalize"
+                            },
+                            {
+                                "font-weight": "bold"
+                            },
+                            {
+                                "padding-left": "20px"
+                            },
+                            {
+                                "padding-bottom": "10px"
+                            },
+                            {
+                                "color": "var(--primary-text-color)"
+                            },
+                            {
+                                "max-width": "75%"
+                            }
+                        ],
+                        "grid": [
+                            {
+                                "grid-template-areas": "\"i\" \"n\" \"s\" \"l\""
+                            },
+                            {
+                                "grid-template-columns": "1fr"
+                            },
+                            {
+                                "grid-template-rows": "1fr"
+                            }
+                        ],
+                        "img_cell": [
+                            {
+                                "justify-content": "start"
+                            },
+                            {
+                                "align-items": "start"
+                            },
+                            {
+                                "padding-left": "20px"
+                            }
+                        ],
+                        "icon": [
+                            {
+                                "height": "auto"
+                            },
+                            {
+                                "padding-top": "10px"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "padding-left": "20px"
+                            },
+                            {
+                                "font-weight": "bold"
+                            },
+                            {
+                                "font-family": "Helvetica"
+                            },
+                            {
+                                "font-size": "13px"
+                            },
+                            {
+                                "padding-bottom": "3px"
+                            },
+                            {
+                                "color": "var(--primary-text-color)"
+                            },
+                            {
+                                "max-width": "75%"
+                            }
+                        ]
+                    }
+                }
+            },
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "account": "default",
+                            "limit": 10,
+                            "playlist_type": "default",
+                            "spotify_entity": "media_player.spotify_cnirithian",
+                            "type": "custom:spotify-card"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "media_player.spotify_cnirithian",
+                                    "type": "media-control"
+                                },
+                                {
+                                    "account": "default",
+                                    "display_style": "list",
+                                    "grid_covers_per_row": 5,
+                                    "height": 300,
+                                    "limit": 50,
+                                    "playlist_type": "default",
+                                    "spotify_entity": "media_player.spotify_cnirithian",
+                                    "type": "custom:spotify-card"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "type": "custom:scheduler-card",
+                            "include": [
+                                "input_boolean.joshua_sleeping",
+                                "input_boolean.josie_sleeping",
+                                "input_boolean.night_mode",
+                                "light.basement_lights",
+                                "light.front_light",
+                                "light.joshua_s_bedroom",
+                                "light.josie_s_bedroom",
+                                "light.laundry_room",
+                                "switch.floor_lamp",
+                                "switch.lamp",
+                                "switch.pumpkin"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "panel": false,
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_select.speakers"
+                                        }
+                                    ],
+                                    "show_header_toggle": false
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.cast_spotify"
+                                    },
+                                    "icon": "mdi:cast",
+                                    "show_state": false,
+                                    "icon_height": "50px"
+                                },
+                                {
+                                    "type": "media-control",
+                                    "entity": "media_player.spotify_cnirithian"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "custom:button-card",
+                            "template": "homekit_style",
+                            "name": "[[[ return entity.attributes.friendly_name.split(\" \").slice(0,-1).join(\" \") ]]]\n",
+                            "show_label": false,
+                            "show_state": false,
+                            "tap_action": {
+                                "action": "more-info"
+                            },
+                            "styles": {
+                                "name": [
+                                    {
+                                        "justify-self": "start"
+                                    },
+                                    {
+                                        "padding-left": "20px"
+                                    },
+                                    {
+                                        "font-weight": "bold"
+                                    },
+                                    {
+                                        "font-family": "Helvetica"
+                                    },
+                                    {
+                                        "font-size": "13px"
+                                    },
+                                    {
+                                        "padding-bottom": "3px"
+                                    },
+                                    {
+                                        "color": "rgba(0, 0, 0, 0.6)"
+                                    },
+                                    {
+                                        "max-width": "75%"
+                                    }
+                                ],
+                                "card": [
+                                    {
+                                        "background-color": "rgba(236, 239, 244, 0.8)"
+                                    }
+                                ],
+                                "state": [
+                                    {
+                                        "color": "rgba(0, 0, 0, 0.6)"
+                                    }
+                                ],
+                                "icon": [
+                                    {
+                                        "color": "var(--accent-color)"
+                                    }
+                                ],
+                                "grid": [
+                                    {
+                                        "position": "relative"
+                                    },
+                                    {
+                                        "grid-template-areas": "\"i\" \"n\" \"motion\" \"brightness\""
+                                    },
+                                    {
+                                        "grid-template-columns": "1fr"
+                                    },
+                                    {
+                                        "grid-template-rows": "1fr"
+                                    }
+                                ],
+                                "custom_fields": {
+                                    "battery": [
+                                        {
+                                            "top": "8.5%"
+                                        },
+                                        {
+                                            "right": "10%"
+                                        },
+                                        {
+                                            "width": "50px"
+                                        },
+                                        {
+                                            "height": "50px"
+                                        },
+                                        {
+                                            "font-weight": "bold"
+                                        },
+                                        {
+                                            "position": "absolute"
+                                        },
+                                        {
+                                            "letter-spacing": "0.03vw"
+                                        }
+                                    ],
+                                    "motion": [
+                                        {
+                                            "justify-self": "start"
+                                        },
+                                        {
+                                            "padding-left": "20px"
+                                        },
+                                        {
+                                            "font-family": "Helvetica"
+                                        },
+                                        {
+                                            "font-size": "11px"
+                                        },
+                                        {
+                                            "font-weight": "bold"
+                                        },
+                                        {
+                                            "padding-bottom": "3px"
+                                        },
+                                        {
+                                            "color": "rgba(0, 0, 0, 0.6)"
+                                        }
+                                    ],
+                                    "brightness": [
+                                        {
+                                            "justify-self": "start"
+                                        },
+                                        {
+                                            "padding-left": "20px"
+                                        },
+                                        {
+                                            "font-family": "Helvetica"
+                                        },
+                                        {
+                                            "font-size": "11px"
+                                        },
+                                        {
+                                            "font-weight": "bold"
+                                        },
+                                        {
+                                            "padding-bottom": "3px"
+                                        },
+                                        {
+                                            "color": "rgba(0, 0, 0, 0.6)"
+                                        }
+                                    ]
+                                }
+                            },
+                            "custom_fields": {
+                                "motion": "[[[ if(entity) return 'Motion: ' + (entity.state == 'off' ? 'Clear' : 'Detected') ]]]\n",
+                                "brightness": "[[[ const light = states[entity.entity_id.slice(7,-6)+'light']\n  if(entity && light)\n  return 'Brightness: ' + light.state + light.attributes.unit_of_measurement ]]]\n",
+                                "battery": "[[[ if (entity && states[entity.entity_id.substr(7) + '_power']) { const battery = states[entity.entity_id.substr(7) + '_power'].state; const radius = 20.5; const circumference = radius * 2 * Math.PI;  return `<svg viewBox=\"0 0 50 50\"><circle cx=\"25\" cy=\"25\" r=\"${radius}\" stroke=\"#b2b2b2\" stroke-width=\"1.5\" fill=\"none\" style=\" transform: rotate(-90deg); transform-origin: 50% 50%; stroke-dasharray: ${circumference}; stroke-dashoffset: ${circumference - battery / 100 * circumference};\" /> <text x=\"50%\" y=\"54%\" fill=\"#8d8e90\" font-size=\"11\" text-anchor=\"middle\" alignment-baseline=\"middle\">${battery}<tspan font-size=\"\">%</tspan></text></svg>`; } ]]]\n"
+                            },
+                            "entity": "binary_sensor.living_room_motion"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -11,6 +11,28 @@
             {
                 "name": "In Basement",
                 "id": "in_basement"
+            },
+            {
+                "name": "DNS Alert",
+                "id": "dns_alert"
+            },
+            {
+                "name": "Enable Switch",
+                "icon": "mdi:pine-tree",
+                "id": "enable_switch"
+            },
+            {
+                "name": "Door Opened",
+                "icon": "mdi:door-open",
+                "id": "door_opened"
+            },
+            {
+                "name": "Sun Set",
+                "id": "sun_set"
+            },
+            {
+                "name": "Floor Lamp Override",
+                "id": "floor_lamp_override"
             }
         ]
     }

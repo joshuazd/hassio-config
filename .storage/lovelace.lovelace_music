@@ -1,0 +1,368 @@
+{
+    "version": 1,
+    "key": "lovelace.lovelace_music",
+    "data": {
+        "config": {
+            "views": [
+                {
+                    "type": "custom:grid-layout",
+                    "layout": {
+                        "grid-template-columns": "1fr 1fr 1fr 1fr 1fr 1fr",
+                        "grid-template-rows": "1fr 1fr 1fr",
+                        "mediaquery": {
+                            "(max-width: 600px)": {
+                                "grid-template-columns": "50% 50%",
+                                "grid-template-rows": "auto"
+                            }
+                        }
+                    },
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "custom:mini-media-player",
+                            "entity": "media_player.first_floor_speakers",
+                            "name": "First Floor",
+                            "shortcuts": {
+                                "buttons": [
+                                    {
+                                        "icon": "mdi:spotify",
+                                        "type": "service",
+                                        "id": "spotcast.start",
+                                        "data": {
+                                            "entity_id": "media_player.first_floor_speakers"
+                                        }
+                                    }
+                                ]
+                            },
+                            "toggle_power": false,
+                            "hide": {
+                                "power": true,
+                                "source": true,
+                                "volume": true
+                            }
+                        },
+                        {
+                            "type": "custom:mini-media-player",
+                            "name": "All Speakers",
+                            "shortcuts": {
+                                "buttons": [
+                                    {
+                                        "icon": "mdi:spotify",
+                                        "type": "service",
+                                        "id": "spotcast.start",
+                                        "data": {
+                                            "entity_id": "media_player.all_speakers"
+                                        }
+                                    }
+                                ]
+                            },
+                            "entity": "media_player.all_speakers",
+                            "hide": {
+                                "power": true,
+                                "source": true,
+                                "volume": true
+                            }
+                        },
+                        {
+                            "type": "custom:mini-media-player",
+                            "name": "Non-Bedroom",
+                            "shortcuts": {
+                                "buttons": [
+                                    {
+                                        "icon": "mdi:spotify",
+                                        "type": "service",
+                                        "id": "spotcast.start",
+                                        "data": {
+                                            "entity_id": "media_player.non_bedroom_speakers"
+                                        }
+                                    }
+                                ]
+                            },
+                            "entity": "media_player.non_bedroom_speakers",
+                            "hide": {
+                                "power": true,
+                                "source": true,
+                                "volume": true
+                            }
+                        },
+                        {
+                            "type": "custom:mini-media-player",
+                            "name": "Joshua's Bedroom",
+                            "shortcuts": {
+                                "buttons": [
+                                    {
+                                        "icon": "mdi:spotify",
+                                        "type": "service",
+                                        "id": "spotcast.start",
+                                        "data": {
+                                            "entity_id": "media_player.joshua_s_bedroom_speaker"
+                                        }
+                                    }
+                                ]
+                            },
+                            "entity": "media_player.joshua_s_bedroom_speaker",
+                            "hide": {
+                                "power": true,
+                                "source": true
+                            }
+                        },
+                        {
+                            "type": "custom:mini-media-player",
+                            "name": "Josie's Bedroom",
+                            "shortcuts": {
+                                "buttons": [
+                                    {
+                                        "icon": "mdi:spotify",
+                                        "type": "service",
+                                        "id": "spotcast.start",
+                                        "data": {
+                                            "entity_id": "media_player.josie_s_bedroom_speaker"
+                                        }
+                                    }
+                                ]
+                            },
+                            "entity": "media_player.josie_s_bedroom_speaker",
+                            "hide": {
+                                "power": true,
+                                "source": true,
+                                "volume": true
+                            }
+                        },
+                        {
+                            "type": "custom:mini-media-player",
+                            "name": "Basement",
+                            "shortcuts": {
+                                "buttons": [
+                                    {
+                                        "icon": "mdi:spotify",
+                                        "type": "service",
+                                        "id": "spotcast.start",
+                                        "data": {
+                                            "entity_id": "media_player.basement_speakers"
+                                        }
+                                    }
+                                ]
+                            },
+                            "entity": "media_player.basement_speakers",
+                            "hide": {
+                                "power": true,
+                                "source": true,
+                                "volume": true
+                            }
+                        },
+                        {
+                            "type": "custom:button-card",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "tap_action": {
+                                "action": "call-service",
+                                "service": "media_player.play_media",
+                                "service_data": {
+                                    "media_content_id": "[[[ return entity.attributes.url ]]]",
+                                    "media_content_type": "playlist",
+                                    "entity_id": "media_player.spotify_cnirithian"
+                                }
+                            },
+                            "entity": "sensor.daily_mix_1",
+                            "show_entity_picture": true,
+                            "show_label": true,
+                            "entity_picture": "[[[ return entity.attributes.image; ]]]",
+                            "label": "[[[ return entity.attributes.label ]]]",
+                            "name": "[[[ return entity.attributes.name ]]]"
+                        },
+                        {
+                            "type": "custom:button-card",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "tap_action": {
+                                "action": "call-service",
+                                "service": "media_player.play_media",
+                                "service_data": {
+                                    "media_content_id": "[[[ return entity.attributes.url ]]]",
+                                    "media_content_type": "playlist",
+                                    "entity_id": "media_player.spotify_cnirithian"
+                                }
+                            },
+                            "entity": "sensor.daily_mix_2",
+                            "show_entity_picture": true,
+                            "show_label": true,
+                            "entity_picture": "[[[ return entity.attributes.image; ]]]",
+                            "label": "[[[ return entity.attributes.label ]]]",
+                            "name": "[[[ return entity.attributes.name ]]]"
+                        },
+                        {
+                            "type": "custom:button-card",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "tap_action": {
+                                "action": "call-service",
+                                "service": "media_player.play_media",
+                                "service_data": {
+                                    "media_content_id": "[[[ return entity.attributes.url ]]]",
+                                    "media_content_type": "playlist",
+                                    "entity_id": "media_player.spotify_cnirithian"
+                                }
+                            },
+                            "entity": "sensor.daily_mix_3",
+                            "show_entity_picture": true,
+                            "show_label": true,
+                            "entity_picture": "[[[ return entity.attributes.image; ]]]",
+                            "label": "[[[ return entity.attributes.label ]]]",
+                            "name": "[[[ return entity.attributes.name ]]]"
+                        },
+                        {
+                            "type": "custom:button-card",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "tap_action": {
+                                "action": "call-service",
+                                "service": "media_player.play_media",
+                                "service_data": {
+                                    "media_content_id": "[[[ return entity.attributes.url ]]]",
+                                    "media_content_type": "playlist",
+                                    "entity_id": "media_player.spotify_cnirithian"
+                                }
+                            },
+                            "entity": "sensor.daily_mix_4",
+                            "show_entity_picture": true,
+                            "show_label": true,
+                            "entity_picture": "[[[ return entity.attributes.image; ]]]",
+                            "label": "[[[ return entity.attributes.label ]]]",
+                            "name": "[[[ return entity.attributes.name ]]]"
+                        },
+                        {
+                            "type": "custom:button-card",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "tap_action": {
+                                "action": "call-service",
+                                "service": "media_player.play_media",
+                                "service_data": {
+                                    "media_content_id": "[[[ return entity.attributes.url ]]]",
+                                    "media_content_type": "playlist",
+                                    "entity_id": "media_player.spotify_cnirithian"
+                                }
+                            },
+                            "entity": "sensor.daily_mix_5",
+                            "show_entity_picture": true,
+                            "show_label": true,
+                            "entity_picture": "[[[ return entity.attributes.image; ]]]",
+                            "label": "[[[ return entity.attributes.label ]]]",
+                            "name": "[[[ return entity.attributes.name ]]]"
+                        },
+                        {
+                            "type": "custom:button-card",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "tap_action": {
+                                "action": "call-service",
+                                "service": "media_player.play_media",
+                                "service_data": {
+                                    "media_content_id": "[[[ return entity.attributes.url ]]]",
+                                    "media_content_type": "playlist",
+                                    "entity_id": "media_player.spotify_cnirithian"
+                                }
+                            },
+                            "entity": "sensor.daily_mix_6",
+                            "show_entity_picture": true,
+                            "show_label": true,
+                            "entity_picture": "[[[ return entity.attributes.image; ]]]",
+                            "label": "[[[ return entity.attributes.label ]]]",
+                            "name": "[[[ return entity.attributes.name ]]]"
+                        },
+                        {
+                            "type": "custom:button-card",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "tap_action": {
+                                "action": "call-service",
+                                "service": "media_player.play_media",
+                                "service_data": {
+                                    "media_content_id": "[[[ return entity.attributes.url ]]]",
+                                    "media_content_type": "playlist",
+                                    "entity_id": "media_player.spotify_cnirithian"
+                                }
+                            },
+                            "entity": "sensor.discover_weekly",
+                            "show_entity_picture": true,
+                            "show_label": true,
+                            "entity_picture": "[[[ return entity.attributes.image; ]]]",
+                            "label": "[[[ return entity.attributes.label ]]]",
+                            "name": "[[[ return entity.attributes.name ]]]"
+                        },
+                        {
+                            "type": "custom:button-card",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "tap_action": {
+                                "action": "call-service",
+                                "service": "media_player.play_media",
+                                "service_data": {
+                                    "media_content_id": "[[[ return entity.attributes.url ]]]",
+                                    "media_content_type": "playlist",
+                                    "entity_id": "media_player.spotify_cnirithian"
+                                }
+                            },
+                            "entity": "sensor.indie",
+                            "show_entity_picture": true,
+                            "show_label": true,
+                            "entity_picture": "[[[ return entity.attributes.image; ]]]",
+                            "label": "[[[ return entity.attributes.label ]]]",
+                            "name": "[[[ return entity.attributes.name ]]]"
+                        },
+                        {
+                            "type": "custom:button-card",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "tap_action": {
+                                "action": "call-service",
+                                "service": "media_player.play_media",
+                                "service_data": {
+                                    "media_content_id": "[[[ return entity.attributes.url ]]]",
+                                    "media_content_type": "playlist",
+                                    "entity_id": "media_player.spotify_cnirithian"
+                                }
+                            },
+                            "entity": "sensor.mood",
+                            "show_entity_picture": true,
+                            "show_label": true,
+                            "entity_picture": "[[[ return entity.attributes.image; ]]]",
+                            "label": "[[[ return entity.attributes.label ]]]",
+                            "name": "[[[ return entity.attributes.name ]]]"
+                        },
+                        {
+                            "type": "custom:button-card",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "tap_action": {
+                                "action": "call-service",
+                                "service": "media_player.play_media",
+                                "service_data": {
+                                    "media_content_id": "[[[ return entity.attributes.url ]]]",
+                                    "media_content_type": "playlist",
+                                    "entity_id": "media_player.spotify_cnirithian"
+                                }
+                            },
+                            "entity": "sensor.party",
+                            "show_entity_picture": true,
+                            "show_label": true,
+                            "entity_picture": "[[[ return entity.attributes.image; ]]]",
+                            "label": "[[[ return entity.attributes.label ]]]",
+                            "name": "[[[ return entity.attributes.name ]]]"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
