@@ -37,3 +37,4 @@ light:
     name: "basement_lights"
     dimmer_datapoint: 2
     switch_datapoint: 1
+    min_value: 25

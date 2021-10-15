@@ -1,19 +1,19 @@
 button_card_templates: !include_dir_merge_named lovelace/button_card_templates
 
-background: linear-gradient(32deg, rgba(131,58,180,1) 0%, rgba(55,127,226,1) 35%, rgba(255,137,137,1) 64%, rgba(252,176,69,1) 100%)
+background: linear-gradient(32deg, rgb(180, 142, 173) 0%, rgb(94, 129, 172) 35%, rgb(191, 97, 106) 64%, rgb(235, 203, 139) 100%)
 
-custom_header:
-  background: 'rgba(0, 0, 0, 0.6);'
-  elements_color: rgba(255, 255, 255, 0.8)
-  chevrons: false
-  compact_mode: true
-  exceptions:
-    - conditions:
-        user: Joshua
-      config:
-        hide_tabs: []
-  hide_tabs: joshua
-  hide_unused: true
+# custom_header:
+#   background: 'rgba(0, 0, 0, 0.6);'
+#   elements_color: rgba(255, 255, 255, 0.8)
+#   chevrons: false
+#   compact_mode: true
+#   exceptions:
+#     - conditions:
+#         user: Joshua
+#       config:
+#         hide_tabs: []
+#   hide_tabs: joshua
+#   hide_unused: true
 
 swipe_nav:
   animate: swipe
@@ -24,4 +24,5 @@ title: Home
 views: 
   - !include lovelace/views/main.yaml
   - !include lovelace/views/media.yaml
+  - !include lovelace/views/toggles.yaml
   - !include lovelace/views/joshua.yaml

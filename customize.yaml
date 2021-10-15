@@ -3,8 +3,7 @@ input_boolean.night_mode:
     icon: if (state === 'on') return 'mdi:weather-night'; return 'mdi:weather-sunny';
     icon_color: if (state === 'on') return '#5294E2'; return '#ffaf5f';
 switch.pumpkin:
-#   icon: mdi:pine-tree
-  icon: mdi:pumpkin
+  icon: mdi:pine-tree
 light.front_light:
   icon: mdi:coach-lamp
 switch.lamp:
@@ -43,7 +42,29 @@ person.joshua:
   entity_picture: /local/joshua.svg
 person.josie:
   entity_picture: /local/josie.svg
+device_tracker.josie:
+  entity_picture: /local/josie.svg
 device_tracker.pixel_3:
+  entity_picture: /local/joshua.svg
+device_tracker.pixel_5:
+  entity_picture: /local/joshua.svg
+device_tracker.joshua:
   entity_picture: /local/joshua.svg
 sensor.bedroom_sensor_temperature:
   device_class: temperature
+switch.joshua_bedroom_switch:
+  icon: mdi:radiator
+switch.josie_bedroom_switch:
+  icon: mdi:radiator
+light.joshua_s_bedroom:
+  friendly_name: Joshua's Bedroom Light
+light.josie_s_bedroom:
+  friendly_name: Josie's Bedroom Light
+sensor.washing_machine_plug_input:
+  unit_of_measurement: W
+binary_sensor.laundry_room_door:
+  device_class: door
+sensor.outside_temperature:
+  unit_of_measurement: °F
+binary_sensor.bedroom_sensor_motion:
+  device_class: motion

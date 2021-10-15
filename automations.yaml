@@ -19,17 +19,6 @@
       topic: tasmotas/cmnd/state
       payload: ''
   id: 93566cc0bf4d4b99b63debc0f2ccd843
-- id: '1586183063690'
-  alias: Vacation
-  description: ''
-  trigger:
-  - event: start
-    platform: homeassistant
-  condition: []
-  action:
-  - data: {}
-    entity_id: input_boolean.vacation
-    service: input_boolean.turn_on
 - id: '1588296994097'
   alias: Notify on Start
   description: ''
@@ -39,5 +28,314 @@
   condition: []
   action:
   - data:
-      message: Home Assistant Started
-    service: notify.mobile_app_pixel_3
+      title: Home Assistant Status
+      message: Server Started
+    service: notify.mobile_app_pixel_5
+  mode: single
+- id: '1603897338403'
+  alias: Ask For Run
+  description: ''
+  trigger:
+  - platform: time
+    at: '20:00'
+  condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - sun
+  - condition: numeric_state
+    entity_id: input_number.runs
+    below: '2'
+  - condition: state
+    entity_id: input_boolean.running
+    state: 'off'
+  action:
+  - service: notify.mobile_app_pixel_5
+    data:
+      message: Are you running tomorrow?
+      data:
+        actions:
+        - action: yes_run
+          title: 'Yes'
+        - action: no_run
+          title: 'No'
+  mode: single
+- id: '1603898194188'
+  alias: Change Run Toggle
+  description: ''
+  trigger:
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: yes_run
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: no_run
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.event.data.action == ''yes_run'' }}'
+      sequence:
+      - service: input_boolean.turn_on
+        data: {}
+        entity_id: input_boolean.running
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.event.data.action == ''no_run'' }}'
+      sequence:
+      - service: input_boolean.turn_off
+        data: {}
+        entity_id: input_boolean.running
+    default: []
+  mode: single
+- id: '1609789547172'
+  alias: Telegram Temperature Command
+  description: ''
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /temp
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /temps
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /temperature
+  condition: []
+  action:
+  - service: telegram_bot.send_message
+    data:
+      target: '{{ trigger.event.data.user_id }}'
+      message: '🌡bedroom temperature is {{ states("sensor.bedroom_sensor_temperature")
+        }}
+
+        🌡basement temperature is {{ states("sensor.lumi_lumi_weather_temperature")
+        }}
+
+        🌡outside temperature is {{ states("sensor.dark_sky_temperature") }} and it
+        feels like {{ states("sensor.dark_sky_apparent_temperature") }}
+
+        '
+  mode: parallel
+  max: 10
+- id: '1609791918863'
+  alias: Telegram Digest Command
+  description: ''
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /digest
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /summary
+  condition: []
+  action:
+  - service: telegram_bot.send_message
+    data:
+      target: '{{ trigger.event.data.user_id }}'
+      message: ' 👨 Joshua is {%- if states(''person.joshua'') == ''not_home'' %} not
+        home {% else %} at {{ states(''person.joshua'') }} {% endif %}
+
+        👩 Josie is {%- if states(''person.josie'') == ''not_home'' %} not home {%
+        else %} at {{ states(''person.josie'') }} {% endif %}
+
+
+        {% for state in expand(''group.all_lights'') -%} {% if state.state == ''on''
+        %} 💡 {{ state.name | lower }} {% if (state.name | lower).endswith(''s'') %}are{%
+        else %}is{% endif %} {{state.state_with_unit}}
+
+        {% endif %} {%- endfor -%} {% for state in expand(''group.all_doors'') -%}
+        {% if state.state == ''on'' %} 🚪 {{ state.name | lower }} is open
+
+        {% endif %} {%- endfor -%}'
+  mode: single
+- id: '1609800044951'
+  alias: Telegram Light Command
+  description: ''
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /light
+  condition: []
+  action:
+  - service: light.turn_{{ trigger.event.data['args'][1] }}
+    data:
+      entity_id: light.{{ trigger.event.data['args'][0] }}
+  mode: single
+- id: '1609819876477'
+  alias: Telegram State Command
+  description: ''
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /state
+  condition: []
+  action:
+  - service: telegram_bot.send_message
+    data:
+      target: '{{ trigger.event.data.user_id }}'
+      message: '{{ states(trigger.event.data["args"][0]) }}'
+  mode: single
+- id: '1609858623360'
+  alias: Telegram Reload Command
+  description: ''
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /reload
+  condition: []
+  action:
+  - service: telegram_bot.send_message
+    data:
+      target: '{{ trigger.event.data.user_id }}'
+      message: '{{ trigger.event.data["args"][0] }} reloading'
+  - service: '{{ trigger.event.data["args"][0] }}.reload'
+    data: {}
+  - service: telegram_bot.send_message
+    data:
+      target: '{{ trigger.event.data.user_id }}'
+      message: '{{ trigger.event.data["args"][0] }} reloaded'
+  mode: single
+- id: '1609950053984'
+  alias: Nightly Snapshot
+  description: ''
+  trigger:
+  - platform: time
+    at: 02:00:00
+  condition: []
+  action:
+  - service: hassio.snapshot_full
+    data:
+      name: Automated Backup {{ now().strftime('%Y-%m-%d') }}
+  mode: single
+- id: '1611602380442'
+  alias: Heater On At Night
+  description: ''
+  trigger:
+  - type: temperature
+    platform: device
+    device_id: 0dac880741d914ccfc62e54d77c272e2
+    entity_id: sensor.bedroom_sensor_temperature
+    domain: sensor
+    below: 67
+  condition:
+  - condition: time
+    after: '21:00'
+    before: '23:59'
+  - type: is_temperature
+    condition: device
+    device_id: 7b8528eccec94d5b955f939850a4cea2
+    entity_id: sensor.bedroom_sensor_temperature
+    domain: sensor
+    below: 67
+  action:
+  - type: turn_on
+    device_id: 157ea3ec1b2411eba6c0e1f989057be1
+    entity_id: switch.joshua_bedroom_switch
+    domain: switch
+  mode: single
+- id: '1611602499584'
+  alias: Enable Heater Automation
+  description: ''
+  trigger:
+  - platform: time
+    at: '21:00:00'
+  condition: []
+  action:
+  - service: automation.turn_on
+    data: {}
+    entity_id: automation.heater_on_at_night
+  - service: automation.trigger
+    data:
+      skip_condition: false
+    entity_id: automation.heater_on_at_night
+  mode: single
+- id: '1611602577366'
+  alias: Disable Heater Automation
+  description: ''
+  trigger:
+  - platform: time
+    at: 00:00:00
+  condition: []
+  action:
+  - service: automation.turn_off
+    data: {}
+    entity_id: automation.heater_on_at_night
+  mode: single
+- id: '1611681583833'
+  alias: Turn Heater Off
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.wyze_front_door
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: input_boolean.running
+    state: 'on'
+  - condition: time
+    after: input_datetime.run_time
+    before: input_datetime.wake_up_time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  - condition: state
+    entity_id: input_boolean.door_opened
+    state: 'off'
+  action:
+  - type: turn_off
+    device_id: 157ea3ec1b2411eba6c0e1f989057be1
+    entity_id: switch.joshua_bedroom_switch
+    domain: switch
+  - service: input_number.increment
+    data: {}
+    entity_id: input_number.runs
+  - service: input_boolean.turn_on
+    target:
+      entity_id: input_boolean.door_opened
+  mode: single
+- id: '1614790768447'
+  alias: Reset Runs
+  description: ''
+  trigger:
+  - platform: time
+    at: '19:00:00'
+  condition:
+  - condition: time
+    weekday:
+    - sun
+  action:
+  - service: input_number.set_value
+    data:
+      value: 0
+    entity_id: input_number.runs
+  mode: single
+- id: '1617036096028'
+  alias: Nightly Reset
+  description: ''
+  trigger:
+  - platform: time
+    at: 01:00
+  condition: []
+  action:
+  - service: input_boolean.turn_off
+    target:
+      entity_id: input_boolean.door_opened
+  mode: single

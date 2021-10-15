@@ -8,17 +8,19 @@ system_health:
 updater:
 zeroconf:
 discovery:
+my:
+energy:
 lovelace:
   mode: yaml
   resources: !include lovelace/resources.yaml
-mqtt:
-  discovery: true
-  broker: 127.0.0.1
-  username: !secret username
-  password: !secret password
+# mqtt:
+#   discovery: true
+#   broker: 127.0.0.1
+#   username: !secret username
+#   password: !secret password
 
-zwave:
-  usb_path: /dev/serial/by-id/usb-Silicon_Labs_HubZ_Smart_Home_Controller_8130021D-if00-port0
+# zwave:
+#   usb_path: /dev/serial/by-id/usb-Silicon_Labs_HubZ_Smart_Home_Controller_8130021D-if00-port0
 
 homeassistant:
   customize: !include customize.yaml
@@ -29,7 +31,7 @@ person:
     user_id: 0deba9a5d55f4283a58721dd67e57107
     device_trackers:
       - device_tracker.joshua
-      - device_tracker.pixel_3
+      - device_tracker.pixel_5
      # - device_tracker.ping_joshua
   - name: Josie
     id: 679231f68a4d4e05b2a552cc84133a2c
@@ -52,6 +54,11 @@ zone: !include zones.yaml
 tts:
   - platform: google_translate
     base_url: http://192.168.86.93:8123
+  - platform: google_cloud
+    key_file: Hassio-847c31d4c633.json
+    language: en-US
+    gender: female
+    voice: en-US-Wavenet-F
 
 group: !include groups.yaml
 automation: !include automations.yaml
@@ -64,6 +71,13 @@ frontend:
   #  - /local/custom_ui/state-card-custom-ui-es5.html
 
 http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 127.0.0.1
+    - 192.168.86.93
+    - 172.30.33.6
+    - 172.30.33.7
+    - 172.30.32.1
 #  base_url: !secret base_url
 #  ssl_certificate: !secret ssl_cert
 #  ssl_key: !secret ssl_key
@@ -115,6 +129,7 @@ recorder:
       - calendar
       - weather
       - zone
+      - automation
     entities:
       - sun.sun
       - sensor.dark_sky_icon
@@ -131,13 +146,16 @@ recorder:
       - sensor.google_wifi_new_version
       - sensor.google_wifi_status
       - sensor.google_wifi_uptime
+      - sensor.dark_sky_dew_point
       - sensor.dark_sky_dew_point_0d
       - sensor.dark_sky_dew_point_0h
       - sensor.dark_sky_icon_0d
       - sensor.dark_sky_icon_0h
+      - sensor.dark_sky_summary
       - sensor.dark_sky_summary_0d
       - sensor.dark_sky_summary_0h
       - sensor.dark_sky_temperature_0h
+      - sensor.dark_sky_wind_speed
       - sensor.dark_sky_wind_speed_0d
       - sensor.dark_sky_wind_speed_0h
       - input_boolean.joshua_home
@@ -156,6 +174,12 @@ recorder:
       - switch.adguard_protection
       - switch.adguard_safe_browsing
       - switch.adguard_safe_search
+      - switch.schedule_joshua_bedroom_switch_morning
+      - switch.schedule_joshua_bedroom_switch_night
+      - switch.schedule_josie_bedroom_switch
+      - switch.schedule_tree
+      - sensor.pixel_5_last_notification
+      - sensor.pixel_3a_proximity_sensor
 
 google:
   client_id: !secret google_client_id
@@ -163,8 +187,9 @@ google:
 
 google_assistant:
   project_id: hassio-aca8d
-  service_account: !include service_account.json
+  service_account: !include Hassio-847c31d4c633.json
   expose_by_default: true
+  report_state: true
   exposed_domains:
     - switch
     - light
@@ -197,20 +222,30 @@ google_assistant:
       expose: false
     switch.adguard_safe_search:
       expose: false
+    switch.schedule_joshua_bedroom_switch_morning:
+      expose: false
+    switch.schedule_joshua_bedroom_switch_night:
+      expose: false
+    switch.schedule_josie_bedroom_switch:
+      expose: false
+    switch.schedule_tree:
+      expose: false
     
 
 device_tracker:
-  - platform: nmap_tracker
-    hosts: 
-      - 192.168.86.92
-      - 192.168.86.114
- #     - 192.168.86.1/24
-    home_interval: 5
-    consider_home: 300
-    interval_seconds: 60
-    track_new_devices: false
-    exclude:
-     - 192.168.86.93
+#   - platform: nmap_tracker
+#     hosts: 
+#       - 192.168.86.92
+#       - 192.168.86.114
+#       - 192.168.86.127
+#       - 192.168.86.128
+# #     - 192.168.86.1/24
+#     home_interval: 5
+#     consider_home: 300
+#     interval_seconds: 60
+#     track_new_devices: false
+#     exclude:
+#     - 192.168.86.93
   - platform: ping
     hosts:
       ping_josie: 192.168.86.114
@@ -236,6 +271,51 @@ notify:
   - name: ga_broadcast
     platform: rest
     resource: http://127.0.0.1:5000/broadcast_message
+  - platform: telegram
+    name: telegram_joshua
+    chat_id: 1563546300
+
+template:
+  - binary_sensor:
+      - name: Dryer Running
+        unique_id: dryer_running
+        icon: >
+          {% if is_state('binary_sensor.dryer_running', 'on') %}
+            mdi:tumble-dryer
+          {% else %}
+            mdi:tumble-dryer-off
+          {% endif %}
+        state: "{{ states('binary_sensor.vibration_ias_zone') }}"
+        delay_on: '0:04:00'
+        delay_off: '0:02:00'
+      - name: Keyboard
+        unique_id: keyboard_on
+        icon: mdi:piano
+        #   {% if is_state('binary_sensor.keyboard', 'on') %}
+        #     mdi:piano
+        #   {% else %}
+        #     mdi:piano-off
+        #   {% endif %}
+        state: "{{ states('sensor.keyboard_electrical_measurement')|float > 6 }}"
+      - name: Washing Machine Running
+        unique_id: washing_machine_running
+        icon: >
+          {% if is_state('binary_sensor.washing_machine_running', 'on') %}
+            mdi:washing-machine
+          {% else %}
+            mdi:washing-machine-off
+          {% endif %}
+        state: "{{ states('sensor.washing_machine_plug_output')|float > 5 }}"
+        delay_off: '0:02:00'
+  - trigger:
+      - platform: state
+        entity_id: light.basement_lights
+        to: 'on'
+    binary_sensor:
+      - name: basement lights turned on
+        unique_id: basement_lights_lock
+        state: "{{ is_state('light.basement_lights', 'on') }}"
+        auto_off: '00:00:10'
 
 sensor:
   - platform: time_date
@@ -252,24 +332,13 @@ sensor:
         arg: wlan0
       - type: load_5m
   - platform: google_wifi
+    host: 192.168.86.1
   - platform: command_line
     name: CPU Temperature
     command: "cat /sys/class/thermal/thermal_zone0/temp"
     unit_of_measurement: "°C"
     value_template: '{{ value | multiply(0.001) | round(1) }}'
     scan_interval: 180
-  - platform: google_travel_time
-    name: Travel Time Home to Work
-    api_key: !secret google_maps_api_key
-    origin: !secret home_place_id
-    destination: !secret work_place_id
-    scan_interval: 1800
-  - platform: google_travel_time
-    name: Travel Time Work to Home
-    api_key: !secret google_maps_api_key
-    origin: !secret work_place_id
-    destination: !secret home_place_id
-    scan_interval: 1800
   - platform: template
     sensors:
       tv_muted:
@@ -285,6 +354,16 @@ sensor:
       tv_app:
         friendly_name: 'TV App'
         value_template: "{{ state_attr('media_player.basement_tv', 'app_name') }}"
+      update_version:
+        friendly_name: 'Lastest Home Assistant Version'
+        value_template: "{{ state_attr('binary_sensor.updater', 'newest_version') }}"
+      basement_lights_brightness:
+        friendly_name: 'Basement Lights Brightness'
+        value_template: "{{ state_attr('light.basement_lights', 'brightness') }}"
+      outside_temperature:
+        friendly_name: 'Temperature'
+        value_template: "{{ state_attr('weather.kstl_hourly', 'temperature') }}"
+        unique_id: outside_temperature
   - platform: darksky
     api_key: !secret darksky_api_key
     scan_interval: '00:10'
@@ -302,9 +381,13 @@ sensor:
 
 binary_sensor:
   - platform: wyzesense
-    device: auto
+    device: '/dev/hidraw0'
   - platform: workday
     country: US
+  - platform: command_line
+    name: Check Config Log
+    device_class: connectivity
+    command: 'test -f "/share/check_config.txt" && echo "ON" || echo "OFF"'
   - platform: bayesian
     prior: 0.3
     probability_threshold: 0.7
@@ -349,6 +432,7 @@ webostv:
 
 input_datetime:
 input_select:
+input_number:
 input_boolean:
   night_mode:
     name: Night Mode

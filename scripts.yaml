@@ -52,10 +52,11 @@ cast_spotify:
 ask_if_downstairs:
   alias: Ask If Downstairs
   sequence:
-  - service: notify.mobile_app_pixel_3
+  - service: notify.mobile_app_pixel_5
     data:
       message: The basement lights are on.  Are you still downstairs?
       data:
+        timeout: 900
         actions:
         - action: yes_in_basement
           title: Yes, I Am
@@ -63,21 +64,8 @@ ask_if_downstairs:
     data:
       message: The basement lights are on.  Are you still downstairs?
       data:
+        timeout: 900
         actions:
         - action: yes_in_basement
           title: Yes, I Am
-#   - choose:
-#     - conditions:
-#       - condition: state
-#         entity_id: input_boolean.josie_sleeping
-#         state: 'off'
-#       sequence:
-#       - service: notify.mobile_app_pixel_3a
-#         data:
-#           message: The basement lights are on.  Are you still downstairs?
-#           data:
-#             actions:
-#             - action: yes_in_basement
-#               title: Yes, I Am'
-#     default: []
   mode: single
