@@ -4357,23 +4357,6 @@
                 "original_icon": "mdi:battery"
             },
             {
-                "entity_id": "sensor.hacs",
-                "config_entry_id": "dc178c8820b9bf085b2e008f647a735f",
-                "device_id": "9b0615bd255346c19cd935fdfff68ac5",
-                "area_id": null,
-                "unique_id": "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd",
-                "platform": "hacs",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": "pending update(s)",
-                "original_name": "hacs",
-                "original_icon": "hacs:hacs"
-            },
-            {
                 "entity_id": "switch.no_name_group_0x0000_zha_group_0x0000",
                 "config_entry_id": "26605136b3bb49dc9d46c7e831afa6ca",
                 "device_id": "67ea42990da646c9bdaa3ae0deccb03b",
@@ -4472,7 +4455,7 @@
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
-                "original_name": "Asustek Computer 41:31:49",
+                "original_name": "desktop-g4ud39k",
                 "original_icon": "mdi:lan-connect"
             },
             {
@@ -4506,7 +4489,7 @@
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
-                "original_name": "basement_lights",
+                "original_name": "Espressif 9A:8F:E0",
                 "original_icon": "mdi:lan-disconnect"
             },
             {
@@ -4575,7 +4558,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Google 77:65:BE",
-                "original_icon": "mdi:lan-connect"
+                "original_icon": "mdi:lan-disconnect"
             },
             {
                 "entity_id": "device_tracker.joshua",
@@ -4676,7 +4659,7 @@
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
-                "original_name": "Google 8B:D5:4E",
+                "original_name": "google-home-mini",
                 "original_icon": "mdi:lan-connect"
             },
             {
@@ -4710,7 +4693,7 @@
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
-                "original_name": "Google D0:04:14",
+                "original_name": "google-home",
                 "original_icon": "mdi:lan-connect"
             },
             {
@@ -4762,7 +4745,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "wemo",
-                "original_icon": "mdi:lan-disconnect"
+                "original_icon": "mdi:lan-connect"
             },
             {
                 "entity_id": "device_tracker.nmap_wemo_lamp",
@@ -4778,8 +4761,8 @@
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
-                "original_name": "Belkin International E9:C2:D5",
-                "original_icon": "mdi:lan-disconnect"
+                "original_name": "wemo",
+                "original_icon": "mdi:lan-connect"
             },
             {
                 "entity_id": "device_tracker.nmap_thinkpad",
@@ -4829,8 +4812,8 @@
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
-                "original_name": "wemo",
-                "original_icon": "mdi:lan-connect"
+                "original_name": "Belkin International 94:ED:3D",
+                "original_icon": "mdi:lan-disconnect"
             },
             {
                 "entity_id": "device_tracker.amazon_technologies_7d_4f_44",
@@ -5145,6 +5128,23 @@
                 "unit_of_measurement": null,
                 "original_name": "LUMI lumi.plug.maus01 9b1ea202 binary_input",
                 "original_icon": null
+            },
+            {
+                "entity_id": "sensor.hacs",
+                "config_entry_id": "c4a8eb8c3c04231fdf3ee7c4f7e2fbca",
+                "device_id": "9b0615bd255346c19cd935fdfff68ac5",
+                "area_id": null,
+                "unique_id": "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd",
+                "platform": "hacs",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "pending update(s)",
+                "original_name": "hacs",
+                "original_icon": "hacs:hacs"
             }
         ]
     }

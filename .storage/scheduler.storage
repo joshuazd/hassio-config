@@ -1,5 +1,5 @@
 {
-    "version": 1,
+    "version": 2,
     "key": "scheduler.storage",
     "data": {
         "schedules": [
@@ -36,6 +36,8 @@
                 "weekdays": [
                     "workday"
                 ],
+                "start_date": null,
+                "end_date": null,
                 "repeat_type": "repeat",
                 "name": "Joshua Bedroom Switch Morning",
                 "enabled": false
@@ -73,6 +75,8 @@
                 "weekdays": [
                     "daily"
                 ],
+                "start_date": null,
+                "end_date": null,
                 "repeat_type": "repeat",
                 "name": "Joshua Bedroom Switch Night",
                 "enabled": true
@@ -149,10 +153,13 @@
                 "weekdays": [
                     "daily"
                 ],
+                "start_date": null,
+                "end_date": null,
                 "repeat_type": "repeat",
                 "name": "Josie Bedroom Switch",
                 "enabled": false
             }
-        ]
+        ],
+        "tags": []
     }
 }

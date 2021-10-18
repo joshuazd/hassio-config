@@ -36,3 +36,4 @@ service_account.json
 .storage/hacs
 .storage/hacs.repositories
 .storage/zha.storage
+.storage/core.config_entries

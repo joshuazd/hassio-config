@@ -78,6 +78,7 @@ http:
     - 172.30.33.6
     - 172.30.33.7
     - 172.30.32.1
+    - 172.30.33.4
 #  base_url: !secret base_url
 #  ssl_certificate: !secret ssl_cert
 #  ssl_key: !secret ssl_key
@@ -187,7 +188,7 @@ google:
 
 google_assistant:
   project_id: hassio-aca8d
-  service_account: !include Hassio-847c31d4c633.json
+  service_account: !include service_account.json
   expose_by_default: true
   report_state: true
   exposed_domains:

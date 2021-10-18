@@ -6,10 +6,10 @@
             "uses_password": false,
             "name": "basement_lights",
             "mac_address": "EC:FA:BC:9A:8F:E0",
-            "compilation_time": "Sep  2 2021, 23:10:50",
-            "model": "PLATFORMIO_ESP01_1M",
+            "compilation_time": "Oct 18 2021, 09:53:52",
+            "model": "esp01_1m",
             "has_deep_sleep": false,
-            "esphome_version": "2021.8.2",
+            "esphome_version": "2021.9.3",
             "project_name": "",
             "project_version": ""
         },
@@ -26,7 +26,7 @@
                 "unique_id": "basement_lightslightbasement_lights",
                 "disabled_by_default": false,
                 "supported_color_modes": [
-                    2
+                    3
                 ],
                 "min_mireds": 0.0,
                 "max_mireds": 0.0,
